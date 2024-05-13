@@ -9,12 +9,10 @@ class OtpScreen extends StatefulWidget {
 }
 
 class _OtpScreenState extends State<OtpScreen> {
-  final _focusNodes =
-  List.generate(6, (_) => FocusNode()); // List of focus nodes
+  final _focusNodes = List.generate(6, (_) => FocusNode()); // List of focus nodes
   final _otpController = TextEditingController(); // To store the complete OTP
 
-  List<String> _otp =
-  List.generate(6, (_) => ''); // Initialize empty list for OTP digits
+  List<String> _otp = List.generate(6, (_) => ''); // Initialize empty list for OTP digits
 
   @override
   void initState() {
@@ -53,8 +51,7 @@ class _OtpScreenState extends State<OtpScreen> {
           filled: true, // Ensure background fills the entire field
           // Remove border
           counterText: '', // Hide counter text
-          contentPadding:
-          EdgeInsets.symmetric(vertical: 12.0), // Adjust padding
+          contentPadding: EdgeInsets.symmetric(vertical: 12.0), // Adjust padding
         ),
         onChanged: (value) {
           setState(() {
@@ -75,8 +72,7 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-      Color.fromRGBO(219, 223, 227, 1.0), // Light gray background
+      backgroundColor: Color.fromRGBO(219, 223, 227, 1.0), // Light gray background
       appBar: AppBar(
         title: Text(
           'OTP Verification',
@@ -90,8 +86,7 @@ class _OtpScreenState extends State<OtpScreen> {
       ),
       body: SingleChildScrollView(
         // Allow content to scroll if needed
-        padding: const EdgeInsets.symmetric(
-            horizontal: 20.0), // Padding around content
+        padding: const EdgeInsets.symmetric(horizontal: 20.0), // Padding around content
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -135,8 +130,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     style: Theme.of(context).textTheme.displaySmall,
                   ),
                   style: ButtonStyle(
-                    backgroundColor:
-                    MaterialStateProperty.all<Color>(Color(0xFFA62E2E)),
+                    backgroundColor: MaterialStateProperty.all<Color>(Color(0xFFA62E2E)),
                   ),
                 ),
               ),

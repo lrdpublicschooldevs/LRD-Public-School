@@ -74,6 +74,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "get",
+      "rootUri": "file:///C:/Users/anshr/AppData/Local/Pub/Cache/hosted/pub.dev/get-4.6.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "http",
       "rootUri": "file:///C:/Users/anshr/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.1",
       "packageUri": "lib/",
@@ -242,7 +248,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-05-13T07:01:59.491508Z",
+  "generated": "2024-05-13T15:06:17.349380Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }

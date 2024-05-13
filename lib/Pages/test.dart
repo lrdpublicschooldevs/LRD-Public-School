@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:myapp/Config/images.dart';
 import 'reset_password.dart';
 
 class Test extends StatefulWidget {
@@ -19,7 +20,7 @@ class _TestState extends State<Test> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              'lib/assets/bgDesignLayer.svg',
+              AssetsIamge.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
@@ -28,7 +29,7 @@ class _TestState extends State<Test> {
             left: 20,
             right: 20,
             child: Image.asset(
-              'lib/assets/lock.png',
+              AssetsIamge.lockImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -70,8 +71,9 @@ class _TestState extends State<Test> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20,),
-
+                      SizedBox(
+                        height: 20,
+                      ),
                       Center(
                         child: SizedBox(
                           width: 180,

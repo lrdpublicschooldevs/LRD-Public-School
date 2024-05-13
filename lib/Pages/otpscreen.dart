@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:myapp/Config/images.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -75,7 +76,7 @@ class _OtpScreenState extends State<OtpScreen> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              'lib/assets/bgDesignLayer.svg',
+              'assets/bgDesignLayer.svg',
               fit: BoxFit.cover,
             ),
           ),
@@ -84,7 +85,7 @@ class _OtpScreenState extends State<OtpScreen> {
             left: 20,
             right: 20,
             child: Image.asset(
-              'lib/assets/otppage_image.png',
+              AssetsIamge.otpImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,

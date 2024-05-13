@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'Pages/otpscreen.dart';
+import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/loginPage.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -17,7 +18,7 @@ class SplashScreen extends StatelessWidget {
               children: [
                 // Background SVG
                 SvgPicture.asset(
-                  'lib/assets/splashBg.svg',
+                  AssetsIamge.splashBgSVG,
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: double.infinity,
@@ -25,7 +26,7 @@ class SplashScreen extends StatelessWidget {
                 // Logo PNG
                 Center(
                   child: Image.asset(
-                    'lib/assets/logo  lrd.png',
+                    AssetsIamge.logoImg,
                     width: 200,
                     height: 200,
                     fit: BoxFit.contain,
@@ -37,7 +38,7 @@ class SplashScreen extends StatelessWidget {
         } else {
           // Once loading is complete, switch to the WelcomePage
           // return const WelcomePage();
-          return const OtpScreen();//OtpScreen
+          return const LoginPage(); //OtpScreen
         }
       },
     );

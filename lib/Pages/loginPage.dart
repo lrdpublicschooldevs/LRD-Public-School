@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:myapp/Config/images.dart';
 import 'reset_password.dart';
 
 class LoginPage extends StatefulWidget {
@@ -19,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              'lib/assets/bgDesignLayer.svg',
+              AssetsIamge.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
@@ -28,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             left: 20,
             right: 20,
             child: Image.asset(
-              'lib/assets/lock.png',
+              AssetsIamge.lockImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -46,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
+                color: Theme.of(context).colorScheme.primaryContainer, // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
@@ -68,7 +69,9 @@ class _LoginPageState extends State<LoginPage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 20,),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
@@ -149,7 +152,11 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(height: 30),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => ResetPasswordScreen(),));// Navigate to forgot password screen
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ResetPasswordScreen(),
+                              )); // Navigate to forgot password screen
                         },
                         child: Text(
                           'Forgot password',

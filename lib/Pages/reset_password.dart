@@ -11,7 +11,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   final TextEditingController _newPasswordController = TextEditingController();
   final TextEditingController _confirmPasswordController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +19,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              'lib/assets/bgDesignLayer.svg',
+              'assets/bgDesignLayer.svg',
               fit: BoxFit.cover,
             ),
           ),
@@ -29,7 +28,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             left: 20,
             right: 20,
             child: Image.asset(
-              'lib/assets/forgot.png',
+              'assets/forgot.png',
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -69,7 +68,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 20,),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
@@ -139,7 +140,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         ),
                       ),
                       SizedBox(height: 20),
-
                     ],
                   ),
                 ),

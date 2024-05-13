@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'login_page.dart'; // Import your LoginPage file
+import 'package:get/get.dart';
+import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/loginPage.dart';
+import 'package:myapp/primaryBtn.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -8,92 +11,82 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Stack(
-          children: [
-            // Background SVG
-            SvgPicture.asset(
-              'lib/assets/splashBg.svg',
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
+      body: Stack(
+        children: [
+          // Background SVG
+          SvgPicture.asset(
+            AssetsIamge.splashBgSVG,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          // Logo PNG
+          Positioned(
+            top: 150,
+            left: 0,
+            right: 0,
+            child: Image.asset(
+              AssetsIamge.logoImg,
+              width: 150,
+              height: 150,
+              fit: BoxFit.contain,
             ),
-            // Logo PNG
-            Positioned(
-              top: 150,
-              left: 0,
-              right: 0,
-              child: Image.asset(
-                'lib/assets/logo  lrd.png',
-                width: 170,
-                height: 170,
-                fit: BoxFit.contain,
-              ),
-            ),
-            // Buttons
-            Positioned(
-              left: 0,
-              right: 0,
-              top: 350,
-              child: Column(
-                children: [
-                  Text(
-                    'Welcome to', // Add text between the buttons
-                    style: Theme.of(context).textTheme.displayMedium!,
-                  ),
-                  Text(
-                    'LRD Public School', // Add text between the buttons
-                    style: Theme.of(context).textTheme.displayLarge!,
-                  ),
-
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height <= 800 ? 45 : 70,
-                  ),
-
-
-                  SizedBox(
-                    width: 250,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => LoginPage()), // Navigate to LoginPage
-                        );
-                      },
-                      child: Text(
-                        'Student/Parent Login',
-                        style: Theme.of(context).textTheme.displaySmall,
-                      ),
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(Color(0xFFA62E2E)),
-                      ),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            top: 300,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Welcome to', // Add text between the buttons
+                      style: Theme.of(context).textTheme.displayMedium,
                     ),
-                  ),
-                  SizedBox(height: 16),
-                  // Add spacing between the text and buttons
-                  SizedBox(
-                    width: 250,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => LoginPage()), // Navigate to LoginPage
-                        );
-                      },
-                      child: Text(
-                        'Teacher Login',
-                        style: Theme.of(context).textTheme.displaySmall,
-                      ),
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Theme.of(context).elevatedButtonTheme.style!.backgroundColor!.resolve({})!),
-                      ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'LRD Public School', // Add text between the buttons
+                      style: Theme.of(context).textTheme.displayMedium,
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
+
+                const SizedBox(
+                  height: 25,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    PrimaryBtn(
+                      btnName: 'Student/Parent Login',
+                      ontap: () {
+                        Get.to(() => LoginPage());
+                      },
+                    ),
+                  ],
+                ),
+                SizedBox(height: 16),
+                // Add spacing between the text and buttons
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    PrimaryBtn(
+                      btnName: "Teacher Login",
+                      ontap: () {},
+                    ),
+                  ],
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
