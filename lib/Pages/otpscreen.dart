@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/DashBoard/dashboard.dart';
+import 'package:myapp/primaryBtn.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -76,12 +79,12 @@ class _OtpScreenState extends State<OtpScreen> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              'assets/bgDesignLayer.svg',
+              AssetsIamge.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.04, // Adjust this value as needed
+            top: MediaQuery.of(context).size.height * 0.1, // Adjust this value as needed
             left: 20,
             right: 20,
             child: Image.asset(
@@ -93,7 +96,7 @@ class _OtpScreenState extends State<OtpScreen> {
           ),
           // Login Card
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.32, // Adjust this value as needed
+            top: MediaQuery.of(context).size.height * 0.37, // Adjust this value as needed
             left: 20,
             right: 20,
             child: Container(
@@ -109,22 +112,18 @@ class _OtpScreenState extends State<OtpScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'OTP Verification',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: Theme.of(context).textTheme.displaySmall,
                         ),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 30),
                       Center(
                         child: Text(
                           'Enter the 6-digit code',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                          ),
+                          style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
                       SizedBox(height: 20),
@@ -137,24 +136,18 @@ class _OtpScreenState extends State<OtpScreen> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 40),
-                      Center(
-                        child: SizedBox(
-                          width: 180,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              // Add your login logic here
+                      const SizedBox(height: 40),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          PrimaryBtn(
+                            btnName: "      Submit       ",
+                            ontap: () {
+                              Get.to(DashboardPage());
                             },
-                            child: Text(
-                              'Verify',
-                              style: Theme.of(context).textTheme.displaySmall,
-                            ),
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(Color(0xFFA62E2E)),
-                            ),
                           ),
-                        ),
-                      ),
+                        ],
+                      )
                     ],
                   ),
                 ),

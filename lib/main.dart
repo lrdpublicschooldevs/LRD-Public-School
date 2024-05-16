@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       //     ),
       //   ),
       // ),
-      home: const DashboardPage(), // Set the SplashScreen as the home page initially
+      home: const SplashScreen(), // Set the SplashScreen as the home page initially
     );
   }
 }

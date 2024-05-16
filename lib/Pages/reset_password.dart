@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/DashBoard/dashboard.dart';
+import 'package:myapp/primaryBtn.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   @override
@@ -19,16 +23,16 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              'assets/bgDesignLayer.svg',
+              AssetsIamge.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0, // Adjust this value as needed
+            top: MediaQuery.of(context).size.height * 0.1, // Adjust this value as needed
             left: 20,
             right: 20,
             child: Image.asset(
-              'assets/forgot.png',
+              AssetsIamge.forgotImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -36,11 +40,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
           ),
           // Login Card
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.28, // Adjust this value as needed
+            top: MediaQuery.of(context).size.height * 0.35, // Adjust this value as needed
             left: 20,
             right: 20,
             child: Container(
-              height: 463,
+              height: 400,
               child: Card(
                 elevation: 8,
                 shape: RoundedRectangleBorder(
@@ -52,92 +56,59 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'Reset Password',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: Theme.of(context).textTheme.displaySmall,
                         ),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 30),
                       Text(
                         'New Password',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(15),
                           color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.4),
-                              spreadRadius: 0,
-                              blurRadius: 4,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
                         ),
                         child: TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: 'Enter New password',
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(16),
+                            contentPadding: EdgeInsets.all(15),
                           ),
                         ),
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 20),
                       Text(
                         'Confirm Password',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
-                      SizedBox(height: 20),
                       Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(15),
                           color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.4),
-                              spreadRadius: 0,
-                              blurRadius: 4,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
                         ),
                         child: TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: 'Re-enter new password',
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(16),
+                            contentPadding: EdgeInsets.all(15),
                           ),
                         ),
                       ),
-                      SizedBox(height: 16),
-                      Center(
-                        child: SizedBox(
-                          width: 180,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              // Add your login logic here
-                            },
-                            child: Text(
-                              'Update',
-                              style: Theme.of(context).textTheme.displaySmall,
-                            ),
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(Color(0xFFA62E2E)),
-                            ),
-                          ),
-                        ),
+                      const SizedBox(height: 30),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          PrimaryBtn(
+                              btnName: "    Upadte    ",
+                              ontap: () {
+                                Get.to(DashboardPage());
+                              })
+                        ],
                       ),
                       SizedBox(height: 20),
                     ],

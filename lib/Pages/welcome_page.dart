@@ -65,7 +65,7 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     PrimaryBtn(
-                      btnName: 'Student/Parent Login',
+                      btnName: '  Student/Parent Login  ',
                       ontap: () {
                         Get.to(() => LoginPage());
                       },
@@ -78,7 +78,7 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     PrimaryBtn(
-                      btnName: "Teacher Login",
+                      btnName: "        Teacher Login        ",
                       ontap: () {},
                     ),
                   ],

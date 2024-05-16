@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:myapp/Config/colors.dart';
 
 var lightTheme = ThemeData(
-  // useMaterial3: true,
-  inputDecorationTheme: InputDecorationTheme(
-    fillColor: dOnContainerColor,
-    filled: true,
-    border: UnderlineInputBorder(
-      borderSide: BorderSide.none,
-      borderRadius: BorderRadius.circular(10),
-    ),
-  ),
+  useMaterial3: true,
+  // inputDecorationTheme: InputDecorationTheme(
+  //   fillColor: dOnContainerColor,
+  //   filled: true,
+  //   border: UnderlineInputBorder(
+  //     borderSide: BorderSide.none,
+  //     borderRadius: BorderRadius.circular(10),
+  //   ),
+  // ),
   colorScheme: const ColorScheme.light(
     primary: dbuttonColor,
     onPrimary: dContainerColor,

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/otpscreen.dart';
+import 'package:myapp/primaryBtn.dart';
 import 'reset_password.dart';
 
 class LoginPage extends StatefulWidget {
@@ -37,83 +40,51 @@ class _LoginPageState extends State<LoginPage> {
           ),
           // Login Card
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.32, // Adjust this value as needed
+            top: MediaQuery.of(context).size.height * 0.35, // Adjust this value as needed
             left: 20,
             right: 20,
             child: Container(
-              height: 463,
+              height: 400,
               child: Card(
                 elevation: 8,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: Theme.of(context).colorScheme.background, // Semi-transparent white color
+                color: Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'Sign in to continue',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: Theme.of(context).textTheme.displaySmall,
                         ),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 30),
                       Text(
                         'ERP id',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
+                        style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(15),
                           color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.4),
-                              spreadRadius: 0,
-                              blurRadius: 4,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
                         ),
                         child: TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: 'Enter Your ERP Id',
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(16),
+                            contentPadding: EdgeInsets.all(15),
                           ),
                         ),
                       ),
-                      SizedBox(height: 16),
-                      Text(
-                        'Password',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
+                      Text('Password', style: Theme.of(context).textTheme.bodyLarge),
                       Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.4),
-                              spreadRadius: 0,
-                              blurRadius: 4,
-                              offset: Offset(0, 4),
-                            ),
-                          ],
-                        ),
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.white),
                         child: TextFormField(
                           obscureText: _obscurePassword,
                           decoration: InputDecoration(
@@ -131,42 +102,32 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 16),
-                      Center(
-                        child: SizedBox(
-                          width: 180,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              // Add your login logic here
+                      const SizedBox(height: 30),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          PrimaryBtn(
+                              btnName: "      Login      ",
+                              ontap: () {
+                                Get.to(() => OtpScreen());
+                              }),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Get.to(ResetPasswordScreen());
                             },
                             child: Text(
-                              'Login',
-                              style: Theme.of(context).textTheme.displaySmall,
+                              "Forget Password?",
+                              style: Theme.of(context).textTheme.bodyMedium,
                             ),
-                            style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(Color(0xFFA62E2E)),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 30),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ResetPasswordScreen(),
-                              )); // Navigate to forgot password screen
-                        },
-                        child: Text(
-                          'Forgot password',
-                          style: TextStyle(
-                            color: Color(0xFF031C5B),
-                            decoration: TextDecoration.underline,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
+                          )
+                        ],
+                      )
                     ],
                   ),
                 ),
