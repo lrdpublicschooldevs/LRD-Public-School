@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
+import 'package:myapp/Pages/DashBoard/dashboard.dart';
 import 'package:myapp/splash_screen.dart';
 // Import your WelcomePage file
 
@@ -13,10 +14,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       title: 'LRD Public School',
       debugShowCheckedModeBanner: false,
-      // theme: lightTheme,
+      theme: lightTheme,
       themeMode: ThemeMode.light,
       // theme: ThemeData(
       //   buttonTheme: const ButtonThemeData(
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       //     ),
       //   ),
       // ),
-      home: const SplashScreen(), // Set the SplashScreen as the home page initially
+      home: const DashboardPage(), // Set the SplashScreen as the home page initially
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/Config/colors.dart';
 
 var lightTheme = ThemeData(
-  useMaterial3: true,
+  // useMaterial3: true,
   inputDecorationTheme: InputDecorationTheme(
     fillColor: dOnContainerColor,
     filled: true,
@@ -12,12 +12,12 @@ var lightTheme = ThemeData(
     ),
   ),
   colorScheme: const ColorScheme.light(
-    // primary: dPrimaryColor,
-    onPrimary: dbuttonColor,
-    // background: dBackgroundColor,
+    primary: dbuttonColor,
+    onPrimary: dContainerColor,
+    // background: dContainerColor,
     onBackground: dOnBackgroundColor,
-    // primaryContainer: dPrimaryColor,
-    onPrimaryContainer: dContainerColor,
+    // primaryContainer: dContainerColor,
+    // onPrimaryContainer: dContainerColor,
   ),
   textTheme: const TextTheme(
     headlineLarge: TextStyle(fontSize: 32, color: textBold, fontFamily: "Poppins", fontWeight: FontWeight.w800),
