@@ -15,7 +15,7 @@ class DashboardPage extends StatelessWidget {
             children: [
               DashboardHeader(),
               AttendanceCard(),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               DashboardBody()
             ],
           ),

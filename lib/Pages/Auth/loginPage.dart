@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/DashBoard/dashboard.dart';
-import 'package:myapp/primaryBtn.dart';
+import 'package:myapp/Pages/Auth/otpscreen.dart';
+import 'package:myapp/Widgets/primaryBtn.dart';
+import 'reset_password.dart';
 
-class ResetPasswordScreen extends StatefulWidget {
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
-  State<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
-  final _formKey = GlobalKey<FormState>(); // GlobalKey for the form
-  final TextEditingController _newPasswordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
-
+class _LoginPageState extends State<LoginPage> {
+  bool _obscurePassword = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             left: 20,
             right: 20,
             child: Image.asset(
-              AssetsIamge.forgotImg,
+              AssetsIamge.lockImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -59,13 +59,13 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
-                          'Reset Password',
+                          'Sign in to continue',
                           style: Theme.of(context).textTheme.displaySmall,
                         ),
                       ),
                       const SizedBox(height: 30),
                       Text(
-                        'New Password',
+                        'ERP id',
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Container(
@@ -75,27 +75,30 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         ),
                         child: TextFormField(
                           decoration: const InputDecoration(
-                            hintText: 'Enter New password',
+                            hintText: 'Enter Your ERP Id',
                             border: InputBorder.none,
                             contentPadding: EdgeInsets.all(15),
                           ),
                         ),
                       ),
                       const SizedBox(height: 20),
-                      Text(
-                        'Confirm Password',
-                        style: Theme.of(context).textTheme.bodyLarge,
-                      ),
+                      Text('Password', style: Theme.of(context).textTheme.bodyLarge),
                       Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.white,
-                        ),
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.white),
                         child: TextFormField(
-                          decoration: const InputDecoration(
-                            hintText: 'Re-enter new password',
+                          obscureText: _obscurePassword,
+                          decoration: InputDecoration(
+                            hintText: 'Enter your password',
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(15),
+                            contentPadding: EdgeInsets.all(16),
+                            suffixIcon: IconButton(
+                              icon: Icon(_obscurePassword ? Icons.visibility : Icons.visibility_off),
+                              onPressed: () {
+                                setState(() {
+                                  _obscurePassword = !_obscurePassword; // Toggle password visibility
+                                });
+                              },
+                            ),
                           ),
                         ),
                       ),
@@ -104,13 +107,27 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           PrimaryBtn(
-                              btnName: "    Upadte    ",
+                              btnName: "      Login      ",
                               ontap: () {
-                                Get.to(DashboardPage());
-                              })
+                                Get.to(() => OtpScreen());
+                              }),
                         ],
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Get.to(ResetPasswordScreen());
+                            },
+                            child: Text(
+                              "Forget Password?",
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                          )
+                        ],
+                      )
                     ],
                   ),
                 ),

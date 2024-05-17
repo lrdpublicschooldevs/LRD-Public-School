@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:myapp/Pages/loginPage.dart';
+import 'package:myapp/Pages/Auth/loginPage.dart';
 import 'package:myapp/Pages/welcome_page.dart';
 
 // import 'package:hello/Pages/UserProfile/UserProfilePage.dart';

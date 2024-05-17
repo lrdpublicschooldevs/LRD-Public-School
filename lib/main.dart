@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
-import 'package:myapp/Pages/DashBoard/dashboard.dart';
-import 'package:myapp/splash_screen.dart';
-// Import your WelcomePage file
+import 'package:myapp/Widgets/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

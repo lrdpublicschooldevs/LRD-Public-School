@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/otpscreen.dart';
-import 'package:myapp/primaryBtn.dart';
-import 'reset_password.dart';
+import 'package:myapp/Pages/DashBoard/dashboard.dart';
+import 'package:myapp/Widgets/primaryBtn.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
-
+class ResetPasswordScreen extends StatefulWidget {
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
-  bool _obscurePassword = true;
+class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
+  final _formKey = GlobalKey<FormState>(); // GlobalKey for the form
+  final TextEditingController _newPasswordController = TextEditingController();
+  final TextEditingController _confirmPasswordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
             left: 20,
             right: 20,
             child: Image.asset(
-              AssetsIamge.lockImg,
+              AssetsIamge.forgotImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -59,13 +59,13 @@ class _LoginPageState extends State<LoginPage> {
                       Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
-                          'Sign in to continue',
+                          'Reset Password',
                           style: Theme.of(context).textTheme.displaySmall,
                         ),
                       ),
                       const SizedBox(height: 30),
                       Text(
-                        'ERP id',
+                        'New Password',
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Container(
@@ -75,30 +75,27 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         child: TextFormField(
                           decoration: const InputDecoration(
-                            hintText: 'Enter Your ERP Id',
+                            hintText: 'Enter New password',
                             border: InputBorder.none,
                             contentPadding: EdgeInsets.all(15),
                           ),
                         ),
                       ),
                       const SizedBox(height: 20),
-                      Text('Password', style: Theme.of(context).textTheme.bodyLarge),
+                      Text(
+                        'Confirm Password',
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
                       Container(
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.white),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
                         child: TextFormField(
-                          obscureText: _obscurePassword,
-                          decoration: InputDecoration(
-                            hintText: 'Enter your password',
+                          decoration: const InputDecoration(
+                            hintText: 'Re-enter new password',
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(16),
-                            suffixIcon: IconButton(
-                              icon: Icon(_obscurePassword ? Icons.visibility : Icons.visibility_off),
-                              onPressed: () {
-                                setState(() {
-                                  _obscurePassword = !_obscurePassword; // Toggle password visibility
-                                });
-                              },
-                            ),
+                            contentPadding: EdgeInsets.all(15),
                           ),
                         ),
                       ),
@@ -107,27 +104,13 @@ class _LoginPageState extends State<LoginPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           PrimaryBtn(
-                              btnName: "      Login      ",
+                              btnName: "    Upadte    ",
                               ontap: () {
-                                Get.to(() => OtpScreen());
-                              }),
+                                Get.to(DashboardPage());
+                              })
                         ],
                       ),
-                      const SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              Get.to(ResetPasswordScreen());
-                            },
-                            child: Text(
-                              "Forget Password?",
-                              style: Theme.of(context).textTheme.bodyMedium,
-                            ),
-                          )
-                        ],
-                      )
+                      SizedBox(height: 20),
                     ],
                   ),
                 ),

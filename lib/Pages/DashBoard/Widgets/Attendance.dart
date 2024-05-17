@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/primaryBtn.dart';
+import 'package:myapp/Widgets/primaryBtn.dart';
 
 class AttendanceCard extends StatelessWidget {
   const AttendanceCard({super.key});

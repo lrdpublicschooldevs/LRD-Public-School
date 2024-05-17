@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/loginPage.dart';
-import 'package:myapp/primaryBtn.dart';
+import 'package:myapp/Pages/Auth/loginPage.dart';
+import 'package:myapp/Widgets/primaryBtn.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});

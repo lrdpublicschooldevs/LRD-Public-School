@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/loginPage.dart';
-import 'package:myapp/Pages/otpscreen.dart';
 import 'package:myapp/Pages/welcome_page.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -11,7 +9,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: Future.delayed(const Duration(seconds: 1)), // Simulate a loading time of 3 seconds
+      future: Future.delayed(const Duration(seconds: 3)), // Simulate a loading time of 3 seconds
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           // While waiting, show the splash screen
@@ -29,8 +27,8 @@ class SplashScreen extends StatelessWidget {
                 Center(
                   child: Image.asset(
                     AssetsIamge.logoImg,
-                    width: 200,
-                    height: 200,
+                    width: 150,
+                    height: 150,
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -40,7 +38,7 @@ class SplashScreen extends StatelessWidget {
         } else {
           // Once loading is complete, switch to the WelcomePage
           // return const WelcomePage();
-          return const OtpScreen(); //OtpScreen
+          return const WelcomePage(); //OtpScreen
         }
       },
     );

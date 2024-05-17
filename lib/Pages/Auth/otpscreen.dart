@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/DashBoard/dashboard.dart';
-import 'package:myapp/primaryBtn.dart';
+import 'package:myapp/Widgets/primaryBtn.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -100,7 +100,7 @@ class _OtpScreenState extends State<OtpScreen> {
             left: 20,
             right: 20,
             child: Container(
-              height: 400,
+              height: 370,
               child: Card(
                 elevation: 8,
                 shape: RoundedRectangleBorder(
@@ -126,7 +126,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 30),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2),
                         child: Row(
@@ -135,6 +135,16 @@ class _OtpScreenState extends State<OtpScreen> {
                             for (int i = 0; i < 6; i++) _buildOtpField(i),
                           ],
                         ),
+                      ),
+                      const SizedBox(height: 30),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Don't recieve otp? Click here to resend Otp",
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          )
+                        ],
                       ),
                       const SizedBox(height: 40),
                       Row(
