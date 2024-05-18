@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/Student_profile/StudentProfile.dart';
+import 'package:myapp/Pages/Student_profile/student_profile.dart';
 
 class DashboardHeader extends StatelessWidget {
   const DashboardHeader({super.key});
@@ -32,14 +35,19 @@ class DashboardHeader extends StatelessWidget {
           ),
           Column(
             children: [
-              Container(
-                height: 90,
-                width: 90,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.asset(
-                    AssetsIamge.proflePicImg,
-                    fit: BoxFit.contain,
+              InkWell(
+                onTap: () {
+                  Get.to(() => StudentProfilePage());
+                },
+                child: Container(
+                  height: 90,
+                  width: 90,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Image.asset(
+                      AssetsIamge.proflePicImg,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               )

@@ -17,19 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       themeMode: ThemeMode.light,
-      // theme: ThemeData(
-      //   buttonTheme: const ButtonThemeData(
-      //     // Button 1 color
-      //     buttonColor: Color(0xFFA62E2E),
-      //   ),
-      //   elevatedButtonTheme: ElevatedButtonThemeData(
-      //     // Button 2 color
-      //     style: ButtonStyle(
-      //       backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF4A4A4A)),
-      //     ),
-      //   ),
-      // ),
-      home: const SplashScreen(), // Set the SplashScreen as the home page initially
+      home: const SplashScreen(), 
     );
   }
 }

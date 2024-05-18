@@ -13,7 +13,7 @@ class DashboardBody extends StatelessWidget {
         height: 570,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Theme.of(context).colorScheme.onPrimary,
+          color: const Color.fromRGBO(250, 225, 225, 0.8),
         ),
         child: Column(
           children: [
