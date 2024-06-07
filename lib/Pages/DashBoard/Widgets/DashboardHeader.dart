@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Student_profile/StudentProfile.dart';
-import 'package:myapp/Pages/Student_profile/student_profile.dart';
 
 class DashboardHeader extends StatelessWidget {
   const DashboardHeader({super.key});
