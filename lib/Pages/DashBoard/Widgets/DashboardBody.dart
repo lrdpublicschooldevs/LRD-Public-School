@@ -19,12 +19,12 @@ class DashboardBody extends StatelessWidget {
           children: [
             Container(
               height: 35,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
-                color: Colors.black,
+                color: Theme.of(context).colorScheme.primary,
               ),
               child: const Center(
                 child: Text(

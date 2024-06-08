@@ -10,7 +10,6 @@ class AttendanceCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: Container(
-        height: 180,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: const Color.fromRGBO(250, 225, 225, 0.8),
@@ -19,32 +18,32 @@ class AttendanceCard extends StatelessWidget {
           children: [
             Container(
               height: 30,
-              decoration: const BoxDecoration(
-                color: Color(0xFF222222),
-                borderRadius: BorderRadius.only(
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 15, right: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Attendence",
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                      style: TextStyle(fontSize: 22, color: Colors.white),
                     ),
                     Icon(
                       Icons.info,
                       color: Colors.white,
-                      size: 20,
+                      size: 22,
                     )
                   ],
                 ),
               ),
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 5),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -66,7 +65,7 @@ class AttendanceCard extends StatelessWidget {
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 5),
                       Container(
                         height: 30,
                         width: 170,
@@ -80,7 +79,7 @@ class AttendanceCard extends StatelessWidget {
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 5),
                       Row(
                         children: [
                           PrimaryBtn(btnName: "More Details", ontap: () {}),
@@ -103,7 +102,8 @@ class AttendanceCard extends StatelessWidget {
                   ),
                 )
               ],
-            )
+            ),
+            const SizedBox(height: 5),
           ],
         ),
       ),
