@@ -3,6 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/welcome_page.dart';
 
+import '../Pages/Auth/loginPage.dart';
+import '../Pages/Student_profile/test.dart';
+
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
@@ -38,7 +41,7 @@ class SplashScreen extends StatelessWidget {
         } else {
           // Once loading is complete, switch to the WelcomePage
           // return const WelcomePage();
-          return const WelcomePage(); //OtpScreen
+          return const LoginPage(); //OtpScreen
         }
       },
     );

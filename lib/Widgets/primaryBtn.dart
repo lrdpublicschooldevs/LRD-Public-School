@@ -14,7 +14,7 @@ class PrimaryBtn extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(30),
           color: Theme.of(context).colorScheme.primary,
         ),
         child: Row(
