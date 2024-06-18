@@ -33,34 +33,50 @@ class DashboardBody extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             Expanded(
-              child: GridView(
-                padding: const EdgeInsets.only(left: 10, right: 10),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                ),
-                children: [
-                  DashboardBox(context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
-                  DashboardBox(context, () {}, AssetsIamge.dTransportSVG, "Transport"),
-                  DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
-                  DashboardBox(context, () {}, AssetsIamge.dNotificationSVG, "Notification"),
-                  DashboardBox(context, () {}, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
-                  DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
-                  DashboardBox(context, () {}, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
-                  DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
-                  DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Ask Doubt"),
-                  DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),
-                  DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
-                  DashboardBox(context, () {}, AssetsIamge.dOfficialDetailsSVG, "Official Details"),
-                  DashboardBox(context, () {}, AssetsIamge.dClassTeacherSVG, "   Class\nTeachers"),
-                  DashboardBox(context, () {}, AssetsIamge.dReportCardSVG, "Report Card"),
-                  DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
-                ],
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  int crossAxisCount;
+                  if (constraints.maxWidth < 600) {
+                    // Mobile view
+                    crossAxisCount = 3;
+                  } else if (constraints.maxWidth < 1200) {
+                    // Tablet view
+                    crossAxisCount = 5;
+                  } else {
+                    // Desktop view
+                    crossAxisCount = (constraints.maxWidth / 200).floor(); // Dynamically calculate columns
+                  }
+
+                  return GridView(
+                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: crossAxisCount,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                    ),
+                    children: [
+                      DashboardBox(context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
+                      DashboardBox(context, () {}, AssetsIamge.dTransportSVG, "Transport"),
+                      DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
+                      DashboardBox(context, () {}, AssetsIamge.dNotificationSVG, "Notification"),
+                      DashboardBox(context, () {}, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
+                      DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
+                      DashboardBox(context, () {}, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
+                      DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
+                      DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Ask Doubt"),
+                      DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),
+                      DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
+                      DashboardBox(context, () {}, AssetsIamge.dOfficialDetailsSVG, "Official Details"),
+                      DashboardBox(context, () {}, AssetsIamge.dClassTeacherSVG, "   Class\nTeachers"),
+                      DashboardBox(context, () {}, AssetsIamge.dReportCardSVG, "Report Card"),
+                      DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
+                    ],
+                  );
+                },
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -82,12 +98,15 @@ class DashboardBody extends StatelessWidget {
           children: [
             SvgPicture.asset(
               iconPath,
+              width: 50, // Fixed width
+              height: 50, // Fixed height
               color: Colors.black,
             ),
             Text(
               iconName,
               style: Theme.of(context).textTheme.bodyMedium,
-            )
+              textAlign: TextAlign.center, // Center align the text
+            ),
           ],
         ),
       ),
