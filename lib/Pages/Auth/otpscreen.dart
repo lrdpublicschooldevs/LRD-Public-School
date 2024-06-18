@@ -1,5 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/DashBoard/dashboard.dart';
@@ -100,9 +101,9 @@ class _OtpScreenState extends State<OtpScreen> {
             left: 20,
             right: 20,
             child: Container(
-              height: 370,
+              height: 400,
               child: Card(
-                elevation: 8,
+                elevation: 10,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
@@ -119,7 +120,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           style: Theme.of(context).textTheme.displaySmall,
                         ),
                       ),
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 25),
                       Center(
                         child: Text(
                           'Enter the 6-digit code',
@@ -129,34 +130,51 @@ class _OtpScreenState extends State<OtpScreen> {
                       SizedBox(height: 30),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            for (int i = 0; i < 6; i++) _buildOtpField(i),
-                          ],
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              for (int i = 0; i < 6; i++) _buildOtpField(i),
+                            ],
+                          ),
                         ),
                       ),
                       const SizedBox(height: 30),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            "Don't recieve otp? Click here to resend Otp",
-                            style: Theme.of(context).textTheme.bodyMedium,
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 40),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          PrimaryBtn(
-                            btnName: "      Submit       ",
-                            ontap: () {
-                              Get.to(DashboardPage());
-                            },
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Don't receive OTP?",
+                                style: Theme.of(context).textTheme.bodyMedium,
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                "Click here to resend OTP",
+                                style: Theme.of(context).textTheme.bodyMedium,
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
                         ],
+                      ),
+
+                      const SizedBox(height: 40),
+                      Expanded(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            PrimaryBtn(
+                              btnName: "      Submit       ",
+                              ontap: () {
+                                Get.to(DashboardPage());
+                              },
+                            ),
+                          ],
+                        ),
                       )
                     ],
                   ),
