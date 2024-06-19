@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
@@ -15,7 +16,7 @@ class ExamPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         centerTitle: true,
         title: Text(
           "Exam Sheet",
@@ -34,65 +35,68 @@ class ExamPage extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          Column(
-            children: [
-              Obx(
-                () => Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        isLogin.value = true;
-                      },
-                      child: Container(
-                        height: 40,
-                        width: isLogin.value ? MediaQuery.sizeOf(context).width / 2.0 : MediaQuery.sizeOf(context).width / 3.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: isLogin.value ? Theme.of(context).colorScheme.primary : Colors.grey,
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Exam Sheet",
-                            style: isLogin.value
-                                ? Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                      color: Colors.white,
-                                    )
-                                : Theme.of(context).textTheme.bodyMedium,
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(height: 5),
+                Obx(
+                  () => Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          isLogin.value = true;
+                        },
+                        child: Container(
+                          height: 40,
+                          width: isLogin.value ? MediaQuery.sizeOf(context).width / 2.0 : MediaQuery.sizeOf(context).width / 3.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: isLogin.value ? Theme.of(context).colorScheme.primary : Colors.grey,
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Exam Sheet",
+                              style: isLogin.value
+                                  ? Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                        color: Colors.white,
+                                      )
+                                  : Theme.of(context).textTheme.bodyMedium,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        isLogin.value = false;
-                      },
-                      child: Container(
-                        height: 40,
-                        width: isLogin.value ? MediaQuery.sizeOf(context).width / 3.0 : MediaQuery.sizeOf(context).width / 2.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: isLogin.value ? Colors.grey : Theme.of(context).colorScheme.primary,
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Unit Test",
-                            style: isLogin.value
-                                ? Theme.of(context).textTheme.bodyMedium
-                                : Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                      color: Colors.white,
-                                    ),
+                      InkWell(
+                        onTap: () {
+                          isLogin.value = false;
+                        },
+                        child: Container(
+                          height: 40,
+                          width: isLogin.value ? MediaQuery.sizeOf(context).width / 3.0 : MediaQuery.sizeOf(context).width / 2.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: isLogin.value ? Colors.grey : Theme.of(context).colorScheme.primary,
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Unit Test",
+                              style: isLogin.value
+                                  ? Theme.of(context).textTheme.bodyMedium
+                                  : Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                        color: Colors.white,
+                                      ),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Obx(
-                () => isLogin.value ? ExamSheetDetails() : UnitTestDetails(),
-              )
-            ],
+                Obx(
+                  () => isLogin.value ? ExamSheetDetails() : UnitTestDetails(),
+                )
+              ],
+            ),
           )
         ],
       ),
