@@ -31,14 +31,16 @@ class TransportPage extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          Column(
-            children: [
-              BusInfoPage(),
-              const SizedBox(height: 20),
-              DriverInfoPage(),
-              const SizedBox(height: 20),
-              HelplinePage()
-            ],
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                BusInfoPage(),
+                const SizedBox(height: 20),
+                DriverInfoPage(),
+                const SizedBox(height: 20),
+                HelplinePage()
+              ],
+            ),
           )
         ],
       ),
