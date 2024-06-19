@@ -11,13 +11,13 @@ class MyProgressIndicator extends StatelessWidget {
     return Column(
       children: [
         CircularPercentIndicator(
-          radius: 60.0,
+          radius: 50.0,
           lineWidth: 10.0,
           percent: percent,
           center: Flexible(
             child: Text(
               lable,
-              style: Theme.of(context).textTheme.bodySmall,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
           circularStrokeCap: CircularStrokeCap.round,
