@@ -21,7 +21,7 @@ class ExamSheetDetails extends StatelessWidget {
             children: [
               Text(
                 "Exam Sheet",
-                style: Theme.of(context).textTheme.displaySmall,
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
               const SizedBox(height: 10),
               Container(color: Colors.black, height: 0.7),

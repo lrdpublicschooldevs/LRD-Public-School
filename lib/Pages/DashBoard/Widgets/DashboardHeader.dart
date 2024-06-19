@@ -18,7 +18,7 @@ class DashboardHeader extends StatelessWidget {
             children: [
               Text(
                 "Hi Student",
-                style: Theme.of(context).textTheme.displaySmall,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               Text(
                 "Class : 3rd | Sec : A",

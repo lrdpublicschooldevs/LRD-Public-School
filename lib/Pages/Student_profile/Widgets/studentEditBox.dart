@@ -16,7 +16,7 @@ class StudentEditDetail extends StatelessWidget {
         ),
         Text(
           detail,
-          style: Theme.of(context).textTheme.bodyLarge,
+          style: Theme.of(context).textTheme.labelLarge,
         ),
       ],
     );

@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                       Center(
                         child: Text(
                           'Sign in to continue',
-                          style: Theme.of(context).textTheme.displaySmall,
+                          style: Theme.of(context).textTheme.headlineLarge,
                         ),
                       ),
                       const SizedBox(height: 30),

@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Exam/ExamPage.dart';
+import 'package:myapp/Pages/Transport/TransortPage.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -28,10 +29,10 @@ class DashboardBody extends StatelessWidget {
                 ),
                 color: Theme.of(context).colorScheme.primary,
               ),
-              child: const Center(
+              child: Center(
                 child: Text(
                   "DashBoard",
-                  style: TextStyle(fontSize: 24, color: Colors.white),
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white),
                 ),
               ),
             ),
@@ -46,7 +47,9 @@ class DashboardBody extends StatelessWidget {
                 ),
                 children: [
                   DashboardBox(context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
-                  DashboardBox(context, () {}, AssetsIamge.dTransportSVG, "Transport"),
+                  DashboardBox(context, () {
+                    Get.to(TransportPage());
+                  }, AssetsIamge.dTransportSVG, "Transport"),
                   DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
                   DashboardBox(context, () {}, AssetsIamge.dNotificationSVG, "Notification"),
                   DashboardBox(context, () {
@@ -75,8 +78,8 @@ class DashboardBody extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 90,
-        width: 90,
+        // height: 90,
+        // width: 90,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,

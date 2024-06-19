@@ -22,7 +22,7 @@ class PrimaryBtn extends StatelessWidget {
           children: [
             Text(
               btnName,
-              style: TextStyle(fontSize: 18, color: Colors.white),
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
             )
           ],
         ),

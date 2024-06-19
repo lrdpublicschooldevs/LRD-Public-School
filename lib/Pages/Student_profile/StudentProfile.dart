@@ -19,7 +19,7 @@ class StudentProfilePage extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Student Profile",
-          style: Theme.of(context).textTheme.displaySmall,
+          style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
           onTap: () {},
@@ -49,11 +49,12 @@ class StudentProfilePage extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
+                        const SizedBox(height: 10),
                         Text(
                           "User Detail's",
-                          style: Theme.of(context).textTheme.displaySmall,
+                          style: Theme.of(context).textTheme.headlineLarge,
                         ),
-                        const SizedBox(height: 5),
+                        const SizedBox(height: 10),
                         Container(
                           height: 1,
                           width: 290,

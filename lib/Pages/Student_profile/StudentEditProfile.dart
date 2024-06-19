@@ -15,7 +15,7 @@ class StudentEditProfile extends StatelessWidget {
           centerTitle: true,
           title: Text(
             "Student Edit Profile",
-            style: Theme.of(context).textTheme.displaySmall,
+            style: Theme.of(context).textTheme.displayMedium,
           ),
           leading: InkWell(
             onTap: () {},

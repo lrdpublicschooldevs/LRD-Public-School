@@ -19,7 +19,7 @@ class ExamPage extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Exam Sheet",
-          style: Theme.of(context).textTheme.displaySmall,
+          style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
           onTap: () {},
