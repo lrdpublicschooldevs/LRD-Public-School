@@ -170,6 +170,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "percent_indicator",
+      "rootUri": "file:///C:/Users/ASUS/AppData/Local/Pub/Cache/hosted/pub.dev/percent_indicator-4.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///C:/Users/ASUS/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-6.0.2",
       "packageUri": "lib/",
@@ -272,7 +278,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-06-19T00:16:41.366401Z",
+  "generated": "2024-06-20T07:29:48.235232Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }

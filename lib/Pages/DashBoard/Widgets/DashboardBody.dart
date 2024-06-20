@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/Exam/ExamPage.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -61,7 +63,9 @@ class DashboardBody extends StatelessWidget {
                       DashboardBox(context, () {}, AssetsIamge.dTransportSVG, "Transport"),
                       DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
                       DashboardBox(context, () {}, AssetsIamge.dNotificationSVG, "Notification"),
-                      DashboardBox(context, () {}, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
+                      DashboardBox(context, () {
+                        Get.to(ExamPage());
+                      }, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
                       DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
                       DashboardBox(context, () {}, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
                       DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
