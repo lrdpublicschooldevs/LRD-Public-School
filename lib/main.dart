@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'LRD Public School',
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.ltudent page ""
+        "ight,
       home: const SplashScreen(),
     );
   }

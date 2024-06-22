@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Leave/Widgets/LeaveSheetBox.dart';
+import 'package:myapp/Pages/Student_profile/Leave/Widgets/LeaveSheetBox.dart';
 
 class LeaveForm extends StatefulWidget {
   @override
@@ -35,9 +35,7 @@ class _LeaveFormState extends State<LeaveForm> {
             height: double.infinity,
           ),
           ListView(
-            children: [
-              LeaveSheetBox()
-            ],
+            children: [LeaveSheetBox()],
           ),
         ],
       ),

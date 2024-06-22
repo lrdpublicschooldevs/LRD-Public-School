@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Exam/ExamPage.dart';
-import 'package:myapp/Pages/Leave/LeaveForm.dart';
+import 'package:myapp/Pages/Student_profile/Exam/ExamPage.dart';
+import 'package:myapp/Pages/Student_profile/Leave/LeaveForm.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -49,7 +49,8 @@ class DashboardBody extends StatelessWidget {
                     crossAxisCount = 5;
                   } else {
                     // Desktop view
-                    crossAxisCount = (constraints.maxWidth / 200).floor(); // Dynamically calculate columns
+                    crossAxisCount = (constraints.maxWidth / 200)
+                        .floor(); // Dynamically calculate columns
                   }
 
                   return GridView(
@@ -60,25 +61,38 @@ class DashboardBody extends StatelessWidget {
                       mainAxisSpacing: 10,
                     ),
                     children: [
-                      DashboardBox(context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
-                      DashboardBox(context, () {}, AssetsIamge.dTransportSVG, "Transport"),
-                      DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
-                      DashboardBox(context, () {}, AssetsIamge.dNotificationSVG, "Notification"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
+                      DashboardBox(context, () {}, AssetsIamge.dTransportSVG,
+                          "Transport"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dLibrarySVG, "Library"),
+                      DashboardBox(context, () {}, AssetsIamge.dNotificationSVG,
+                          "Notification"),
                       DashboardBox(context, () {
                         Get.to(ExamPage());
                       }, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
-                      DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
+                      DashboardBox(context, () {},
+                          AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
                       DashboardBox(context, () {
                         Get.to(LeaveForm());
                       }, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
-                      DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
-                      DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Ask Doubt"),
-                      DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),
-                      DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
-                      DashboardBox(context, () {}, AssetsIamge.dOfficialDetailsSVG, "Official Details"),
-                      DashboardBox(context, () {}, AssetsIamge.dClassTeacherSVG, "   Class\nTeachers"),
-                      DashboardBox(context, () {}, AssetsIamge.dReportCardSVG, "Report Card"),
-                      DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
+                      DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG,
+                          "Time Table"),
+                      DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG,
+                          "Ask Doubt"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
+                      DashboardBox(context, () {},
+                          AssetsIamge.dOfficialDetailsSVG, "Official Details"),
+                      DashboardBox(context, () {}, AssetsIamge.dClassTeacherSVG,
+                          "   Class\nTeachers"),
+                      DashboardBox(context, () {}, AssetsIamge.dReportCardSVG,
+                          "Report Card"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
                     ],
                   );
                 },
@@ -90,7 +104,8 @@ class DashboardBody extends StatelessWidget {
     );
   }
 
-  Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath, String iconName) {
+  Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath,
+      String iconName) {
     return InkWell(
       onTap: onTap,
       child: Container(
