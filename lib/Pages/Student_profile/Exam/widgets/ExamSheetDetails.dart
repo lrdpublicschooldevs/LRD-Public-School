@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/Exam/widgets/ExamSheetLabel.dart';
+import 'package:myapp/Pages/Student_profile/Exam/widgets/ExamSheetLabel.dart';
 
 class ExamSheetDetails extends StatelessWidget {
   const ExamSheetDetails({super.key});

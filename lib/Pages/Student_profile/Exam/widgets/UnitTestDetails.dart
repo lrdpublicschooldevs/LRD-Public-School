@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/Exam/widgets/UnitBoxLabel.dart';
+import 'package:myapp/Pages/Student_profile/Exam/widgets/UnitBoxLabel.dart';
 
 class UnitTestDetails extends StatelessWidget {
   const UnitTestDetails({super.key});
