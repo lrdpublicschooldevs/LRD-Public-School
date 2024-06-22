@@ -39,17 +39,25 @@ class WelcomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 10),
-                Text(
-                  'Welcome to', // Add text between the buttons
-                  style: Theme.of(context).textTheme.displayMedium,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Welcome to', // Add text between the buttons
+                      style: Theme.of(context).textTheme.displayMedium,
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'LRD Public School', // Add text between the buttons
+                      style: Theme.of(context).textTheme.displayMedium,
+                    ),
+                  ],
+                ),
 
-                Text(
-                  'LRD Public School', // Add text between the buttons
-                  style: Theme.of(context).textTheme.displayMedium,
-                ),
                 const SizedBox(
                   height: 25,
                 ),

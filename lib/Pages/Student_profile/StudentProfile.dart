@@ -85,7 +85,7 @@ class StudentProfilePage extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   PrimaryBtn(
-                                    btnName: "       Edit Profile       ",
+                                    btnName: "Edit Profile",
                                     ontap: () {
                                       Get.to(StudentEditProfile());
                                     },

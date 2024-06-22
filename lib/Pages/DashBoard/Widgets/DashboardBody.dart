@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Exam/ExamPage.dart';
-import 'package:myapp/Pages/Transport/TransortPage.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -36,7 +35,7 @@ class DashboardBody extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             Expanded(
               child: GridView(
                 padding: const EdgeInsets.only(left: 10, right: 10),
@@ -47,9 +46,7 @@ class DashboardBody extends StatelessWidget {
                 ),
                 children: [
                   DashboardBox(context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
-                  DashboardBox(context, () {
-                    Get.to(TransportPage());
-                  }, AssetsIamge.dTransportSVG, "Transport"),
+                  DashboardBox(context, () {}, AssetsIamge.dTransportSVG, "Transport"),
                   DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
                   DashboardBox(context, () {}, AssetsIamge.dNotificationSVG, "Notification"),
                   DashboardBox(context, () {
@@ -67,7 +64,7 @@ class DashboardBody extends StatelessWidget {
                   DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -89,12 +86,15 @@ class DashboardBody extends StatelessWidget {
           children: [
             SvgPicture.asset(
               iconPath,
+              width: 50, // Fixed width
+              height: 50, // Fixed height
               color: Colors.black,
             ),
             Text(
               iconName,
               style: Theme.of(context).textTheme.bodyMedium,
-            )
+              textAlign: TextAlign.center, // Center align the text
+            ),
           ],
         ),
       ),

@@ -15,6 +15,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool _obscurePassword = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                       Center(
                         child: Text(
                           'Sign in to continue',
-                          style: Theme.of(context).textTheme.headlineLarge,
+                          style: Theme.of(context).textTheme.displaySmall,
                         ),
                       ),
                       const SizedBox(height: 30),
