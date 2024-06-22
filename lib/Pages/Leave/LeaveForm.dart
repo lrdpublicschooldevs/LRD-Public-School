@@ -19,7 +19,7 @@ class _LeaveFormState extends State<LeaveForm> {
         centerTitle: true,
         title: Text(
           "Leave Sheet",
-          style: Theme.of(context).textTheme.displaySmall,
+          style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
           onTap: () {},
