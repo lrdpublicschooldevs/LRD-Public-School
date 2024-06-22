@@ -52,7 +52,7 @@ class StudentProfilePage extends StatelessWidget {
                         const SizedBox(height: 10),
                         Text(
                           "User Detail's",
-                          style: Theme.of(context).textTheme.headlineLarge,
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         const SizedBox(height: 10),
                         Container(
