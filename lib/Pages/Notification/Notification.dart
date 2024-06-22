@@ -14,7 +14,7 @@ class NotificationPage extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Notifications",
-          style: Theme.of(context).textTheme.displaySmall,
+          style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
           onTap: () {},
