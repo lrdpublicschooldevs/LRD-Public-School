@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
@@ -35,70 +34,6 @@ class ExamPage extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-<<<<<<< HEAD:lib/Pages/Student_profile/Exam/ExamPage.dart
-          Column(
-            children: [
-              Obx(
-                () => Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        isLogin.value = true;
-                      },
-                      child: Container(
-                        height: 40,
-                        width: isLogin.value
-                            ? MediaQuery.sizeOf(context).width / 2.0
-                            : MediaQuery.sizeOf(context).width / 3.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: isLogin.value
-                              ? Theme.of(context).colorScheme.primary
-                              : Colors.grey,
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Exam Sheet",
-                            style: isLogin.value
-                                ? Theme.of(context)
-                                    .textTheme
-                                    .bodyLarge
-                                    ?.copyWith(
-                                      color: Colors.white,
-                                    )
-                                : Theme.of(context).textTheme.bodyMedium,
-                          ),
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        isLogin.value = false;
-                      },
-                      child: Container(
-                        height: 40,
-                        width: isLogin.value
-                            ? MediaQuery.sizeOf(context).width / 3.0
-                            : MediaQuery.sizeOf(context).width / 2.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: isLogin.value
-                              ? Colors.grey
-                              : Theme.of(context).colorScheme.primary,
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Unit Test",
-                            style: isLogin.value
-                                ? Theme.of(context).textTheme.bodyMedium
-                                : Theme.of(context)
-                                    .textTheme
-                                    .bodyLarge
-                                    ?.copyWith(
-                                      color: Colors.white,
-                                    ),
-=======
           SingleChildScrollView(
             child: Column(
               children: [
@@ -113,16 +48,23 @@ class ExamPage extends StatelessWidget {
                         },
                         child: Container(
                           height: 40,
-                          width: isLogin.value ? MediaQuery.sizeOf(context).width / 2.0 : MediaQuery.sizeOf(context).width / 3.0,
+                          width: isLogin.value
+                              ? MediaQuery.sizeOf(context).width / 2.0
+                              : MediaQuery.sizeOf(context).width / 3.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: isLogin.value ? Theme.of(context).colorScheme.primary : Colors.grey,
+                            color: isLogin.value
+                                ? Theme.of(context).colorScheme.primary
+                                : Colors.grey,
                           ),
                           child: Center(
                             child: Text(
                               "Exam Sheet",
                               style: isLogin.value
-                                  ? Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                  ? Theme.of(context)
+                                      .textTheme
+                                      .bodyLarge
+                                      ?.copyWith(
                                         color: Colors.white,
                                       )
                                   : Theme.of(context).textTheme.bodyMedium,
@@ -136,21 +78,27 @@ class ExamPage extends StatelessWidget {
                         },
                         child: Container(
                           height: 40,
-                          width: isLogin.value ? MediaQuery.sizeOf(context).width / 3.0 : MediaQuery.sizeOf(context).width / 2.0,
+                          width: isLogin.value
+                              ? MediaQuery.sizeOf(context).width / 3.0
+                              : MediaQuery.sizeOf(context).width / 2.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: isLogin.value ? Colors.grey : Theme.of(context).colorScheme.primary,
+                            color: isLogin.value
+                                ? Colors.grey
+                                : Theme.of(context).colorScheme.primary,
                           ),
                           child: Center(
                             child: Text(
                               "Unit Test",
                               style: isLogin.value
                                   ? Theme.of(context).textTheme.bodyMedium
-                                  : Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                  : Theme.of(context)
+                                      .textTheme
+                                      .bodyLarge
+                                      ?.copyWith(
                                         color: Colors.white,
                                       ),
                             ),
->>>>>>> 8d8aa630c150200f6c96861ac4e82e6aa42d2441:lib/Pages/Exam/ExamPage.dart
                           ),
                         ),
                       ),
