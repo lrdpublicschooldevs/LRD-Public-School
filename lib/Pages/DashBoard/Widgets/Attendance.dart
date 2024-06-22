@@ -32,7 +32,7 @@ class AttendanceCard extends StatelessWidget {
                   children: [
                     Text(
                       "Attendence",
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white),
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
                     ),
                     Icon(
                       Icons.info,
@@ -48,7 +48,7 @@ class AttendanceCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(right: 10, left: 10),
+                  padding: const EdgeInsets.only(right: 10, left: 10, top: 5),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -62,10 +62,10 @@ class AttendanceCard extends StatelessWidget {
                         ),
                         child: Text(
                           "Attendance : 90%",
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ),
-                      const SizedBox(height: 5),
+                      const SizedBox(height: 10),
                       Container(
                         height: 30,
                         width: 170,
@@ -76,10 +76,10 @@ class AttendanceCard extends StatelessWidget {
                         ),
                         child: Text(
                           "Attendance : 90%",
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ),
-                      const SizedBox(height: 5),
+                      const SizedBox(height: 10),
                       Row(
                         children: [
                           PrimaryBtn(btnName: "More Details", ontap: () {}),
@@ -90,7 +90,8 @@ class AttendanceCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                MyProgressIndicator(percent: 0.75, lable: "75% \n April"),
+                MyProgressIndicator(percent: 0.75, lable: " 75% \n April"),
+                SizedBox(width: 5)
               ],
             ),
             const SizedBox(height: 10),
