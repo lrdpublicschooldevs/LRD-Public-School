@@ -23,7 +23,9 @@ class ExamPage extends StatelessWidget {
           style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
-          onTap: () {},
+          onTap: () {
+            Get.back();
+          },
           child: const Icon(Icons.arrow_back_ios_new_outlined),
         ),
       ),
