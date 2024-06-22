@@ -9,7 +9,6 @@ class UnitTestDetails extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
       child: Container(
-        width: 350,
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -21,7 +20,7 @@ class UnitTestDetails extends StatelessWidget {
             children: [
               Text(
                 "Unit Text",
-                style: Theme.of(context).textTheme.displaySmall,
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
               const SizedBox(height: 10),
               Container(color: Colors.black, height: 0.7),
