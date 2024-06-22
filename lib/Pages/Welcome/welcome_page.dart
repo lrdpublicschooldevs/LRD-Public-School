@@ -44,7 +44,7 @@ class WelcomePage extends StatelessWidget {
                   children: [
                     Text(
                       'Welcome to', // Add text between the buttons
-                      style: Theme.of(context).textTheme.displayMedium,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ],
                 ),
@@ -53,7 +53,7 @@ class WelcomePage extends StatelessWidget {
                   children: [
                     Text(
                       'LRD Public School', // Add text between the buttons
-                      style: Theme.of(context).textTheme.displayMedium,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ],
                 ),
@@ -65,7 +65,7 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     PrimaryBtn(
-                      btnName: '  Student/Parent Login  ',
+                      btnName: 'Student/Parent Login',
                       ontap: () {
                         Get.to(() => LoginPage());
                       },
@@ -78,7 +78,7 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     PrimaryBtn(
-                      btnName: "        Teacher Login        ",
+                      btnName: "Teacher Login",
                       ontap: () {},
                     ),
                   ],
