@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
@@ -138,7 +137,7 @@ class StudentEditProfile extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              PrimaryBtn(btnName: "      Update      ", ontap: () {})
+                              PrimaryBtn(btnName: "Update", ontap: () {})
                             ],
                           ),
                           const SizedBox(height: 20),

@@ -14,6 +14,7 @@ var lightTheme = ThemeData(
   colorScheme: const ColorScheme.light(
     primary: dbuttonColor,
     onPrimary: dContainerColor,
+    outline:  textBold,
     // background: dContainerColor,
     onBackground: dOnBackgroundColor,
     // primaryContainer: dContainerColor,

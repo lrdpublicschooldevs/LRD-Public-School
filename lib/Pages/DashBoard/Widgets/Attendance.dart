@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/DashBoard/Widgets/CircleProgressBar.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class AttendanceCard extends StatelessWidget {
@@ -84,26 +84,16 @@ class AttendanceCard extends StatelessWidget {
                         children: [
                           PrimaryBtn(btnName: "More Details", ontap: () {}),
                           const SizedBox(width: 10),
-                          PrimaryBtn(btnName: " Apr ", ontap: () {})
+                          // PrimaryBtn(btnName: " Apr ", ontap: () {})
                         ],
                       )
                     ],
                   ),
                 ),
-                Container(
-                  height: 120,
-                  width: 100,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Image.asset(
-                      AssetsIamge.attProImg,
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                )
+                MyProgressIndicator(percent: 0.75, lable: "75% \n April"),
               ],
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
           ],
         ),
       ),

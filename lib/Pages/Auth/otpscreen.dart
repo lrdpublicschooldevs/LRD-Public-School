@@ -161,14 +161,13 @@ class _OtpScreenState extends State<OtpScreen> {
                           ),
                         ],
                       ),
-
                       const SizedBox(height: 40),
                       Expanded(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             PrimaryBtn(
-                              btnName: "      Submit       ",
+                              btnName: "Submit",
                               ontap: () {
                                 Get.to(DashboardPage());
                               },
