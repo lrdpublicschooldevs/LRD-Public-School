@@ -117,7 +117,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       Center(
                         child: Text(
                           'OTP Verification',
-                          style: Theme.of(context).textTheme.displaySmall,
+                          style: Theme.of(context).textTheme.headlineLarge,
                         ),
                       ),
                       const SizedBox(height: 25),

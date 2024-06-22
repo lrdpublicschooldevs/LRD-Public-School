@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Exam/ExamPage.dart';
-import 'package:myapp/Pages/Leave/LeaveForm.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -29,59 +28,41 @@ class DashboardBody extends StatelessWidget {
                 ),
                 color: Theme.of(context).colorScheme.primary,
               ),
-              child: const Center(
+              child: Center(
                 child: Text(
                   "DashBoard",
-                  style: TextStyle(fontSize: 24, color: Colors.white),
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white),
                 ),
               ),
             ),
             const SizedBox(height: 20),
             Expanded(
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  int crossAxisCount;
-                  if (constraints.maxWidth < 600) {
-                    // Mobile view
-                    crossAxisCount = 3;
-                  } else if (constraints.maxWidth < 1200) {
-                    // Tablet view
-                    crossAxisCount = 5;
-                  } else {
-                    // Desktop view
-                    crossAxisCount = (constraints.maxWidth / 200).floor(); // Dynamically calculate columns
-                  }
-
-                  return GridView(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: crossAxisCount,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                    ),
-                    children: [
-                      DashboardBox(context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
-                      DashboardBox(context, () {}, AssetsIamge.dTransportSVG, "Transport"),
-                      DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
-                      DashboardBox(context, () {}, AssetsIamge.dNotificationSVG, "Notification"),
-                      DashboardBox(context, () {
-                        Get.to(ExamPage());
-                      }, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
-                      DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
-                      DashboardBox(context, () {
-                        Get.to(LeaveForm());
-                      }, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
-                      DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
-                      DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Ask Doubt"),
-                      DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),
-                      DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
-                      DashboardBox(context, () {}, AssetsIamge.dOfficialDetailsSVG, "Official Details"),
-                      DashboardBox(context, () {}, AssetsIamge.dClassTeacherSVG, "   Class\nTeachers"),
-                      DashboardBox(context, () {}, AssetsIamge.dReportCardSVG, "Report Card"),
-                      DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
-                    ],
-                  );
-                },
+              child: GridView(
+                padding: const EdgeInsets.only(left: 10, right: 10),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                ),
+                children: [
+                  DashboardBox(context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
+                  DashboardBox(context, () {}, AssetsIamge.dTransportSVG, "Transport"),
+                  DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
+                  DashboardBox(context, () {}, AssetsIamge.dNotificationSVG, "Notification"),
+                  DashboardBox(context, () {
+                    Get.to(ExamPage());
+                  }, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
+                  DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
+                  DashboardBox(context, () {}, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
+                  DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
+                  DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Ask Doubt"),
+                  DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),
+                  DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
+                  DashboardBox(context, () {}, AssetsIamge.dOfficialDetailsSVG, "Official Details"),
+                  DashboardBox(context, () {}, AssetsIamge.dClassTeacherSVG, "   Class\nTeachers"),
+                  DashboardBox(context, () {}, AssetsIamge.dReportCardSVG, "Report Card"),
+                  DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
+                ],
               ),
             ),
           ],
@@ -94,8 +75,8 @@ class DashboardBody extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 90,
-        width: 90,
+        // height: 90,
+        // width: 90,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,

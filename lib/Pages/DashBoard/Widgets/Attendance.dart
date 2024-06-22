@@ -25,14 +25,14 @@ class AttendanceCard extends StatelessWidget {
                   topRight: Radius.circular(20),
                 ),
               ),
-              child: const Padding(
+              child: Padding(
                 padding: EdgeInsets.only(left: 15, right: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Attendence",
-                      style: TextStyle(fontSize: 22, color: Colors.white),
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white),
                     ),
                     Icon(
                       Icons.info,
