@@ -41,16 +41,6 @@ class _LeaveFormState extends State<LeaveForm> {
             Column(
               children: [
                 AppBar(
-                  leading: IconButton(
-                    icon: SvgPicture.asset(
-                      'assets/icons/back.svg',
-                      height: 24,
-                      width: 24,
-                    ),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
                   title: Center(child: Text('Leave Form')),
                   backgroundColor: Colors.transparent,
                   elevation: 0,
