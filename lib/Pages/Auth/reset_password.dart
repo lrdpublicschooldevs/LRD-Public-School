@@ -104,7 +104,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           PrimaryBtn(
-                              btnName: "    Upadte    ",
+                              btnName: "Upadte",
                               ontap: () {
                                 Get.to(DashboardPage());
                               })

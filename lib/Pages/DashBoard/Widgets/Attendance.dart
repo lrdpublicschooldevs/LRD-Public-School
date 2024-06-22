@@ -84,7 +84,7 @@ class AttendanceCard extends StatelessWidget {
                         children: [
                           PrimaryBtn(btnName: "More Details", ontap: () {}),
                           const SizedBox(width: 10),
-                          PrimaryBtn(btnName: " Apr ", ontap: () {})
+                          // PrimaryBtn(btnName: " Apr ", ontap: () {})
                         ],
                       )
                     ],
