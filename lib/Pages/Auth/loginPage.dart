@@ -114,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   PrimaryBtn(
-                                    btnName: "      Login      ",
+                                    btnName: "Login",
                                     ontap: () {
                                       Get.to(() => OtpScreen());
                                     },

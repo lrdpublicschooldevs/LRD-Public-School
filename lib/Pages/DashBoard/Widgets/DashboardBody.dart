@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Exam/ExamPage.dart';
+import 'package:myapp/Pages/Leave/LeaveForm.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -67,7 +68,9 @@ class DashboardBody extends StatelessWidget {
                         Get.to(ExamPage());
                       }, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
                       DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
-                      DashboardBox(context, () {}, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
+                      DashboardBox(context, () {
+                        Get.to(LeaveForm());
+                      }, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
                       DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
                       DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Ask Doubt"),
                       DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),

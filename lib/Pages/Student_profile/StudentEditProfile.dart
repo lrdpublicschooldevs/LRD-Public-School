@@ -137,7 +137,7 @@ class StudentEditProfile extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              PrimaryBtn(btnName: "      Update      ", ontap: () {})
+                              PrimaryBtn(btnName: "Update", ontap: () {})
                             ],
                           ),
                           const SizedBox(height: 20),

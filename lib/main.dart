@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
-import 'package:myapp/Pages/Auth/otpscreen.dart';
+import 'package:myapp/Pages/Leave/LeaveForm.dart';
+import 'package:myapp/Pages/Notification/Notification.dart';
+import 'package:myapp/Pages/Student_profile/StudentProfile.dart';
 import 'package:myapp/Widgets/splash_screen.dart';
 
 import 'Pages/DashBoard/dashboard.dart';
-import 'Pages/DashBoard/dashboardRoutes/HomeWork.dart';
 import 'Pages/DashBoard/dashboardRoutes/LeaveForm.dart';
 import 'Pages/DashBoard/dashboardRoutes/Notification.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       themeMode: ThemeMode.light,
-      home: LeaveForm(),
+      home: NotificationPage(),
     );
   }
 }

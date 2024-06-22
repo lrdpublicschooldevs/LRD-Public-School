@@ -12,7 +12,7 @@ class PrimaryBtn extends StatelessWidget {
       highlightColor: Colors.transparent,
       onTap: ontap,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           color: Theme.of(context).colorScheme.primary,
