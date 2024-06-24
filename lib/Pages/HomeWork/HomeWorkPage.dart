@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/HomeWork/widgets/HomeWorkBox.dart';
+import 'package:myapp/Widgets/primaryBtn.dart';
 
 class HomeWorkPage extends StatelessWidget {
   const HomeWorkPage({super.key});
@@ -33,11 +34,71 @@ class HomeWorkPage extends StatelessWidget {
             height: double.infinity,
           ),
           ListView(children: [
-            Container(
-              padding: const EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: const Color.fromRGBO(250, 225, 225, 0.6),
+            HomeWorkBox(
+              labelColor: Colors.yellow,
+              labelName: "Mathematics",
+              subjectName: "Surface Area",
+              assignDate: "27 May 2024",
+              submitDate: "05 June 2024",
+              primBtn: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  PrimaryBtn(
+                    btnName: "Details",
+                    ontap: () {},
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            HomeWorkBox(
+              labelColor: Colors.yellow,
+              labelName: "Mathematics",
+              subjectName: "Surface Area",
+              assignDate: "27 May 2024",
+              submitDate: "05 June 2024",
+              primBtn: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  PrimaryBtn(
+                    btnName: "Details",
+                    ontap: () {},
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            HomeWorkBox(
+              labelColor: Colors.yellow,
+              labelName: "Mathematics",
+              subjectName: "Surface Area",
+              assignDate: "27 May 2024",
+              submitDate: "05 June 2024",
+              primBtn: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  PrimaryBtn(
+                    btnName: "Details",
+                    ontap: () {},
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            HomeWorkBox(
+              labelColor: Colors.yellow,
+              labelName: "Mathematics",
+              subjectName: "Surface Area",
+              assignDate: "27 May 2024",
+              submitDate: "05 June 2024",
+              primBtn: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  PrimaryBtn(
+                    btnName: "Details",
+                    ontap: () {},
+                  ),
+                ],
               ),
             ),
           ])
