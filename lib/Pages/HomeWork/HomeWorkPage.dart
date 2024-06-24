@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -31,7 +32,15 @@ class HomeWorkPage extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          Column(children: [])
+          ListView(children: [
+            Container(
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: const Color.fromRGBO(250, 225, 225, 0.6),
+              ),
+            ),
+          ])
         ],
       ),
     );
