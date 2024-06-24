@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Exam/ExamPage.dart';
+import 'package:myapp/Pages/HomeWork/HomeWorkPage.dart';
 import 'package:myapp/Pages/Leave/LeaveForm.dart';
 import 'package:myapp/Pages/Notification/Notification.dart';
 import 'package:myapp/Pages/Transport/TransortPage.dart';
@@ -48,7 +49,9 @@ class DashboardBody extends StatelessWidget {
                   mainAxisSpacing: 10,
                 ),
                 children: [
-                  DashboardBox(context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
+                  DashboardBox(context, () {
+                    Get.to(HomeWorkPage());
+                  }, AssetsIamge.dHomeworkSVG, "Homework"),
                   DashboardBox(context, () {
                     Get.to(TransportPage());
                   }, AssetsIamge.dTransportSVG, "Transport"),
@@ -84,8 +87,8 @@ class DashboardBody extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        // height: 90,
-        // width: 90,
+        height: 90,
+        width: 90,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,
@@ -95,8 +98,8 @@ class DashboardBody extends StatelessWidget {
           children: [
             SvgPicture.asset(
               iconPath,
-              width: 50, // Fixed width
-              height: 50, // Fixed height
+              width: 40, // Fixed width
+              height: 40, // Fixed height
               color: Colors.black,
             ),
             Text(
