@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/DashBoard/dashboard.dart';
+import 'package:myapp/Pages/Student_Page/DashBoard/dashboard.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class OtpScreen extends StatefulWidget {
