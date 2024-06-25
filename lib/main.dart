@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
-import 'package:flutter/material.dart';
 import 'package:myapp/Widgets/splash_screen.dart';
 
 void main() {
@@ -21,5 +21,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-class NotificationPage {}

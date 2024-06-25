@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Auth/otpscreen.dart';
+import 'package:myapp/Widgets/primaryBtn.dart';
 import 'reset_password.dart';
 
 class LoginPage extends StatefulWidget {
@@ -47,13 +49,13 @@ class _LoginPageState extends State<LoginPage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: const Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
+                color: Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(padding: const EdgeInsets.all(5)),
+                      Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'Sign in to continue',
@@ -87,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: InputDecoration(
                             hintText: 'Enter your password',
                             border: InputBorder.none,
-                            contentPadding: const EdgeInsets.all(16),
+                            contentPadding: EdgeInsets.all(16),
                             suffixIcon: IconButton(
                               icon: Icon(_obscurePassword ? Icons.visibility : Icons.visibility_off),
                               onPressed: () {
@@ -106,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                           PrimaryBtn(
                               btnName: " Login ",
                               ontap: () {
-                                Get.to(() => const OtpScreen());
+                                Get.to(() => OtpScreen());
                               }),
                         ],
                       ),

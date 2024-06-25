@@ -2,16 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_Page/ask_doubt/widgets/askDoubtBox.dart';
 
-class AskDoubtPage extends StatefulWidget {
-  const AskDoubtPage({super.key});
+class BoxContainer extends StatelessWidget {
+  const BoxContainer({super.key});
 
-  @override
-  State<AskDoubtPage> createState() => _AskDoubtPageState();
-}
-
-class _AskDoubtPageState extends State<AskDoubtPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +14,7 @@ class _AskDoubtPageState extends State<AskDoubtPage> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          "Ask Doubt",
+          "Notifications",
           style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
@@ -42,7 +36,13 @@ class _AskDoubtPageState extends State<AskDoubtPage> {
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: ListView(
               children: [
-                AskDoubtBox()
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromRGBO(250, 225, 225, 0.6),
+                  ),
+                ),
               ],
             ),
           )
