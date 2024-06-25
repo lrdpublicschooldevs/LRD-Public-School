@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
-import 'package:myapp/Pages/Fee/FeePage.dart';
+import 'package:myapp/Pages/Notification/Notification.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       themeMode: ThemeMode.light,
-      home: const FeePage(),
+      home: const NotificationPage(),
     );
   }
 }
