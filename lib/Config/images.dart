@@ -6,6 +6,7 @@ class AssetsIamge {
   static const appIconSVG = "$iconsPath/logo 1.svg";
   static const splashBgSVG = "$iconsPath/splashBg.svg";
   static const bgDesignSVG = "$iconsPath/bgDesignLayer.svg";
+  static const checkIconSvg = "$iconsPath/checkmark.svg";
 
   // --- DashBoard Icon ----
   static const dHomeworkSVG = "$iconsPath/Homework.svg";

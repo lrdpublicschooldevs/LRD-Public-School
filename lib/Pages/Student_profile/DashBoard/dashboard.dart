@@ -21,15 +21,18 @@ class DashboardPage extends StatelessWidget {
               width: double.infinity,
               height: double.infinity,
             ),
-            ListView(
-              children: [
-                const SizedBox(height: 10),
-                DashboardHeader(),
-                AttendanceCard(),
-                const SizedBox(height: 20),
-                DashboardBody(),
-                const SizedBox(height: 30)
-              ],
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: ListView(
+                children: [
+                  DashboardHeader(),
+                  const SizedBox(height: 20),
+                  AttendanceCard(),
+                  const SizedBox(height: 20),
+                  DashboardBody(),
+                  const SizedBox(height: 30)
+                ],
+              ),
             ),
           ],
         ));

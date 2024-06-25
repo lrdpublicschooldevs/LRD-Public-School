@@ -20,7 +20,7 @@ class UnitTestDetails extends StatelessWidget {
             children: [
               Text(
                 "Unit Text",
-                style: Theme.of(context).textTheme.headlineLarge,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: 10),
               Container(color: Colors.black, height: 0.7),

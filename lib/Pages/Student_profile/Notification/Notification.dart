@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:expandable/expandable.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/Notification/widgets/NotificationBox.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
@@ -14,7 +14,7 @@ class NotificationPage extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Notifications",
-          style: Theme.of(context).textTheme.displaySmall,
+          style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
           onTap: () {},
@@ -29,140 +29,37 @@ class NotificationPage extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          Column(
-            children: [
-              Expanded(
-                child: ListView(
-                  padding: const EdgeInsets.all(10),
-                  children: List.generate(
-                    3,
-                    (index) => NotificationCard(
-                      notificationType: 'Attendance',
-                      message: 'This is a notification message which can be very long and needs to be expandable to show the complete text.',
-                      iconPath: 'assets/icons/notification.svg',
-                      time: '10:00 AM',
-                      date: '2023-06-20',
-                    ),
-                  ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20, left: 20),
+            child: ListView(
+              children: [
+                NotificationBox(
+                  labelColor: Colors.orange.shade200,
+                  labelName: "  Attenadence  ",
+                  date: "25 June 2024",
+                  time: "08:00 AM",
+                  message: "Attendance of Data Structure Algorithm (21BTCSE1037) is less than 75%",
                 ),
-              ),
-            ],
+                const SizedBox(height: 10),
+                NotificationBox(
+                  labelColor: Colors.green.shade200,
+                  labelName: "  Notice  ",
+                  date: "20 June 2024",
+                  time: "08:00 AM",
+                  message: "Tomorrow class will be suspended for the occasion of Mahashivratri",
+                ),
+                const SizedBox(height: 10),
+                NotificationBox(
+                  labelColor: Colors.yellow.shade200,
+                  labelName: "  Birthday Wish  ",
+                  date: "15 June 2024",
+                  time: "08:00 AM",
+                  message: "Dear Student, wishing you a very happy birthday. Always keep your goals in mind, learn something new everyday and make your life a great sucess.",
+                ),
+              ],
+            ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class NotificationCard extends StatelessWidget {
-  final String notificationType;
-  final String message;
-  final String iconPath;
-  final String time;
-  final String date;
-
-  NotificationCard({
-    required this.notificationType,
-    required this.message,
-    required this.iconPath,
-    required this.time,
-    required this.date,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 10),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: ExpandablePanel(
-        collapsed: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                decoration: BoxDecoration(
-                  color: Colors.red.shade500,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Text(
-                  notificationType,
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Row(
-                children: [
-                  SvgPicture.asset(
-                    iconPath,
-                    width: 24,
-                    height: 24,
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(time),
-                        Text(date),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 10),
-              Text(
-                message,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
-          ),
-        ),
-        expanded: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Text(
-                  notificationType,
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Row(
-                children: [
-                  SvgPicture.asset(
-                    iconPath,
-                    width: 24,
-                    height: 24,
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(time),
-                        Text(date),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 10),
-              Text(message),
-            ],
-          ),
-        ),
       ),
     );
   }

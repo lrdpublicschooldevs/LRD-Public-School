@@ -19,8 +19,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset:
-          false, // Add this line to prevent the screen from resizing when the keyboard is opened
+      resizeToAvoidBottomInset: false, // Add this line to prevent the screen from resizing when the keyboard is opened
       body: Stack(
         children: [
           Positioned.fill(
@@ -30,8 +29,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height *
-                0.1, // Adjust this value as needed
+            top: MediaQuery.of(context).size.height * 0.1, // Adjust this value as needed
             left: 20,
             right: 20,
             child: Image.asset(
@@ -65,7 +63,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                       Center(
                         child: Text(
                           'Reset Password',
-                          style: Theme.of(context).textTheme.displaySmall,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                       ),
                       const SizedBox(height: 30),

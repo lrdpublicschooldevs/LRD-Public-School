@@ -30,123 +30,120 @@ class StudentEditProfile extends StatelessWidget {
               width: double.infinity,
               height: double.infinity,
             ),
-            SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-                    child: Container(
-                      padding: const EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: const Color.fromRGBO(250, 225, 225, 0.6),
-                      ),
-                      child: Column(
-                        children: [
-                          Stack(
+            ListView(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: Container(
+                    padding: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: const Color.fromRGBO(250, 225, 225, 0.6),
+                    ),
+                    child: Column(
+                      children: [
+                        Stack(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.only(top: 20),
+                              height: 150,
+                              width: 160,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(100),
+                                child: Image.asset(
+                                  AssetsIamge.proflePicImg,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              bottom: -10,
+                              right: -10,
+                              child: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.edit),
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                        Padding(
+                          padding: const EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Container(
-                                padding: const EdgeInsets.only(top: 20),
-                                height: 150,
-                                width: 160,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(100),
-                                  child: Image.asset(
-                                    AssetsIamge.proflePicImg,
-                                    fit: BoxFit.contain,
+                              Text(
+                                "Student Email : ",
+                                style: Theme.of(context).textTheme.bodyLarge,
+                              ),
+                              SizedBox(
+                                height: 35,
+                                child: TextField(
+                                  enabled: true,
+                                  decoration: InputDecoration(
+                                    filled: true,
+                                    hintText: "",
+                                    fillColor: Colors.transparent,
+                                    border: UnderlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
                                   ),
                                 ),
                               ),
-                              Positioned(
-                                bottom: -10,
-                                right: -10,
-                                child: IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(Icons.edit),
+                              const SizedBox(height: 20),
+                              Text(
+                                "Contact Number : ",
+                                style: Theme.of(context).textTheme.bodyLarge,
+                              ),
+                              SizedBox(
+                                height: 35,
+                                child: TextField(
+                                  enabled: true,
+                                  decoration: InputDecoration(
+                                    filled: true,
+                                    hintText: "",
+                                    fillColor: Colors.transparent,
+                                    border: UnderlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                  ),
                                 ),
-                              )
+                              ),
+                              const SizedBox(height: 20),
+                              Text(
+                                "Address : ",
+                                style: Theme.of(context).textTheme.bodyLarge,
+                              ),
+                              SizedBox(
+                                height: 35,
+                                child: TextField(
+                                  enabled: true,
+                                  decoration: InputDecoration(
+                                    filled: true,
+                                    hintText: "",
+                                    fillColor: Colors.transparent,
+                                    border: UnderlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5),
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
-                          const SizedBox(height: 20),
-                          Padding(
-                            padding: const EdgeInsets.all(15),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Student Email : ",
-                                  style: Theme.of(context).textTheme.bodyLarge,
-                                ),
-                                SizedBox(
-                                  height: 30,
-                                  child: TextField(
-                                    enabled: true,
-                                    decoration: InputDecoration(
-                                      filled: true,
-                                      hintText: "",
-                                      fillColor: Colors.transparent,
-                                      border: UnderlineInputBorder(
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 20),
-                                Text(
-                                  "Student Email : ",
-                                  style: Theme.of(context).textTheme.bodyLarge,
-                                ),
-                                SizedBox(
-                                  height: 30,
-                                  child: TextField(
-                                    enabled: true,
-                                    decoration: InputDecoration(
-                                      filled: true,
-                                      hintText: "",
-                                      fillColor: Colors.transparent,
-                                      border: UnderlineInputBorder(
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 20),
-                                Text(
-                                  "Contact Number : ",
-                                  style: Theme.of(context).textTheme.bodyLarge,
-                                ),
-                                SizedBox(
-                                  height: 30,
-                                  child: TextField(
-                                    enabled: true,
-                                    decoration: InputDecoration(
-                                      filled: true,
-                                      hintText: "",
-                                      fillColor: Colors.transparent,
-                                      border: UnderlineInputBorder(
-                                        borderRadius: BorderRadius.circular(5),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(height: 30),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              PrimaryBtn(btnName: "Update", ontap: () {})
-                            ],
-                          ),
-                          const SizedBox(height: 20),
-                        ],
-                      ),
+                        ),
+                        const SizedBox(height: 30),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            PrimaryBtn(btnName: "Update", ontap: () {})
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             )
           ],
         ));

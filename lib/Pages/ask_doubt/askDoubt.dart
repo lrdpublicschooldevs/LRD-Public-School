@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_profile/Leave/Widgets/LeaveSheetBox.dart';
+import 'package:myapp/Pages/ask_doubt/widgets/askDoubtBox.dart';
 
-class LeaveForm extends StatefulWidget {
+class AskDoubtPage extends StatefulWidget {
+  const AskDoubtPage({super.key});
+
   @override
-  _LeaveFormState createState() => _LeaveFormState();
+  State<AskDoubtPage> createState() => _AskDoubtPageState();
 }
 
-class _LeaveFormState extends State<LeaveForm> {
+class _AskDoubtPageState extends State<AskDoubtPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +20,13 @@ class _LeaveFormState extends State<LeaveForm> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          "Leave Sheet",
+          "Notifications",
           style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
-          onTap: () {},
+          onTap: () {
+            Get.back();
+          },
           child: const Icon(Icons.arrow_back_ios_new_outlined),
         ),
       ),
@@ -34,9 +38,14 @@ class _LeaveFormState extends State<LeaveForm> {
             width: double.infinity,
             height: double.infinity,
           ),
-          ListView(
-            children: [LeaveSheetBox()],
-          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20, left: 20),
+            child: ListView(
+              children: [
+                AskDoubtBox()
+              ],
+            ),
+          )
         ],
       ),
     );

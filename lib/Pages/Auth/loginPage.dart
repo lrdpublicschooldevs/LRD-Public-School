@@ -19,7 +19,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false, // Add this line to prevent the screen from resizing when the keyboard is opened
       body: Stack(
         children: [
           Positioned.fill(
@@ -45,7 +44,6 @@ class _LoginPageState extends State<LoginPage> {
             left: 20,
             right: 20,
             child: Container(
-              height: 400,
               child: Card(
                 elevation: 8,
                 shape: RoundedRectangleBorder(
@@ -61,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                       Center(
                         child: Text(
                           'Sign in to continue',
-                          style: Theme.of(context).textTheme.displaySmall,
+                          style: Theme.of(context).textTheme.headlineMedium,
                         ),
                       ),
                       const SizedBox(height: 30),
@@ -108,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           PrimaryBtn(
-                              btnName: "      Login      ",
+                              btnName: " Login ",
                               ontap: () {
                                 Get.to(() => OtpScreen());
                               }),
