@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_profile/DashBoard/Widgets/Attendance.dart';
-import 'package:myapp/Pages/Student_profile/DashBoard/Widgets/DashboardBody.dart';
-import 'package:myapp/Pages/Student_profile/DashBoard/Widgets/DashboardHeader.dart';
+import 'package:myapp/Pages/DashBoard/Widgets/Attendance.dart';
+import 'package:myapp/Pages/DashBoard/Widgets/DashboardBody.dart';
+import 'package:myapp/Pages/DashBoard/Widgets/DashboardHeader.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -24,13 +23,13 @@ class DashboardPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(20),
               child: ListView(
-                children: [
+                children: const [
                   DashboardHeader(),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   AttendanceCard(),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   DashboardBody(),
-                  const SizedBox(height: 30)
+                  SizedBox(height: 30)
                 ],
               ),
             ),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_profile/Exam/widgets/ExamSheetDetails.dart';
-import 'package:myapp/Pages/Student_profile/Exam/widgets/UnitTestDetails.dart';
+import 'package:myapp/Pages/Exam/widgets/ExamSheetDetails.dart';
+import 'package:myapp/Pages/Exam/widgets/UnitTestDetails.dart';
 
 class ExamPage extends StatelessWidget {
   const ExamPage({super.key});

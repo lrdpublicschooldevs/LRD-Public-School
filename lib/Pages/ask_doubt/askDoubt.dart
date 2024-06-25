@@ -20,7 +20,7 @@ class _AskDoubtPageState extends State<AskDoubtPage> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          "Notifications",
+          "Ask Doubt",
           style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(

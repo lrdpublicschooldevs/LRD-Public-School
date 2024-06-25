@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/Student_profile/Exam/widgets/ExamSheetLabel.dart';
+import 'package:myapp/Pages/Exam/widgets/ExamSheetLabel.dart';
 
 class ExamSheetDetails extends StatelessWidget {
   const ExamSheetDetails({super.key});
@@ -25,7 +25,7 @@ class ExamSheetDetails extends StatelessWidget {
               const SizedBox(height: 10),
               Container(color: Colors.black, height: 0.7),
               const SizedBox(height: 5),
-              ExamSheetLabel(
+              const ExamSheetLabel(
                 date: '1',
                 subject: "Science",
                 from: "09:00 AM",
@@ -34,7 +34,7 @@ class ExamSheetDetails extends StatelessWidget {
                 to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              ExamSheetLabel(
+              const ExamSheetLabel(
                 date: '2',
                 subject: "Mathmetaics",
                 from: "09:00 AM",
@@ -43,7 +43,7 @@ class ExamSheetDetails extends StatelessWidget {
                 to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              ExamSheetLabel(
+              const ExamSheetLabel(
                 date: '3',
                 subject: "Social Science",
                 from: "09:00 AM",
@@ -52,7 +52,7 @@ class ExamSheetDetails extends StatelessWidget {
                 to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              ExamSheetLabel(
+              const ExamSheetLabel(
                 date: '4',
                 subject: "Hindi",
                 from: "09:00 AM",
@@ -61,7 +61,7 @@ class ExamSheetDetails extends StatelessWidget {
                 to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              ExamSheetLabel(
+              const ExamSheetLabel(
                 date: '5',
                 subject: "English",
                 from: "09:00 AM",
@@ -70,7 +70,7 @@ class ExamSheetDetails extends StatelessWidget {
                 to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              ExamSheetLabel(
+              const ExamSheetLabel(
                 date: '6',
                 subject: "Computer",
                 from: "09:00 AM",

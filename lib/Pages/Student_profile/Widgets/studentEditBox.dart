@@ -12,11 +12,11 @@ class StudentEditDetail extends StatelessWidget {
       children: [
         Text(
           text,
-          style: Theme.of(context).textTheme.bodyMedium,
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         Text(
           detail,
-          style: Theme.of(context).textTheme.bodySmall,
+          style: Theme.of(context).textTheme.labelLarge,
         ),
       ],
     );

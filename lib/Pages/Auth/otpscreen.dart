@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_profile/DashBoard/dashboard.dart';
+import 'package:myapp/Pages/DashBoard/dashboard.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -66,7 +66,7 @@ class _OtpScreenState extends State<OtpScreen> {
             _handleFocusChange(index);
           });
         },
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 16.0, // Adjust font size
           color: Colors.black, // Black text color
           fontWeight: FontWeight.w600, // Semi-bold font weight
@@ -112,14 +112,14 @@ class _OtpScreenState extends State<OtpScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: Color.fromRGBO(
+                color: const Color.fromRGBO(
                     255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(padding: EdgeInsets.all(5)),
+                      const Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'OTP Verification',
@@ -133,7 +133,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
-                      SizedBox(height: 30),
+                      const SizedBox(height: 30),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2),
                         child: ConstrainedBox(
@@ -176,7 +176,7 @@ class _OtpScreenState extends State<OtpScreen> {
                             PrimaryBtn(
                               btnName: "Submit",
                               ontap: () {
-                                Get.to(DashboardPage());
+                                Get.to(const DashboardPage());
                               },
                             ),
                           ],

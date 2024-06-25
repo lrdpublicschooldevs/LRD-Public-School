@@ -5,8 +5,11 @@ import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Exam/ExamPage.dart';
 import 'package:myapp/Pages/HomeWork/HomeWorkPage.dart';
 import 'package:myapp/Pages/Leave/LeaveForm.dart';
-import 'package:myapp/Pages/Notification/Notification.dart';
+import 'package:myapp/Pages/Notification/NotificationPage.dart';
+import 'package:myapp/Pages/Teacher%20Details/TeacherPage.dart';
 import 'package:myapp/Pages/Transport/TransortPage.dart';
+import 'package:myapp/Pages/ask_doubt/askDoubt.dart';
+import 'package:myapp/main.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -72,7 +75,7 @@ class DashboardBody extends StatelessWidget {
                 DashboardBox(
                   context,
                   () {
-                    Get.to(const NotificationPage());
+                    Get.to(const NotificationPage1());
                   },
                   AssetsIamge.dNotificationSVG,
                   "Notification",
@@ -107,7 +110,9 @@ class DashboardBody extends StatelessWidget {
                 ),
                 DashboardBox(
                   context,
-                  () {},
+                  () {
+                    Get.to(const AskDoubtPage());
+                  },
                   AssetsIamge.dAskDoubtSVG,
                   "Ask Doubt",
                 ),
@@ -131,7 +136,9 @@ class DashboardBody extends StatelessWidget {
                 ),
                 DashboardBox(
                   context,
-                  () {},
+                  () {
+                    Get.to(const TeacherPage());
+                  },
                   AssetsIamge.dClassTeacherSVG,
                   "   Class\nTeachers",
                 ),

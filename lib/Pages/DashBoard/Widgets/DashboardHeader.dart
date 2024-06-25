@@ -34,7 +34,7 @@ class DashboardHeader extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-                Get.to(() => StudentProfilePage());
+                Get.to(() =>  StudentProfilePage());
               },
               child: Container(
                 height: 90,

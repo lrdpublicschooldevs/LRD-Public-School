@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_profile/DashBoard/dashboard.dart';
+import 'package:myapp/Pages/DashBoard/dashboard.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
@@ -52,14 +52,14 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: Color.fromRGBO(
+                color: const Color.fromRGBO(
                     255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(padding: EdgeInsets.all(5)),
+                      const Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'Reset Password',
@@ -109,11 +109,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                           PrimaryBtn(
                               btnName: "Upadte",
                               ontap: () {
-                                Get.to(DashboardPage());
+                                Get.to(const DashboardPage());
                               })
                         ],
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                     ],
                   ),
                 ),

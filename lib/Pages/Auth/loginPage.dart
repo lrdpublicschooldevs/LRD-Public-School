@@ -49,13 +49,13 @@ class _LoginPageState extends State<LoginPage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
+                color: const Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(padding: EdgeInsets.all(5)),
+                      const Padding(padding: const EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'Sign in to continue',
@@ -89,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: InputDecoration(
                             hintText: 'Enter your password',
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(16),
+                            contentPadding: const EdgeInsets.all(16),
                             suffixIcon: IconButton(
                               icon: Icon(_obscurePassword ? Icons.visibility : Icons.visibility_off),
                               onPressed: () {
@@ -108,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                           PrimaryBtn(
                               btnName: " Login ",
                               ontap: () {
-                                Get.to(() => OtpScreen());
+                                Get.to(() => const OtpScreen());
                               }),
                         ],
                       ),

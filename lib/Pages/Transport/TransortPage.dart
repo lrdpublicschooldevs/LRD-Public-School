@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Transport/Widgets/BusInfoPage.dart';
 import 'package:myapp/Pages/Transport/Widgets/DiverInfoPage.dart';
@@ -19,7 +20,9 @@ class TransportPage extends StatelessWidget {
           style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
-          onTap: () {},
+          onTap: () {
+            Get.back();
+          },
           child: const Icon(Icons.arrow_back_ios_new_outlined),
         ),
       ),
