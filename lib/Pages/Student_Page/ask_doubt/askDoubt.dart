@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Student_Page/ask_doubt/widgets/askDoubtBox.dart';
 
 class AskDoubtPage extends StatefulWidget {
