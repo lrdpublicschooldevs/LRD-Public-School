@@ -47,31 +47,106 @@ class DashboardBody extends StatelessWidget {
                 mainAxisSpacing: 10,
               ),
               children: [
-                DashboardBox(context, () {
-                  Get.to(HomeWorkPage());
-                }, AssetsIamge.dHomeworkSVG, "Homework"),
-                DashboardBox(context, () {
-                  Get.to(TransportPage());
-                }, AssetsIamge.dTransportSVG, "Transport"),
-                DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
-                DashboardBox(context, () {
-                  Get.to(NotificationPage());
-                }, AssetsIamge.dNotificationSVG, "Notification"),
-                DashboardBox(context, () {
-                  Get.to(ExamPage());
-                }, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
-                DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
-                DashboardBox(context, () {
-                  Get.to(LeaveForm());
-                }, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
-                DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
-                DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Ask Doubt"),
-                DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),
-                DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
-                DashboardBox(context, () {}, AssetsIamge.dOfficialDetailsSVG, "Official Details"),
-                DashboardBox(context, () {}, AssetsIamge.dClassTeacherSVG, "   Class\nTeachers"),
-                DashboardBox(context, () {}, AssetsIamge.dReportCardSVG, "Report Card"),
-                DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
+                DashboardBox(
+                  context,
+                  () {
+                    Get.to(const HomeWorkPage());
+                  },
+                  AssetsIamge.dHomeworkSVG,
+                  "Homework",
+                ),
+                DashboardBox(
+                  context,
+                  () {
+                    Get.to(const TransportPage());
+                  },
+                  AssetsIamge.dTransportSVG,
+                  "Transport",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dLibrarySVG,
+                  "Library",
+                ),
+                DashboardBox(
+                  context,
+                  () {
+                    Get.to(const NotificationPage());
+                  },
+                  AssetsIamge.dNotificationSVG,
+                  "Notification",
+                ),
+                DashboardBox(
+                  context,
+                  () {
+                    Get.to(const ExamPage());
+                  },
+                  AssetsIamge.dExamDatesheetSVG,
+                  "Exam Sheet",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dAcademyCalenderSVG,
+                  "Academy\nCalender",
+                ),
+                DashboardBox(
+                  context,
+                  () {
+                    Get.to(LeaveForm());
+                  },
+                  AssetsIamge.dStudentLeaveSVG,
+                  "Student Leave",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dTimeTableSVG,
+                  "Time Table",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dAskDoubtSVG,
+                  "Ask Doubt",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dSyllabusSVG,
+                  "Syllabus",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dGallerySVG,
+                  "Gallery",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dOfficialDetailsSVG,
+                  "Official Details",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dClassTeacherSVG,
+                  "   Class\nTeachers",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dReportCardSVG,
+                  "Report Card",
+                ),
+                DashboardBox(
+                  context,
+                  () {},
+                  AssetsIamge.dLogoutSVG,
+                  "Logout",
+                ),
               ],
             ),
           ),
