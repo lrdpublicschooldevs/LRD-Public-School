@@ -1,0 +1,93 @@
+import 'package:flutter/material.dart';
+
+class HomeWorkBox extends StatelessWidget {
+  final Color labelColor;
+  final String labelName;
+  final String subjectName;
+  final String assignDate;
+  final String submitDate;
+  final Widget primBtn;
+  const HomeWorkBox({
+    super.key,
+    required this.labelColor,
+    required this.labelName,
+    required this.subjectName,
+    required this.assignDate,
+    required this.submitDate,
+    required this.primBtn,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 20, right: 20),
+      child: Container(
+        padding: const EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: const Color.fromRGBO(250, 225, 225, 0.6),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Card(
+                  color: labelColor,
+                  elevation: 2,
+                  child: Row(
+                    children: [
+                      const SizedBox(width: 5),
+                      const Icon(
+                        Icons.check_circle_outline,
+                        color: Colors.black,
+                        size: 20,
+                      ),
+                      const SizedBox(width: 5),
+                      Text(
+                        labelName,
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
+                      const SizedBox(width: 10),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 15),
+            Text(
+              subjectName,
+              style: Theme.of(context).textTheme.bodyLarge,
+            ),
+            const SizedBox(height: 15),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Assign Date : ", style: Theme.of(context).textTheme.bodyMedium),
+                Text(assignDate, style: Theme.of(context).textTheme.bodyMedium),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Last Submission Date : ", style: Theme.of(context).textTheme.bodyMedium),
+                Text(submitDate, style: Theme.of(context).textTheme.bodyMedium),
+              ],
+            ),
+            const SizedBox(height: 15),
+            Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.9,
+                height: 1,
+                color: Colors.black,
+              ),
+            ),
+            const SizedBox(height: 10),
+            primBtn
+          ],
+        ),
+      ),
+    );
+  }
+}
