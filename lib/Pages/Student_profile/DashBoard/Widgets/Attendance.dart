@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/DashBoard/Widgets/CircleProgressBar.dart';
+import 'package:myapp/Pages/Student_profile/DashBoard/Widgets/CircleProgressBar.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class AttendanceCard extends StatelessWidget {
