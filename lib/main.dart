@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
-import 'package:myapp/Pages/Teacher%20Details/TeacherPage.dart';
+import 'package:myapp/Pages/ask_doubt/askDoubt.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       themeMode: ThemeMode.light,
-      home: const TeacherPage(),
+      home: const AskDoubtPage(),
     );
   }
 }
