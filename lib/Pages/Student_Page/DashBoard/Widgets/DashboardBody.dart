@@ -8,6 +8,7 @@ import 'package:myapp/Pages/Student_Page/Leave/LeaveForm.dart';
 import 'package:myapp/Pages/Student_Page/Notification/NotificationPage.dart';
 import 'package:myapp/Pages/Student_Page/Teacher%20Details/TeacherPage.dart';
 import 'package:myapp/Pages/Student_Page/Transport/TransortPage.dart';
+import 'package:myapp/Pages/Student_Page/academy_Calender/AcademyCalender.dart';
 import 'package:myapp/Pages/Student_Page/ask_doubt/askDoubt.dart';
 import 'package:myapp/Pages/Student_Page/official_Detail/OfficialDetail.dart';
 
@@ -91,7 +92,9 @@ class DashboardBody extends StatelessWidget {
                 ),
                 DashboardBox(
                   context,
-                  () {},
+                  () {
+                    Get.to(const AcademyCalenderPage());
+                  },
                   AssetsIamge.dAcademyCalenderSVG,
                   "Academy\nCalender",
                 ),
@@ -132,7 +135,7 @@ class DashboardBody extends StatelessWidget {
                 DashboardBox(
                   context,
                   () {
-                    Get.to(OfficialDetailPage());
+                    Get.to(const OfficialDetailPage());
                   },
                   AssetsIamge.dOfficialDetailsSVG,
                   "Official Details",
