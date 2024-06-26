@@ -4,6 +4,7 @@ import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/Attendance.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/DashboardBody.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/DashboardHeader.dart';
+import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/Fee.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -28,7 +29,15 @@ class DashboardPage extends StatelessWidget {
                   child: DashboardHeader(),
                 ),
                 SizedBox(height: 15),
-                AttendanceCard(),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      AttendanceCard(),
+                      FeeCard()
+                    ],
+                  ),
+                ),
                 SizedBox(height: 15),
                 DashboardBody(),
                 SizedBox(height: 30)

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/CircleProgressBar.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
-class AttendanceCard extends StatelessWidget {
-  const AttendanceCard({super.key});
+class FeeCard extends StatelessWidget {
+  const FeeCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class AttendanceCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Attendence",
+                  "Fee Detail's",
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
                 ),
                 const Icon(
@@ -42,39 +42,78 @@ class AttendanceCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(10),
             child: Row(
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: 30,
+                      height: 23,
                       width: 170,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.white,
                       ),
-                      child: Text(
-                        "April Attendance : 75%",
-                        style: Theme.of(context).textTheme.bodyMedium,
+                      child: Row(
+                        children: [
+                          const SizedBox(width: 15),
+                          Text(
+                            "Total Fee : 100",
+                            style: Theme.of(context).textTheme.bodyMedium,
+                            textAlign: TextAlign.end,
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 7),
                     Container(
-                      height: 30,
+                      height: 23,
                       width: 170,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.white,
                       ),
-                      child: Text(
-                        "Total Attendance : 90%",
-                        style: Theme.of(context).textTheme.bodyMedium,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            "Paid : 750",
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          Text(
+                            "36 ago",
+                            style: Theme.of(context).textTheme.labelLarge,
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 7),
+                    Container(
+                      height: 23,
+                      width: 170,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            "Pending : 250",
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          Text(
+                            "7 day rem",
+                            style: Theme.of(context).textTheme.labelLarge,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 7),
                     Row(
                       children: [
                         PrimaryBtn(btnName: "More Details", ontap: () {}),
