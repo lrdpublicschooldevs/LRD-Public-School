@@ -10,30 +10,32 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.white,
-        body: Stack(
-          children: [
-            SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: ListView(
+    return SafeArea(
+      child: Scaffold(
+          backgroundColor: Colors.white,
+          body: Stack(
+            children: [
+              SvgPicture.asset(
+                AssetsIamge.bgDesignSVG,
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+              ListView(
                 children: const [
-                  DashboardHeader(),
-                  SizedBox(height: 20),
+                  Padding(
+                    padding: EdgeInsets.only(right: 20, left: 20, top: 10),
+                    child: DashboardHeader(),
+                  ),
+                  SizedBox(height: 15),
                   AttendanceCard(),
-                  SizedBox(height: 20),
+                  SizedBox(height: 15),
                   DashboardBody(),
                   SizedBox(height: 30)
                 ],
               ),
-            ),
-          ],
-        ));
+            ],
+          )),
+    );
   }
 }

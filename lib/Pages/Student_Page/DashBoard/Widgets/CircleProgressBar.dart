@@ -8,24 +8,18 @@ class MyProgressIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CircularPercentIndicator(
-          radius: 50.0,
-          lineWidth: 10.0,
-          percent: percent,
-          center: Flexible(
-            child: Text(
-              lable,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ),
-          circularStrokeCap: CircularStrokeCap.round,
-          animationDuration: 600,
-          backgroundColor: Colors.red,
-          progressColor: Colors.green,
-        ),
-      ],
+    return CircularPercentIndicator(
+      radius: 50.0,
+      lineWidth: 10.0,
+      percent: percent,
+      center: Text(
+        lable,
+        style: Theme.of(context).textTheme.bodyMedium,
+      ),
+      circularStrokeCap: CircularStrokeCap.round,
+      animationDuration: 600,
+      backgroundColor: Colors.red,
+      progressColor: Colors.green,
     );
   }
 }

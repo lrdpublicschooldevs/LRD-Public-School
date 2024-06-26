@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/DashBoardBox.dart';
 import 'package:myapp/Pages/Student_Page/Exam/ExamPage.dart';
 import 'package:myapp/Pages/Student_Page/HomeWork/HomeWorkPage.dart';
 import 'package:myapp/Pages/Student_Page/Leave/LeaveForm.dart';
@@ -9,6 +9,7 @@ import 'package:myapp/Pages/Student_Page/Notification/NotificationPage.dart';
 import 'package:myapp/Pages/Student_Page/Teacher%20Details/TeacherPage.dart';
 import 'package:myapp/Pages/Student_Page/Transport/TransortPage.dart';
 import 'package:myapp/Pages/Student_Page/ask_doubt/askDoubt.dart';
+import 'package:myapp/Pages/Student_Page/official_Detail/OfficialDetail.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -16,6 +17,7 @@ class DashboardBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(right: 20, left: 20),
       height: 570,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -129,7 +131,9 @@ class DashboardBody extends StatelessWidget {
                 ),
                 DashboardBox(
                   context,
-                  () {},
+                  () {
+                    Get.to(OfficialDetailPage());
+                  },
                   AssetsIamge.dOfficialDetailsSVG,
                   "Official Details",
                 ),
@@ -157,34 +161,6 @@ class DashboardBody extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath, String iconName) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: Colors.white,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            SvgPicture.asset(
-              iconPath,
-              width: 40, // Fixed width
-              height: 40, // Fixed height
-              color: Colors.black,
-            ),
-            Text(
-              iconName,
-              style: Theme.of(context).textTheme.bodyMedium,
-              textAlign: TextAlign.center, // Center align the text
-            ),
-          ],
-        ),
       ),
     );
   }
