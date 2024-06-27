@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class StudentEditDetail extends StatelessWidget {
   final String text;
@@ -10,13 +11,21 @@ class StudentEditDetail extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          text,
-          style: Theme.of(context).textTheme.bodyLarge,
+        Container(
+          width: MediaQuery.of(context).size.width * 0.43,
+          child: Text(
+            text,
+            style: Theme.of(context).textTheme.bodyLarge,
+          ),
         ),
-        Text(
-          detail,
-          style: Theme.of(context).textTheme.labelLarge,
+        Expanded(
+          child: Container(
+            width: MediaQuery.of(context).size.width * 0.4,
+            child: Text(
+              detail,
+              style: Theme.of(context).textTheme.labelLarge,
+            ),
+          ),
         ),
       ],
     );
