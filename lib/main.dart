@@ -4,6 +4,8 @@ import 'package:myapp/Config/theme.dart';
 import 'package:myapp/Pages/TeacherPages/TDashboard/dashboard.dart';
 import 'package:myapp/Widgets/splash_screen.dart';
 
+import 'Pages/Student_profile/DashBoard/dashboard.dart';
+
 
 void main() {
   runApp(const MyApp());

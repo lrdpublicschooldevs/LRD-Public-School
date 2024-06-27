@@ -26,11 +26,27 @@ class TDashboardHeader extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelLarge,
               ),
               Card(
-                child: Text(
-                  "  2024 - 25  ",
-                  style: Theme.of(context).textTheme.bodyMedium,
+                elevation: 6,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    gradient: LinearGradient(
+                      colors: [Colors.red.shade100, Colors.white],
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter,
+                    ),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  child: Text(
+                    "  2024 - 25  ",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ),
               )
+
             ],
           ),
           Column(

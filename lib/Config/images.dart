@@ -18,7 +18,7 @@ class AssetsIamge {
   static const dLibrarySVG = "$iconsPath/library.svg";
   static const dLogoutSVG = "$iconsPath/logout.svg";
   static const dNotificationSVG = "$iconsPath/notification.svg";
-  static const dOfficialDetailsSVG = "$iconsPath/officailDetails.svg";
+  static const dOfficialDetailsSVG = "$iconsPath/officialDetail.svg";
   static const dReportCardSVG = "$iconsPath/reportCard.svg";
   static const dStudentLeaveSVG = "$iconsPath/studentLeave.svg";
   static const dSyllabusSVG = "$iconsPath/syllabus.svg";
@@ -29,8 +29,11 @@ class AssetsIamge {
   static const tStdMngSVG = "$iconsPath/TDashboardIcon/stundentManagement.svg";
   static const tAttdMarkingSVG = "$iconsPath/TDashboardIcon/attendanceMarking.svg";
   static const tGradeBookSVG = "$iconsPath/TDashboardIcon/gradeBook.svg";
-  static const tHomeworkManagementSVG = "$iconsPath/TDashboardIcon/homeworkManagement.svg.svg";
+  static const tHomeworkMngSVG = "$iconsPath/TDashboardIcon/homeworkManagement.svg";
   static const tContactParentSVG = "$iconsPath/TDashboardIcon/contactParents.svg";
+  static const tPerformanceRprtSVG = "$iconsPath/TDashboardIcon/performance.svg";
+  static const tLeaveAplicationSVG = "$iconsPath/TDashboardIcon/application.svg";
+  static const tChangePasswordSVG = "$iconsPath/TDashboardIcon/changePassword.svg";
 
 // --- images path file ---
   static const forgotImg = "$imagesPath/forgot.png";
