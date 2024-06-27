@@ -24,6 +24,14 @@ class AssetsIamge {
   static const dSyllabusSVG = "$iconsPath/syllabus.svg";
   static const dTimeTableSVG = "$iconsPath/timeTable.svg";
 
+  // ---Teacher DashBoard Icon ----
+  static const tClassMngSVG = "$iconsPath/TDashboardIcon/classManagement.svg";
+  static const tStdMngSVG = "$iconsPath/TDashboardIcon/stundentManagement.svg";
+  static const tAttdMarkingSVG = "$iconsPath/TDashboardIcon/attendanceMarking.svg";
+  static const tGradeBookSVG = "$iconsPath/TDashboardIcon/gradeBook.svg";
+  static const tHomeworkManagementSVG = "$iconsPath/TDashboardIcon/homeworkManagement.svg.svg";
+  static const tContactParentSVG = "$iconsPath/TDashboardIcon/contactParents.svg";
+
 // --- images path file ---
   static const forgotImg = "$imagesPath/forgot.png";
   static const lockImg = "$imagesPath/lock.png";
