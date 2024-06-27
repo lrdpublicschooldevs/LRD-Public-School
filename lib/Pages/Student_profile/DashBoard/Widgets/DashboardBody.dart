@@ -14,7 +14,7 @@ class DashboardBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: Container(
-        height: 570,
+        height: 500,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: const Color.fromRGBO(250, 225, 225, 0.8),
@@ -33,7 +33,7 @@ class DashboardBody extends StatelessWidget {
               child: const Center(
                 child: Text(
                   "DashBoard",
-                  style: TextStyle(fontSize: 24, color: Colors.white),
+                  style: TextStyle(fontSize: 20, color: Colors.white,fontWeight: FontWeight.w500),
                 ),
               ),
             ),
@@ -110,8 +110,8 @@ class DashboardBody extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 90,
-        width: 90,
+        height: 60,
+        width: 60,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,
@@ -121,9 +121,8 @@ class DashboardBody extends StatelessWidget {
           children: [
             SvgPicture.asset(
               iconPath,
-              width: 50, // Fixed width
-              height: 50, // Fixed height
-              color: Colors.black,
+              width: 35, // Fixed width
+              height: 35, // Fixed height
             ),
             Text(
               iconName,
