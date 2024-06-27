@@ -52,14 +52,14 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: const Color.fromRGBO(
+                color: Color.fromRGBO(
                     255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(padding: EdgeInsets.all(5)),
+                      Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'Reset Password',
@@ -109,11 +109,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                           PrimaryBtn(
                               btnName: "Upadte",
                               ontap: () {
-                                Get.to(const DashboardPage());
+                                Get.to(DashboardPage());
                               })
                         ],
                       ),
-                      const SizedBox(height: 20),
+                      SizedBox(height: 20),
                     ],
                   ),
                 ),

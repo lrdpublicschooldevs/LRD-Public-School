@@ -65,7 +65,7 @@ class _OtpScreenState extends State<OtpScreen> {
             _handleFocusChange(index);
           });
         },
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 16.0, // Adjust font size
           color: Colors.black, // Black text color
           fontWeight: FontWeight.w600, // Semi-bold font weight
@@ -111,14 +111,14 @@ class _OtpScreenState extends State<OtpScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: const Color.fromRGBO(
+                color: Color.fromRGBO(
                     255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(padding: EdgeInsets.all(5)),
+                      Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'OTP Verification',
@@ -132,7 +132,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
-                      const SizedBox(height: 30),
+                      SizedBox(height: 30),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2),
                         child: ConstrainedBox(
@@ -175,7 +175,7 @@ class _OtpScreenState extends State<OtpScreen> {
                             PrimaryBtn(
                               btnName: "Submit",
                               ontap: () {
-                                Get.to(const DashboardPage());
+                                Get.to(DashboardPage());
                               },
                             ),
                           ],
