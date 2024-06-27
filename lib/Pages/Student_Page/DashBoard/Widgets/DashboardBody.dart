@@ -5,6 +5,7 @@ import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/DashBoardBox.dart';
 import 'package:myapp/Pages/Student_Page/Exam/ExamPage.dart';
 import 'package:myapp/Pages/Student_Page/HomeWork/HomeWorkPage.dart';
 import 'package:myapp/Pages/Student_Page/Leave/LeaveForm.dart';
+import 'package:myapp/Pages/Student_Page/Library/LibraryPage.dart';
 import 'package:myapp/Pages/Student_Page/Notification/NotificationPage.dart';
 import 'package:myapp/Pages/Student_Page/Teacher%20Details/TeacherPage.dart';
 import 'package:myapp/Pages/Student_Page/Transport/TransortPage.dart';
@@ -70,7 +71,9 @@ class DashboardBody extends StatelessWidget {
                 ),
                 DashboardBox(
                   context,
-                  () {},
+                  () {
+                    Get.to(const LibraryPage());
+                  },
                   AssetsIamge.dLibrarySVG,
                   "Library",
                 ),
