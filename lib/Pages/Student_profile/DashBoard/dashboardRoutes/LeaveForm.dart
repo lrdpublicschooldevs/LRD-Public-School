@@ -41,7 +41,7 @@ class _LeaveFormState extends State<LeaveForm> {
             Column(
               children: [
                 AppBar(
-                  title: Center(child: Text('Leave Form')),
+                  title:  Center(child: Text('Leave Form')),
                   backgroundColor: Colors.transparent,
                   elevation: 0,
                 ),
