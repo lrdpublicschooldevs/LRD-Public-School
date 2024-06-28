@@ -5,6 +5,7 @@ import 'package:myapp/Pages/TeacherPages/TDashboard/dashboard.dart';
 import 'package:myapp/Widgets/splash_screen.dart';
 
 import 'Pages/Student_profile/DashBoard/dashboard.dart';
+import 'Pages/TeacherPages/AttendanceMark/attendance.dart';
 
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       themeMode: ThemeMode.light,
-      home: TDashboardPage(),
+      home: AttendancePage(),
     );
   }
 }

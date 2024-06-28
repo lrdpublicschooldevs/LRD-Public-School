@@ -14,20 +14,47 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
     Student(name: 'Akshay Kumar', present: false, absent: false),
     Student(name: 'Rajendra Singh Arora', present: false, absent: false),
     Student(name: 'Vijay Joshi', present: false, absent: false),
+    Student(name: 'Anisha singh', present: false, absent: false),
+    Student(name: 'Diksha Rautela', present: false, absent: false),
+    Student(name: 'Manish negi', present: false, absent: false),
     Student(name: 'Ansh Raj', present: false, absent: false),
     Student(name: 'Gracy Singh', present: false, absent: false),
     // Add more students here
   ];
 
+  List<Student> filteredStudents = [];
+
   bool allPresent = false;
+
+  @override
+  void initState() {
+    super.initState();
+    filteredStudents = students; // Initialize filteredStudents with all students
+  }
 
   void markAllPresent(bool value) {
     setState(() {
       allPresent = value;
-      for (var student in students) {
+      for (var student in filteredStudents) {
         student.present = value;
         student.absent = !value;
       }
+    });
+  }
+
+  void filterStudents(String query) {
+    List<Student> results = [];
+    if (query.isEmpty) {
+      results = students;
+    } else {
+      results = students
+          .where((student) =>
+          student.name.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
+
+    setState(() {
+      filteredStudents = results;
     });
   }
 
@@ -113,10 +140,10 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                             filled: true,
                           ),
                           style: const TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w600// Change this to the desired font size
+                            fontSize: 14, // Change this to the desired font size
                           ),
                           onChanged: (value) {
-                            // Implement search functionality
+                            filterStudents(value);
                           },
                         ),
                       ],
@@ -127,20 +154,20 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                 // Student List
                 Expanded(
                   child: ListView.builder(
-                    itemCount: students.length,
+                    itemCount: filteredStudents.length,
                     itemBuilder: (context, index) {
                       return StudentCard(
-                        student: students[index],
+                        student: filteredStudents[index],
                         onPresentChanged: (value) {
                           setState(() {
-                            students[index].present = value;
-                            students[index].absent = !value;
+                            filteredStudents[index].present = value;
+                            filteredStudents[index].absent = !value;
                           });
                         },
                         onAbsentChanged: (value) {
                           setState(() {
-                            students[index].absent = value;
-                            students[index].present = !value;
+                            filteredStudents[index].absent = value;
+                            filteredStudents[index].present = !value;
                           });
                         },
                       );
@@ -159,7 +186,7 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                   ),
                   child: const Text(
                     'Submit Attendance',
-                    style: TextStyle(fontSize: 16,color: Colors.white),
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
               ],
