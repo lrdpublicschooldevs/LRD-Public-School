@@ -177,7 +177,7 @@ class _OtpScreenState extends State<OtpScreen> {
                               btnName: "Submit",
                               ontap: () {
                                 Get.to(DashboardPage());
-                              },
+                              },wd: null,
                             ),
                           ],
                         ),

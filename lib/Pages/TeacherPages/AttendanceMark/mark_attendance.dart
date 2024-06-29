@@ -71,7 +71,7 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
           // Background SVG
           Positioned.fill(
             child: SvgPicture.asset(
-              'assets/background.svg', // Replace with your SVG file path
+              'assets/icons/bgDesignLayer.svg', // Replace with your SVG file path
               fit: BoxFit.cover,
             ),
           ),

@@ -87,7 +87,7 @@ class StudentProfilePage extends StatelessWidget {
                                     btnName: "Edit Profile",
                                     ontap: () {
                                       Get.to(StudentEditProfile());
-                                    },
+                                    },wd: null,
                                   ),
                                 ],
                               ),

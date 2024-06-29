@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class PrimaryBtn extends StatelessWidget {
   final String btnName;
   final VoidCallback ontap;
-  const PrimaryBtn({super.key, required this.btnName, required this.ontap});
+  final double? wd;
+  const PrimaryBtn({super.key, required this.btnName, required this.ontap, required this.wd});
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +12,10 @@ class PrimaryBtn extends StatelessWidget {
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       onTap: ontap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      child: Container(width: wd,
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(25),
           color: Theme.of(context).colorScheme.primary,
         ),
         child: Row(
@@ -22,7 +23,7 @@ class PrimaryBtn extends StatelessWidget {
           children: [
             Text(
               btnName,
-              style: TextStyle(fontSize: 18, color: Colors.white),
+              style: const TextStyle(fontSize: 14, color: Colors.white),
             )
           ],
         ),

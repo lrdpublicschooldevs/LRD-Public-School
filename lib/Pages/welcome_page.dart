@@ -71,7 +71,7 @@ class WelcomePage extends StatelessWidget {
                         btnName: 'Student/Parent Login',
                         ontap: () {
                           Get.to(() => LoginPage());
-                        },
+                        },wd: null,
                       ),
                     ],
                   ),
@@ -82,7 +82,7 @@ class WelcomePage extends StatelessWidget {
                     children: [
                       PrimaryBtn(
                         btnName: "Teacher Login",
-                        ontap: () {},
+                        ontap: () {},wd: null,
                       ),
                     ],
                   ),

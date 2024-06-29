@@ -117,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                                     btnName: "Login",
                                     ontap: () {
                                       Get.to(() => OtpScreen());
-                                    },
+                                    },wd: null,
                                      // Set border radius to 30
                                   ),
                                 ],

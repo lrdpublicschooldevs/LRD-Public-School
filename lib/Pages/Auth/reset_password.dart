@@ -112,7 +112,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                               btnName: "Upadte",
                               ontap: () {
                                 Get.to(DashboardPage());
-                              })
+                              },wd: null,)
                         ],
                       ),
                       SizedBox(height: 20),
