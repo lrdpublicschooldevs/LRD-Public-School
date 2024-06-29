@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/Exam/widgets/UnitBoxLabel.dart';
+import 'package:myapp/Pages/Student_profile/Exam/widgets/ExamSheetLabel.dart';
 
-class UnitTestDetails extends StatelessWidget {
-  const UnitTestDetails({super.key});
+class ExamSheetDetails extends StatelessWidget {
+  const ExamSheetDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
       child: Container(
-        width: 350,
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -20,64 +19,64 @@ class UnitTestDetails extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                "Unit Text",
+                "Exam Sheet",
                 style: Theme.of(context).textTheme.displaySmall,
               ),
               const SizedBox(height: 10),
               Container(color: Colors.black, height: 0.7),
               const SizedBox(height: 5),
-              UnitBoxLabel(
-                date: "1",
+              ExamSheetLabel(
+                date: '1',
                 subject: "Science",
-                peroid: "1st  ",
+                from: "09:00 AM",
                 month: "July",
                 day: "Monday",
-                duration: "30 min",
+                to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              UnitBoxLabel(
-                date: "2",
-                subject: "Mathematics",
-                peroid: "2nd",
+              ExamSheetLabel(
+                date: '2',
+                subject: "Mathmetaics",
+                from: "09:00 AM",
                 month: "July",
                 day: "Tuesday",
-                duration: "30 min",
+                to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              UnitBoxLabel(
-                date: "3",
+              ExamSheetLabel(
+                date: '3',
                 subject: "Social Science",
-                peroid: "3rd ",
+                from: "09:00 AM",
                 month: "July",
                 day: "Wednesday",
-                duration: "30 min",
+                to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              UnitBoxLabel(
-                date: "4",
+              ExamSheetLabel(
+                date: '4',
                 subject: "Hindi",
-                peroid: "4th",
+                from: "09:00 AM",
                 month: "July",
                 day: "Thursday",
-                duration: "30 min",
+                to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              UnitBoxLabel(
-                date: "5",
+              ExamSheetLabel(
+                date: '5',
                 subject: "English",
-                peroid: "5th",
-                month: "Friday",
-                day: "Monday",
-                duration: "30 min",
+                from: "09:00 AM",
+                month: "July",
+                day: "Friday",
+                to: "10:30 AM",
               ),
               Container(color: Colors.black, height: 0.3),
-              UnitBoxLabel(
-                date: "6",
+              ExamSheetLabel(
+                date: '6',
                 subject: "Computer",
-                peroid: "6th",
+                from: "09:00 AM",
                 month: "July",
                 day: "Saturday",
-                duration: "30 min",
+                to: "10:30 AM",
               ),
             ],
           ),

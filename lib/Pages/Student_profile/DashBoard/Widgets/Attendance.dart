@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/DashBoard/Widgets/CircleProgressBar.dart';
+import 'package:myapp/Pages/Student_profile/DashBoard/Widgets/CircleProgressBar.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class AttendanceCard extends StatelessWidget {
@@ -32,7 +32,7 @@ class AttendanceCard extends StatelessWidget {
                   children: [
                     Text(
                       "Attendence",
-                      style: TextStyle(fontSize: 22, color: Colors.white),
+                      style: TextStyle(fontSize: 20, color: Colors.white,fontWeight: FontWeight.w500),
                     ),
                     Icon(
                       Icons.info,
@@ -48,38 +48,38 @@ class AttendanceCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(right: 10, left: 10),
+                  padding: const EdgeInsets.only(right: 5, left: 5,top: 10,bottom: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        height: 30,
-                        width: 170,
+                        height: 40,
+                        width: 200,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                         ),
                         child: Text(
-                          "Attendance : 90%",
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          "April Attendance : 90%",
+                          style: Theme.of(context).textTheme.labelLarge,
                         ),
                       ),
-                      const SizedBox(height: 5),
+                      const SizedBox(height: 10),
                       Container(
-                        height: 30,
-                        width: 170,
+                        height: 40,
+                        width: 200,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                         ),
                         child: Text(
-                          "Attendance : 90%",
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          "Total Attendance : 90%",
+                          style: Theme.of(context).textTheme.labelLarge,
                         ),
                       ),
-                      const SizedBox(height: 5),
+                      const SizedBox(height: 10),
                       Row(
                         children: [
                           PrimaryBtn(btnName: "More Details", ontap: () {}),
@@ -90,7 +90,7 @@ class AttendanceCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                MyProgressIndicator(percent: 0.75, lable: "75% \n April"),
+                MyProgressIndicator(percent: 0.65, lable: " 75% \nApril"),
               ],
             ),
             const SizedBox(height: 10),

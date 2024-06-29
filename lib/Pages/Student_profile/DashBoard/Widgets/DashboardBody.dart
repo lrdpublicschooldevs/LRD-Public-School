@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Exam/ExamPage.dart';
-import 'package:myapp/Pages/Leave/LeaveForm.dart';
+
+import 'package:myapp/Pages/Student_profile/DashBoard/dashboardRoutes/LeaveForm.dart';
+import 'package:myapp/Pages/Student_profile/Exam/ExamPage.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -13,7 +14,7 @@ class DashboardBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: Container(
-        height: 570,
+        height: 500,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: const Color.fromRGBO(250, 225, 225, 0.8),
@@ -32,7 +33,7 @@ class DashboardBody extends StatelessWidget {
               child: const Center(
                 child: Text(
                   "DashBoard",
-                  style: TextStyle(fontSize: 24, color: Colors.white),
+                  style: TextStyle(fontSize: 20, color: Colors.white,fontWeight: FontWeight.w500),
                 ),
               ),
             ),
@@ -49,7 +50,8 @@ class DashboardBody extends StatelessWidget {
                     crossAxisCount = 5;
                   } else {
                     // Desktop view
-                    crossAxisCount = (constraints.maxWidth / 200).floor(); // Dynamically calculate columns
+                    crossAxisCount = (constraints.maxWidth / 200)
+                        .floor(); // Dynamically calculate columns
                   }
 
                   return GridView(
@@ -60,25 +62,38 @@ class DashboardBody extends StatelessWidget {
                       mainAxisSpacing: 10,
                     ),
                     children: [
-                      DashboardBox(context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
-                      DashboardBox(context, () {}, AssetsIamge.dTransportSVG, "Transport"),
-                      DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
-                      DashboardBox(context, () {}, AssetsIamge.dNotificationSVG, "Notification"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dHomeworkSVG, "Homework"),
+                      DashboardBox(context, () {}, AssetsIamge.dTransportSVG,
+                          "Transport"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dLibrarySVG, "Library"),
+                      DashboardBox(context, () {}, AssetsIamge.dNotificationSVG,
+                          "Notification"),
                       DashboardBox(context, () {
                         Get.to(ExamPage());
                       }, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
-                      DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
+                      DashboardBox(context, () {},
+                          AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
                       DashboardBox(context, () {
                         Get.to(LeaveForm());
                       }, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
-                      DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
-                      DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Ask Doubt"),
-                      DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),
-                      DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
-                      DashboardBox(context, () {}, AssetsIamge.dOfficialDetailsSVG, "Official Details"),
-                      DashboardBox(context, () {}, AssetsIamge.dClassTeacherSVG, "   Class\nTeachers"),
-                      DashboardBox(context, () {}, AssetsIamge.dReportCardSVG, "Report Card"),
-                      DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
+                      DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG,
+                          "Time Table"),
+                      DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG,
+                          "Ask Doubt"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
+                      DashboardBox(context, () {},
+                          AssetsIamge.dOfficialDetailsSVG, "Official Details"),
+                      DashboardBox(context, () {}, AssetsIamge.dClassTeacherSVG,
+                          "   Class\nTeachers"),
+                      DashboardBox(context, () {}, AssetsIamge.dReportCardSVG,
+                          "Report Card"),
+                      DashboardBox(
+                          context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
                     ],
                   );
                 },
@@ -90,12 +105,13 @@ class DashboardBody extends StatelessWidget {
     );
   }
 
-  Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath, String iconName) {
+  Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath,
+      String iconName) {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 90,
-        width: 90,
+        height: 60,
+        width: 60,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,
@@ -105,9 +121,8 @@ class DashboardBody extends StatelessWidget {
           children: [
             SvgPicture.asset(
               iconPath,
-              width: 50, // Fixed width
-              height: 50, // Fixed height
-              color: Colors.black,
+              width: 35, // Fixed width
+              height: 35, // Fixed height
             ),
             Text(
               iconName,

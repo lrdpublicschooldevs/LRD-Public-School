@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Student_profile/StudentProfile.dart';
 
-class DashboardHeader extends StatelessWidget {
-  const DashboardHeader({super.key});
+class TDashboardHeader extends StatelessWidget {
+  const TDashboardHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,19 +17,36 @@ class DashboardHeader extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Hi Student",
-                style: Theme.of(context).textTheme.displaySmall,
+                "Hi Teacher",
+                style: Theme.of(context).textTheme.bodyLarge,
+
               ),
               Text(
-                "Class : 3rd | Sec : A",
-                style: Theme.of(context).textTheme.bodyLarge,
+                "Mathematics",
+                style: Theme.of(context).textTheme.labelLarge,
               ),
               Card(
-                child: Text(
-                  "  2024 - 25  ",
-                  style: Theme.of(context).textTheme.bodyMedium,
+                elevation: 6,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    gradient: LinearGradient(
+                      colors: [Colors.red.shade100, Colors.white],
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter,
+                    ),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  child: Text(
+                    "  2024 - 25  ",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ),
               )
+
             ],
           ),
           Column(
@@ -39,8 +56,8 @@ class DashboardHeader extends StatelessWidget {
                   Get.to(() => StudentProfilePage());
                 },
                 child: Container(
-                  height: 90,
-                  width: 90,
+                  height: 70,
+                  width: 70,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(100),
                     child: Image.asset(
