@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:intl/intl.dart'; // Import the intl package
+import 'package:intl/intl.dart';
 
 class MarkAttendancePage extends StatefulWidget {
   const MarkAttendancePage({super.key});
@@ -56,6 +56,20 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
     setState(() {
       filteredStudents = results;
     });
+  }
+
+  void showPopupMessage(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          content: const CustomPopupWidget(),
+        );
+      },
+    );
   }
 
   @override
@@ -179,6 +193,7 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                 ElevatedButton(
                   onPressed: () {
                     // Implement submit functionality
+                    showPopupMessage(context); // Show the popup message on submit
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
@@ -263,4 +278,72 @@ class Student {
   bool absent;
 
   Student({required this.name, required this.present, required this.absent});
+}
+
+class CustomPopupWidget extends StatelessWidget {
+  const CustomPopupWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300, // Adjust the width as needed
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text(
+            '5th B',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'Hindi',
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey,
+            ),
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            '12 Apr 2024\n8:30 a.m. to 9:15 a.m.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey,
+            ),
+          ),
+          const SizedBox(height: 16),
+          const Text(
+            'Attendance has been submitted successfully!',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 16),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+            ),
+            child: const Text(
+              'View Attendance',
+              style: TextStyle(fontSize: 16, color: Colors.white),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
