@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Student_profile/DashBoard/Widgets/Attendance.dart';
