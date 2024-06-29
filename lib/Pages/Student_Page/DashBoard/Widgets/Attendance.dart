@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/CircleProgressBar.dart';
+import 'package:myapp/Pages/Student_Page/attendance/attendancePage.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class AttendanceCard extends StatelessWidget {
@@ -77,7 +79,11 @@ class AttendanceCard extends StatelessWidget {
                     const SizedBox(height: 10),
                     Row(
                       children: [
-                        PrimaryBtn(btnName: "More Details", ontap: () {}),
+                        PrimaryBtn(
+                            btnName: "More Details",
+                            ontap: () {
+                              Get.to(const AttendancePage());
+                            }),
                         const SizedBox(width: 10),
                         // PrimaryBtn(btnName: " Apr ", ontap: () {})
                       ],
