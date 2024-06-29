@@ -88,7 +88,7 @@ class AttendanceCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 1),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
