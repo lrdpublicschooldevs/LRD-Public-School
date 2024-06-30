@@ -23,7 +23,7 @@ class ExamSheetDetails extends StatelessWidget {
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: 10),
-              Container(color: Colors.black, height: 0.7),
+              const Divider(color: Colors.black, height: 1),
               const SizedBox(height: 5),
               const ExamSheetLabel(
                 date: '1',

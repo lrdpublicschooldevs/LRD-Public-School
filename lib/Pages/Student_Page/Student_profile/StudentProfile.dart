@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
@@ -48,56 +47,51 @@ class StudentProfilePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: const Color.fromRGBO(250, 225, 225, 0.6),
                   ),
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 10),
-                      Text(
-                        "User Detail's",
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      ),
-                      const SizedBox(height: 10),
-                      Container(
-                        height: 1,
-                        width: MediaQuery.of(context).size.width * 0.8,
-                        color: Colors.black,
-                      ),
-                      const SizedBox(height: 15),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10, right: 10),
-                        child: Column(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      children: [
+                        Text(
+                          "User Detail's",
+                          style: Theme.of(context).textTheme.headlineSmall,
+                        ),
+                        const SizedBox(height: 10),
+                        const Divider(color: Colors.black, height: 1),
+                        const SizedBox(height: 15),
+                        Column(
                           children: [
-                            StudentEditDetail(text: "Academic Year: ", detail: "2024-25"),
-                            SizedBox(height: 15),
-                            StudentEditDetail(text: "Date of Birth : ", detail: "24/03/2023"),
-                            SizedBox(height: 15),
-                            StudentEditDetail(text: "Date of Admission : ", detail: "24/03/2023"),
-                            SizedBox(height: 15),
-                            StudentEditDetail(text: "Father's Name : ", detail: "XYZZZZZ"),
-                            SizedBox(height: 15),
-                            StudentEditDetail(text: "Mother's Name : ", detail: "XYZZZZZ"),
-                            SizedBox(height: 15),
-                            StudentEditDetail(text: "Student Email : ", detail: "example@gmail.com"),
-                            SizedBox(height: 15),
-                            StudentEditDetail(text: "Contact Number : ", detail: "9999999999"),
-                            SizedBox(height: 15),
-                            StudentEditDetail(text: "Address : ", detail: "xyzzzzz"),
-                            SizedBox(height: 30),
+                            const StudentEditDetail(text: "Academic Year: ", detail: "2024-25"),
+                            const SizedBox(height: 15),
+                            const StudentEditDetail(text: "Date of Birth : ", detail: "24/03/2023"),
+                            const SizedBox(height: 15),
+                            const StudentEditDetail(text: "Date of Admission : ", detail: "24/03/2023"),
+                            const SizedBox(height: 15),
+                            const StudentEditDetail(text: "Father's Name : ", detail: "XYZZZZZ"),
+                            const SizedBox(height: 15),
+                            const StudentEditDetail(text: "Mother's Name : ", detail: "XYZZZZZ"),
+                            const SizedBox(height: 15),
+                            const StudentEditDetail(text: "Student Email : ", detail: "example@gmail.com"),
+                            const SizedBox(height: 15),
+                            const StudentEditDetail(text: "Contact Number : ", detail: "9999999999"),
+                            const SizedBox(height: 15),
+                            const StudentEditDetail(text: "Address : ", detail: "xyzzzzz"),
+                            const SizedBox(height: 30),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 PrimaryBtn(
                                   btnName: "Edit Profile",
                                   ontap: () {
-                                    Get.to(StudentEditProfile());
+                                    Get.to(const StudentEditProfile());
                                   },
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 20),
+                            const SizedBox(height: 5),
                           ],
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               )

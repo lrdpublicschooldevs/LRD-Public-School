@@ -76,13 +76,7 @@ class HomeWorkBox extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 15),
-            Center(
-              child: Container(
-                width: MediaQuery.of(context).size.width * 0.9,
-                height: 1,
-                color: Colors.black,
-              ),
-            ),
+            const Divider(color: Colors.black, height: 1),
             const SizedBox(height: 10),
             primBtn
           ],

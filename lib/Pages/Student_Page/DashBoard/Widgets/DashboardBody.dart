@@ -20,7 +20,7 @@ class DashboardBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(right: 20, left: 20),
-      height: 570,
+      height: MediaQuery.of(context).size.height * 0.5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromRGBO(250, 225, 225, 0.8),
@@ -43,9 +43,10 @@ class DashboardBody extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           Expanded(
             child: GridView(
+              scrollDirection: Axis.vertical,
               padding: const EdgeInsets.only(left: 10, right: 10),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
@@ -166,6 +167,7 @@ class DashboardBody extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 10),
         ],
       ),
     );

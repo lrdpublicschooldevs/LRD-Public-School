@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/CircleProgressBar.dart';
-import 'package:myapp/Widgets/primaryBtn.dart';
+import 'package:myapp/Pages/Student_Page/Fee/FeePage.dart';
 
 class FeeCard extends StatelessWidget {
   const FeeCard({super.key});
@@ -8,7 +9,7 @@ class FeeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 20, left: 20),
+      margin: const EdgeInsets.only(right: 20, left: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromRGBO(250, 225, 225, 0.8),
@@ -18,7 +19,7 @@ class FeeCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(left: 15, right: 15),
             height: 30,
-            width: MediaQuery.of(context).size.width * 0.9,
+            width: MediaQuery.of(context).size.width * 0.81,
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
               borderRadius: const BorderRadius.only(
@@ -42,7 +43,7 @@ class FeeCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.only(top: 10, bottom: 10, left: 5, right: 5),
             child: Row(
               children: [
                 Column(
@@ -116,14 +117,32 @@ class FeeCard extends StatelessWidget {
                     const SizedBox(height: 7),
                     Row(
                       children: [
-                        PrimaryBtn(btnName: "More Details", ontap: () {}),
+                        InkWell(
+                          onTap: () {
+                            Get.to(const FeePage());
+                          },
+                          child: Container(
+                            height: 40,
+                            width: 100,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                            child: Center(
+                              child: Text(
+                                "More Detail",
+                                style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ),
                         const SizedBox(width: 10),
                         // PrimaryBtn(btnName: " Apr ", ontap: () {})
                       ],
                     )
                   ],
                 ),
-                const SizedBox(width: 20),
+                const SizedBox(width: 10),
                 const MyProgressIndicator(percent: 0.75, lable: " 75% \n April"),
               ],
             ),
