@@ -23,13 +23,20 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
   ];
 
   List<Student> filteredStudents = [];
+  final FocusNode _searchFocusNode = FocusNode();
+  final ValueNotifier<bool> _isSearchActive = ValueNotifier<bool>(false);
 
   bool allPresent = false;
 
   @override
   void initState() {
     super.initState();
-    filteredStudents = students; // Initialize filteredStudents with all students
+    filteredStudents =
+        students; // Initialize filteredStudents with all students
+
+    _searchFocusNode.addListener(() {
+      _isSearchActive.value = _searchFocusNode.hasFocus;
+    });
   }
 
   void markAllPresent(bool value) {
@@ -49,7 +56,7 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
     } else {
       results = students
           .where((student) =>
-          student.name.toLowerCase().contains(query.toLowerCase()))
+              student.name.toLowerCase().contains(query.toLowerCase()))
           .toList();
     }
 
@@ -58,7 +65,13 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
     });
   }
 
+  bool isAllAttendanceMarked() {
+    return filteredStudents
+        .every((student) => student.present || student.absent);
+  }
+
   void showPopupMessage(BuildContext context) {
+    bool allMarked = isAllAttendanceMarked();
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -66,7 +79,9 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          content: const CustomPopupWidget(),
+          content: CustomPopupWidget(
+            allMarked: allMarked,
+          ),
         );
       },
     );
@@ -143,6 +158,7 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                         ),
                         const SizedBox(height: 12),
                         TextField(
+                          focusNode: _searchFocusNode,
                           decoration: InputDecoration(
                             prefixIcon: const Icon(Icons.search),
                             hintText: 'Search Student ...',
@@ -154,7 +170,8 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                             filled: true,
                           ),
                           style: const TextStyle(
-                            fontSize: 14, // Change this to the desired font size
+                            fontSize:
+                                14, // Change this to the desired font size
                           ),
                           onChanged: (value) {
                             filterStudents(value);
@@ -190,19 +207,29 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                 ),
                 const SizedBox(height: 12),
                 // Submit Button
-                ElevatedButton(
-                  onPressed: () {
-                    // Implement submit functionality
-                    showPopupMessage(context); // Show the popup message on submit
+                ValueListenableBuilder<bool>(
+                  valueListenable: _isSearchActive,
+                  builder: (context, isSearchActive, child) {
+                    return isSearchActive
+                        ? const SizedBox.shrink()
+                        : ElevatedButton(
+                            onPressed: () {
+                              // Implement submit functionality
+                              showPopupMessage(
+                                  context); // Show the popup message on submit
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 16, horizontal: 32),
+                            ),
+                            child: const Text(
+                              'Submit Attendance',
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
+                            ),
+                          );
                   },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
-                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-                  ),
-                  child: const Text(
-                    'Submit Attendance',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
                 ),
               ],
             ),
@@ -238,7 +265,8 @@ class StudentCard extends StatelessWidget {
         child: Row(
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage('assets/images/profile_pic.png'), // Replace with actual profile image
+              backgroundImage: AssetImage(
+                  'assets/images/profile_pic.png'), // Replace with actual profile image
             ),
             const SizedBox(width: 12),
             Expanded(
@@ -281,7 +309,9 @@ class Student {
 }
 
 class CustomPopupWidget extends StatelessWidget {
-  const CustomPopupWidget({super.key});
+  final bool allMarked;
+
+  const CustomPopupWidget({required this.allMarked, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -295,37 +325,16 @@ class CustomPopupWidget extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
-            '5th B',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(height: 8),
-          const Text(
-            'Hindi',
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.grey,
-            ),
-          ),
-          const SizedBox(height: 8),
-          const Text(
-            '12 Apr 2024\n8:30 a.m. to 9:15 a.m.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.grey,
-            ),
-          ),
           const SizedBox(height: 16),
-          const Text(
-            'Attendance has been submitted successfully!',
+          Text(
+            allMarked
+                ? 'Attendance has been submitted successfully!'
+                : 'You didn\'t mark all student attendance',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
+              color: allMarked ? Colors.green : Colors.black,
             ),
           ),
           const SizedBox(height: 16),
@@ -334,12 +343,13 @@ class CustomPopupWidget extends StatelessWidget {
               Navigator.of(context).pop();
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red,
+              backgroundColor: allMarked ? Colors.green : Colors.red,
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
             ),
-            child: const Text(
-              'View Attendance',
-              style: TextStyle(fontSize: 16, color: Colors.white),
+            child: Text(
+              allMarked ? 'View Attendance' : 'Mark Attendance',
+              style: TextStyle(
+                  fontSize: 16, color: allMarked ? Colors.white : Colors.white),
             ),
           ),
         ],
