@@ -60,7 +60,7 @@ class OfficialStudentDetail extends StatelessWidget {
         children: [
           Text("Student Detail's", style: Theme.of(context).textTheme.headlineMedium),
           const SizedBox(height: 10),
-          Container(height: 1, width: MediaQuery.of(context).size.width * 0.8, color: Colors.black),
+          const Divider(color: Colors.black, height: 1),
           const SizedBox(height: 15),
           ...studentDetails.map((detail) => Column(
                 children: [

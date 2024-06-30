@@ -30,7 +30,7 @@ class TeacherDetailBox extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineMedium,
           ),
           const SizedBox(height: 10),
-          Container(height: 1, width: MediaQuery.of(context).size.width * 0.8, color: Colors.black),
+          const Divider(color: Colors.black, height: 1),
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

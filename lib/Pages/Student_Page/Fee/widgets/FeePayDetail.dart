@@ -39,7 +39,7 @@ class FeePayDetail extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Container(height: 1, width: MediaQuery.of(context).size.width * 0.8, color: Colors.black38),
+          const Divider(color: Colors.black38, height: 1),
           const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -69,7 +69,7 @@ class FeePayDetail extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 15),
-          Container(height: 1, width: MediaQuery.of(context).size.width * 0.8, color: Colors.black38),
+          const Divider(color: Colors.black, height: 1),
           const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
