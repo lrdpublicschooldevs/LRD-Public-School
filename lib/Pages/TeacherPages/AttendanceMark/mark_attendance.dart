@@ -125,7 +125,7 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                       children: [
                         Center(
                           child: Text(
-                            '5th B Hindi',
+                            '5th B Mathematics',
                             style: Theme.of(context).textTheme.bodyLarge,
                           ),
                         ),
@@ -171,8 +171,9 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                           ),
                           style: const TextStyle(
                             fontSize:
-                                14, // Change this to the desired font size
+                                16, // Change this to the desired font size
                           ),
+
                           onChanged: (value) {
                             filterStudents(value);
                           },

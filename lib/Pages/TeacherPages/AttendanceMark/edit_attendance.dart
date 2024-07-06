@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
+import 'student_model.dart';
+import 'editAttendanceForm.dart';
 
 class EditAttendancePage extends StatefulWidget {
   const EditAttendancePage({super.key});
@@ -78,7 +80,7 @@ class EditAttendancePageState extends State<EditAttendancePage> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          content: CustomPopupWidget(),
+          content: const CustomPopupWidget(),
         );
       },
     );
@@ -136,7 +138,7 @@ class EditAttendancePageState extends State<EditAttendancePage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(currentDate),
-                            Text('8:30 a.m. to 9:15 a.m.'),
+                            const Text('8:30 a.m. to 9:15 a.m.'),
                           ],
                         ),
                         const SizedBox(height: 12),
@@ -281,7 +283,7 @@ class StudentCard extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Row(
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               backgroundImage: AssetImage(
                   'assets/images/profile_pic.png'), // Replace with actual profile image
             ),
@@ -311,14 +313,6 @@ class StudentCard extends StatelessWidget {
       ),
     );
   }
-}
-
-class Student {
-  String name;
-  bool present;
-  bool absent;
-
-  Student({required this.name, required this.present, required this.absent});
 }
 
 class CustomPopupWidget extends StatelessWidget {
@@ -369,61 +363,3 @@ class CustomPopupWidget extends StatelessWidget {
   }
 }
 
-class EditAttendanceForm extends StatelessWidget {
-  final Student student;
-  final Function(bool, bool) onAttendanceChanged;
-
-  const EditAttendanceForm({
-    required this.student,
-    required this.onAttendanceChanged,
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Edit Attendance'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Text(
-              student.name,
-              style: Theme.of(context).textTheme.headline6,
-            ),
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text('Present'),
-                Checkbox(
-                  value: student.present,
-                  onChanged: (value) {
-                    if (value != null) {
-                      onAttendanceChanged(value, !value);
-                      Navigator.pop(context);
-                    }
-                  },
-                  activeColor: Colors.green,
-                ),
-                const Text('Absent'),
-                Checkbox(
-                  value: student.absent,
-                  onChanged: (value) {
-                    if (value != null) {
-                      onAttendanceChanged(!value, value);
-                      Navigator.pop(context);
-                    }
-                  },
-                  activeColor: Colors.red,
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
