@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Auth/loginPage.dart';
+import 'package:myapp/Pages/Teacher_Page/Tdashboard/dashboard.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -72,14 +73,16 @@ class WelcomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 // Add spacing between the text and buttons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     PrimaryBtn(
                       btnName: "Teacher Login",
-                      ontap: () {},
+                      ontap: () {
+                        Get.to(const TDashboardPage());
+                      },
                     ),
                   ],
                 ),
