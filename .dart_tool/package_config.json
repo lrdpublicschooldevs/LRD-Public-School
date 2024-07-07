@@ -110,6 +110,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///C:/Users/anshr/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "leak_tracker",
       "rootUri": "file:///C:/Users/anshr/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.0",
       "packageUri": "lib/",
@@ -284,7 +290,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-07-07T09:10:52.711783Z",
+  "generated": "2024-07-07T09:18:17.345362Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }
