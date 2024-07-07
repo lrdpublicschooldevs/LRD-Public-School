@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
-import 'package:myapp/Pages/TeacherPages/TDashboard/dashboard.dart';
-import 'package:myapp/Widgets/splash_screen.dart';
-
-import 'Pages/Student_profile/DashBoard/dashboard.dart';
 import 'Pages/TeacherPages/AttendanceMark/attendance.dart';
 
 
