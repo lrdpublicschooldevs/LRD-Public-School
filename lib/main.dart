@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
 import 'package:myapp/Widgets/splash_screen.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
