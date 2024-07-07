@@ -1,6 +1,7 @@
 class AssetsIamge {
   static const iconsPath = "assets/icons";
   static const imagesPath = "assets/images";
+  static const teacherImagesPath = "assets/icons/TDashboardIcon";
 
 // --- svg path file ---
   static const appIconSVG = "$iconsPath/lrdLogo";
@@ -8,7 +9,7 @@ class AssetsIamge {
   static const bgDesignSVG = "$iconsPath/bgDesignLayer.svg";
   static const checkIconSvg = "$iconsPath/checkmark.svg";
 
-  // --- DashBoard Icon ----
+  // --- Student DashBoard Icon ----
   static const dHomeworkSVG = "$iconsPath/Homework.svg";
   static const dTransportSVG = "$iconsPath/transport.svg";
   static const dAcademyCalenderSVG = "$iconsPath/academyCal.svg";
@@ -24,6 +25,17 @@ class AssetsIamge {
   static const dStudentLeaveSVG = "$iconsPath/studentLeave.svg";
   static const dSyllabusSVG = "$iconsPath/syllabus.svg";
   static const dTimeTableSVG = "$iconsPath/timeTable.svg";
+
+  // --- Teacher DashBoard Icon ----
+  static const tClassMngSVG = "$teacherImagesPath/classManagement.svg";
+  static const tStdMngSVG = "$teacherImagesPath/stundentManagement.svg";
+  static const tAttdMarkingSVG = "$teacherImagesPath/attendanceMarking.svg";
+  static const tHomeworkMngSVG = "$teacherImagesPath/homeworkManagement.svg";
+  static const tGradeBookSVG = "$teacherImagesPath/gradeBook.svg";
+  static const tContactParentSVG = "$teacherImagesPath/contactParents.svg";
+  static const tPerformanceRprtSVG = "$teacherImagesPath/performance.svg";
+  static const tLeaveAplicationSVG = "$teacherImagesPath/application.svg";
+  static const tChangePasswordSVG = "$teacherImagesPath/contactParents.svg";
 
 // --- images path file ---
   static const forgotImg = "$imagesPath/forgot.png";
