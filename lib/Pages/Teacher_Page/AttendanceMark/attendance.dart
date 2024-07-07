@@ -24,7 +24,7 @@ class AttendancePage extends StatelessWidget {
           ),
           ListView(
             padding: const EdgeInsets.all(8.0),
-            children: [
+            children: const[
               AttendanceCard(
                 subject: 'Mathematics',
                 time: '08:00am - 08:40am',

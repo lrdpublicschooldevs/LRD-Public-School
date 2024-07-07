@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/Teacher_Page/AttendanceMark/attendance.dart';
 
 class TDashboardBody extends StatelessWidget {
   const TDashboardBody({super.key});
@@ -29,10 +31,7 @@ class TDashboardBody extends StatelessWidget {
               child: const Center(
                 child: Text(
                   "DashBoard",
-                  style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w500),
                 ),
               ),
             ),
@@ -49,8 +48,7 @@ class TDashboardBody extends StatelessWidget {
                     crossAxisCount = 5;
                   } else {
                     // Desktop view
-                    crossAxisCount = (constraints.maxWidth / 200)
-                        .floor(); // Dynamically calculate columns
+                    crossAxisCount = (constraints.maxWidth / 200).floor(); // Dynamically calculate columns
                   }
 
                   return GridView(
@@ -61,45 +59,26 @@ class TDashboardBody extends StatelessWidget {
                       mainAxisSpacing: 10,
                     ),
                     children: [
-                      DashboardBox(context, () {}, AssetsIamge.tClassMngSVG,
-                          "class Management"),
-                      DashboardBox(context, () {}, AssetsIamge.tStdMngSVG,
-                          "Student Management"),
-                      DashboardBox(context, () {}, AssetsIamge.tAttdMarkingSVG,
-                          "Attendance Marking"),
-                      DashboardBox(context, () {}, AssetsIamge.tGradeBookSVG,
-                          "Gradebook"),
-                      DashboardBox(context, () {}, AssetsIamge.tHomeworkMngSVG,
-                          "Homework Management"),
-                      DashboardBox(context, () {},
-                          AssetsIamge.tContactParentSVG, "Contact Parent"),
-                      DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG,
-                          "Syllabus "),
-                      DashboardBox(
-                          context,
-                          () {},
-                          AssetsIamge.tPerformanceRprtSVG,
-                          "Performance Report"),
-                      DashboardBox(
-                          context, () {}, AssetsIamge.dLibrarySVG, "Library"),
+                      DashboardBox(context, () {}, AssetsIamge.tClassMngSVG, "class Management"),
+                      DashboardBox(context, () {}, AssetsIamge.tStdMngSVG, "Student Management"),
                       DashboardBox(context, () {
-                      }, AssetsIamge.dExamDatesheetSVG, "Exam Datesheet"),
-                      DashboardBox(context, () {},
-                          AssetsIamge.dAcademyCalenderSVG, "Academic Calendar"),
-                      DashboardBox(context, () {
-                      }, AssetsIamge.tLeaveAplicationSVG, "Teacher Leave"),
-                      DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG,
-                          "Time Table"),
-                      DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG,
-                          "Doubt Solving"),
-                      DashboardBox(
-                          context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
-                      DashboardBox(context, () {},
-                          AssetsIamge.dOfficialDetailsSVG, " Official Details"),
-                      DashboardBox(context, () {},
-                          AssetsIamge.tChangePasswordSVG, "Change password"),
-                      DashboardBox(
-                          context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
+                        Get.to(const AttendancePage());
+                      }, AssetsIamge.tAttdMarkingSVG, "Attendance Marking"),
+                      DashboardBox(context, () {}, AssetsIamge.tGradeBookSVG, "Gradebook"),
+                      DashboardBox(context, () {}, AssetsIamge.tHomeworkMngSVG, "Homework Management"),
+                      DashboardBox(context, () {}, AssetsIamge.tContactParentSVG, "Contact Parent"),
+                      DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus "),
+                      DashboardBox(context, () {}, AssetsIamge.tPerformanceRprtSVG, "Performance Report"),
+                      DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
+                      DashboardBox(context, () {}, AssetsIamge.dExamDatesheetSVG, "Exam Datesheet"),
+                      DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academic Calendar"),
+                      DashboardBox(context, () {}, AssetsIamge.tLeaveAplicationSVG, "Teacher Leave"),
+                      DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
+                      DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Doubt Solving"),
+                      DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
+                      DashboardBox(context, () {}, AssetsIamge.dOfficialDetailsSVG, " Official Details"),
+                      DashboardBox(context, () {}, AssetsIamge.tChangePasswordSVG, "Change password"),
+                      DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
                     ],
                   );
                 },
@@ -111,8 +90,7 @@ class TDashboardBody extends StatelessWidget {
     );
   }
 
-  Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath,
-      String iconName) {
+  Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath, String iconName) {
     return InkWell(
       onTap: onTap,
       child: Container(

@@ -68,7 +68,7 @@ class WelcomePage extends StatelessWidget {
                     PrimaryBtn(
                       btnName: 'Student/Parent Login',
                       ontap: () {
-                        Get.to(() => LoginPage());
+                        Get.to(() => const LoginPage());
                       },
                     ),
                   ],
