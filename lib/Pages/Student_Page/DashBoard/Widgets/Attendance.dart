@@ -47,10 +47,11 @@ class AttendanceCard extends StatelessWidget {
             child: Row(
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       height: 30,
-                      width: 170,
+                      width: 200,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -64,7 +65,7 @@ class AttendanceCard extends StatelessWidget {
                     const SizedBox(height: 10),
                     Container(
                       height: 30,
-                      width: 170,
+                      width: 200,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -84,7 +85,7 @@ class AttendanceCard extends StatelessWidget {
                           },
                           child: Container(
                             height: 40,
-                            width: 100,
+                            width: 140,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: Theme.of(context).colorScheme.primary,

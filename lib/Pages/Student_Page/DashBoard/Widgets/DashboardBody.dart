@@ -7,11 +7,13 @@ import 'package:myapp/Pages/Student_Page/HomeWork/HomeWorkPage.dart';
 import 'package:myapp/Pages/Student_Page/Leave/LeaveForm.dart';
 import 'package:myapp/Pages/Student_Page/Library/LibraryPage.dart';
 import 'package:myapp/Pages/Student_Page/Notification/NotificationPage.dart';
+import 'package:myapp/Pages/Student_Page/Report/ReportCard.dart';
 import 'package:myapp/Pages/Student_Page/Teacher%20Details/TeacherPage.dart';
 import 'package:myapp/Pages/Student_Page/Transport/TransortPage.dart';
 import 'package:myapp/Pages/Student_Page/academy_Calender/AcademyCalender.dart';
 import 'package:myapp/Pages/Student_Page/ask_doubt/askDoubt.dart';
 import 'package:myapp/Pages/Student_Page/official_Detail/OfficialDetail.dart';
+import 'package:myapp/Pages/Student_Page/timeTable/timeTablePage.dart';
 
 class DashboardBody extends StatelessWidget {
   const DashboardBody({super.key});
@@ -112,7 +114,9 @@ class DashboardBody extends StatelessWidget {
                 ),
                 DashboardBox(
                   context,
-                  () {},
+                  () {
+                    Get.to(const TimeTablePage());
+                  },
                   AssetsIamge.dTimeTableSVG,
                   "Time Table",
                 ),
@@ -154,7 +158,9 @@ class DashboardBody extends StatelessWidget {
                 ),
                 DashboardBox(
                   context,
-                  () {},
+                  () {
+                    Get.to(const ReportCardPage());
+                  },
                   AssetsIamge.dReportCardSVG,
                   "Report Card",
                 ),
