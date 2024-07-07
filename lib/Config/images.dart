@@ -3,7 +3,7 @@ class AssetsIamge {
   static const imagesPath = "assets/images";
 
 // --- svg path file ---
-  static const appIconSVG = "$iconsPath/logo 1.svg";
+  static const appIconSVG = "$iconsPath/lrdLogo";
   static const splashBgSVG = "$iconsPath/splashBg.svg";
   static const bgDesignSVG = "$iconsPath/bgDesignLayer.svg";
   static const checkIconSvg = "$iconsPath/checkmark.svg";

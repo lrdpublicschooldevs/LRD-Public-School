@@ -51,7 +51,7 @@ class FeeCard extends StatelessWidget {
                   children: [
                     Container(
                       height: 23,
-                      width: 170,
+                      width: 200,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -71,7 +71,7 @@ class FeeCard extends StatelessWidget {
                     const SizedBox(height: 7),
                     Container(
                       height: 23,
-                      width: 170,
+                      width: 200,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -94,7 +94,7 @@ class FeeCard extends StatelessWidget {
                     const SizedBox(height: 7),
                     Container(
                       height: 23,
-                      width: 170,
+                      width: 220,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -123,7 +123,7 @@ class FeeCard extends StatelessWidget {
                           },
                           child: Container(
                             height: 40,
-                            width: 100,
+                            width: 140,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: Theme.of(context).colorScheme.primary,

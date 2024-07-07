@@ -113,6 +113,23 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
                 precentage: "63.3",
               ),
               const Divider(color: Colors.black38, height: 1),
+              const SizedBox(height: 30),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Overall April Attendance : ",
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                  CircleAvatar(
+                    radius: 30,
+                    child: Text(
+                      "45%",
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
+                    ),
+                  )
+                ],
+              ),
             ],
           ),
         ),
