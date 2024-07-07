@@ -7,6 +7,7 @@ import 'package:myapp/Pages/Student_Page/official_Detail/OfficialDetail.dart';
 import 'package:navigation_view/item_navigation_view.dart';
 import 'package:navigation_view/navigation_view.dart';
 
+
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key});
 
