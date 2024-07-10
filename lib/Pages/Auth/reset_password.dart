@@ -6,6 +6,8 @@ import 'package:myapp/Pages/Student_Page/DashBoard/dashboard.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
+  const ResetPasswordScreen({super.key});
+
   @override
   State<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
 }
@@ -13,8 +15,7 @@ class ResetPasswordScreen extends StatefulWidget {
 class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   final _formKey = GlobalKey<FormState>(); // GlobalKey for the form
   final TextEditingController _newPasswordController = TextEditingController();
-  final TextEditingController _confirmPasswordController =
-      TextEditingController();
+  final TextEditingController _confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +42,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
           ),
           // Login Card
           Positioned(
-            top: MediaQuery.of(context).size.height *
-                0.35, // Adjust this value as needed
+            top: MediaQuery.of(context).size.height * 0.35, // Adjust this value as needed
             left: 20,
             right: 20,
             child: Container(
@@ -52,8 +52,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: Color.fromRGBO(
-                    255, 255, 255, 0.8), // Semi-transparent white color
+                color: Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
