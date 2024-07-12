@@ -13,12 +13,10 @@ class OtpScreen extends StatefulWidget {
 }
 
 class _OtpScreenState extends State<OtpScreen> {
-  final _focusNodes =
-      List.generate(6, (_) => FocusNode()); // List of focus nodes
+  final _focusNodes = List.generate(6, (_) => FocusNode()); // List of focus nodes
   final _otpController = TextEditingController(); // To store the complete OTP
 
-  List<String> _otp =
-      List.generate(6, (_) => ''); // Initialize empty list for OTP digits
+  List<String> _otp = List.generate(6, (_) => ''); // Initialize empty list for OTP digits
 
   @override
   void initState() {
@@ -53,8 +51,7 @@ class _OtpScreenState extends State<OtpScreen> {
         decoration: const InputDecoration(
           fillColor: Colors.white, // White background
           filled: true, // Ensure background fills the entire field
-          border:
-              OutlineInputBorder(borderSide: BorderSide.none), // Remove border
+          border: OutlineInputBorder(borderSide: BorderSide.none), // Remove border
           counterText: '', // Hide counter text
           contentPadding: EdgeInsets.symmetric(vertical: 2.0), // Adjust padding
         ),
@@ -65,7 +62,7 @@ class _OtpScreenState extends State<OtpScreen> {
             _handleFocusChange(index);
           });
         },
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 16.0, // Adjust font size
           color: Colors.black, // Black text color
           fontWeight: FontWeight.w600, // Semi-bold font weight
@@ -87,8 +84,7 @@ class _OtpScreenState extends State<OtpScreen> {
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height *
-                0.1, // Adjust this value as needed
+            top: MediaQuery.of(context).size.height * 0.1, // Adjust this value as needed
             left: 20,
             right: 20,
             child: Image.asset(
@@ -100,8 +96,7 @@ class _OtpScreenState extends State<OtpScreen> {
           ),
           // Login Card
           Positioned(
-            top: MediaQuery.of(context).size.height *
-                0.37, // Adjust this value as needed
+            top: MediaQuery.of(context).size.height * 0.37, // Adjust this value as needed
             left: 20,
             right: 20,
             child: Container(
@@ -111,14 +106,13 @@ class _OtpScreenState extends State<OtpScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: Color.fromRGBO(
-                    255, 255, 255, 0.8), // Semi-transparent white color
+                color: const Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(padding: EdgeInsets.all(5)),
+                      const Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'OTP Verification',
@@ -132,12 +126,11 @@ class _OtpScreenState extends State<OtpScreen> {
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
-                      SizedBox(height: 30),
+                      const SizedBox(height: 30),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2),
                         child: ConstrainedBox(
-                          constraints: BoxConstraints(
-                              maxWidth: MediaQuery.of(context).size.width),
+                          constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -175,7 +168,7 @@ class _OtpScreenState extends State<OtpScreen> {
                             PrimaryBtn(
                               btnName: "Submit",
                               ontap: () {
-                                Get.to(DashboardPage());
+                                Get.to(const DashboardPage());
                               },
                             ),
                           ],

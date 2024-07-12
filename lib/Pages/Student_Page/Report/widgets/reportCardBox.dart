@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Pages/Student_Page/Student_profile/Widgets/studentEditBox.dart';
+import 'package:myapp/Widgets/primaryBtn.dart';
 
 class ReportCardBox extends StatelessWidget {
   const ReportCardBox({super.key});
@@ -54,31 +55,37 @@ class ReportCardBox extends StatelessWidget {
           textLabel(context, "English", "40", "50", "80 (A+)"),
           textLabel(context, "English", "40", "50", "80 (A+)"),
           textLabel(context, "English", "40", "50", "80 (A+)"),
+          const SizedBox(height: 10),
+          const StudentEditDetail(text: "Percentage :", detail: "75%"),
+          const SizedBox(height: 10),
+          const StudentEditDetail(text: "Result :", detail: "75%"),
+          const SizedBox(height: 10),
+          PrimaryBtn(btnName: "Download", ontap: () {}),
         ],
       ),
     );
   }
 }
 
-  Widget textLabel(BuildContext context, String subjectName, String mark1, String mark2, String finalMark ) {
-    return Row(
-      children: [
-        Text(
-          subjectName,
-          style: Theme.of(context).textTheme.bodySmall,
-        ),
-        Text(
-          mark1,
-          style: Theme.of(context).textTheme.bodySmall,
-        ),
-        Text(
-          mark2,
-          style: Theme.of(context).textTheme.bodySmall,
-        ),
-        Text(
-          finalMark,
-          style: Theme.of(context).textTheme.bodySmall,
-        )
-      ],
-    );
-  }
+Widget textLabel(BuildContext context, String subjectName, String mark1, String mark2, String finalMark) {
+  return Row(
+    children: [
+      Text(
+        subjectName,
+        style: Theme.of(context).textTheme.bodySmall,
+      ),
+      Text(
+        mark1,
+        style: Theme.of(context).textTheme.bodySmall,
+      ),
+      Text(
+        mark2,
+        style: Theme.of(context).textTheme.bodySmall,
+      ),
+      Text(
+        finalMark,
+        style: Theme.of(context).textTheme.bodySmall,
+      )
+    ],
+  );
+}
