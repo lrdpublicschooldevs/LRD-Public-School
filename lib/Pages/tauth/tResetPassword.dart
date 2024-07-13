@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_Page/DashBoard/dashboard.dart';
+
 import 'package:myapp/Widgets/primaryBtn.dart';
 
-class ResetPasswordScreen extends StatefulWidget {
-  const ResetPasswordScreen({super.key});
+import '../Teacher_Page/Tdashboard/dashboard.dart';
+
+class TeacherResetPasswordScreen extends StatefulWidget {
+  const TeacherResetPasswordScreen({super.key});
 
   @override
-  State<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
+  State<TeacherResetPasswordScreen> createState() => _TeacherResetPasswordScreenState();
 }
 
-class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
+class _TeacherResetPasswordScreenState extends State<TeacherResetPasswordScreen> {
   final _formKey = GlobalKey<FormState>(); // GlobalKey for the form
   final TextEditingController _newPasswordController = TextEditingController();
   final TextEditingController _confirmPasswordController = TextEditingController();
@@ -108,7 +110,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                           PrimaryBtn(
                               btnName: "Upadte",
                               ontap: () {
-                                Get.to(DashboardPage());
+                                Get.to(TDashboardPage());
                               })
                         ],
                       ),

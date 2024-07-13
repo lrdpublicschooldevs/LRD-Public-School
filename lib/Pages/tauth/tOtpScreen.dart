@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_Page/DashBoard/dashboard.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
-class OtpScreen extends StatefulWidget {
-  const OtpScreen({super.key});
+import '../Teacher_Page/Tdashboard/dashboard.dart';
+
+class TeacherOtpScreen extends StatefulWidget {
+  const TeacherOtpScreen({super.key});
 
   @override
-  State<OtpScreen> createState() => _OtpScreenState();
+  State<TeacherOtpScreen> createState() => _TeacherOtpScreenState();
 }
 
-class _OtpScreenState extends State<OtpScreen> {
+class _TeacherOtpScreenState extends State<TeacherOtpScreen> {
   final _focusNodes = List.generate(6, (_) => FocusNode()); // List of focus nodes
   final _otpController = TextEditingController(); // To store the complete OTP
 
@@ -168,7 +169,7 @@ class _OtpScreenState extends State<OtpScreen> {
                             PrimaryBtn(
                               btnName: "Submit",
                               ontap: () {
-                                Get.to(const DashboardPage());
+                                Get.to(const TDashboardPage());
                               },
                             ),
                           ],

@@ -2,25 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_Page/DashBoard/dashboard.dart';
+import 'package:myapp/Pages/tauth/tOtpScreen.dart';
+import 'package:myapp/Pages/tauth/tResetPassword.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
-class ResetPasswordScreen extends StatefulWidget {
-  const ResetPasswordScreen({super.key});
+class TeacherLoginPage extends StatefulWidget {
+  const TeacherLoginPage({super.key});
 
   @override
-  State<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
+  State<TeacherLoginPage> createState() => _TeacherLoginPageState();
 }
 
-class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
-  final _formKey = GlobalKey<FormState>(); // GlobalKey for the form
-  final TextEditingController _newPasswordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
+class _TeacherLoginPageState extends State<TeacherLoginPage> {
+  bool _obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false, // Add this line to prevent the screen from resizing when the keyboard is opened
       body: Stack(
         children: [
           Positioned.fill(
@@ -34,7 +32,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             left: 20,
             right: 20,
             child: Image.asset(
-              AssetsIamge.forgotImg,
+              AssetsIamge.lockImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -46,28 +44,27 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             left: 20,
             right: 20,
             child: Container(
-              height: 400,
               child: Card(
                 elevation: 8,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
+                color: const Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(padding: EdgeInsets.all(5)),
+                      const Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
-                          'Reset Password',
+                          'Sign in to continue',
                           style: Theme.of(context).textTheme.headlineMedium,
                         ),
                       ),
                       const SizedBox(height: 30),
                       Text(
-                        'New Password',
+                        'ERP id',
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
                       Container(
@@ -77,27 +74,30 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         ),
                         child: TextFormField(
                           decoration: const InputDecoration(
-                            hintText: 'Enter New password',
+                            hintText: 'Enter Your ERP Id',
                             border: InputBorder.none,
                             contentPadding: EdgeInsets.all(15),
                           ),
                         ),
                       ),
                       const SizedBox(height: 20),
-                      Text(
-                        'Confirm Password',
-                        style: Theme.of(context).textTheme.bodyLarge,
-                      ),
+                      Text('Password', style: Theme.of(context).textTheme.bodyLarge),
                       Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.white,
-                        ),
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.white),
                         child: TextFormField(
-                          decoration: const InputDecoration(
-                            hintText: 'Re-enter new password',
+                          obscureText: _obscurePassword,
+                          decoration: InputDecoration(
+                            hintText: 'Enter your password',
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(15),
+                            contentPadding: const EdgeInsets.all(16),
+                            suffixIcon: IconButton(
+                              icon: Icon(_obscurePassword ? Icons.visibility : Icons.visibility_off),
+                              onPressed: () {
+                                setState(() {
+                                  _obscurePassword = !_obscurePassword; // Toggle password visibility
+                                });
+                              },
+                            ),
                           ),
                         ),
                       ),
@@ -106,13 +106,27 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           PrimaryBtn(
-                              btnName: "Upadte",
+                              btnName: " Login ",
                               ontap: () {
-                                Get.to(DashboardPage());
-                              })
+                                Get.to(() => const TeacherOtpScreen());
+                              }),
                         ],
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Get.to(const TeacherResetPasswordScreen());
+                            },
+                            child: Text(
+                              "Forget Password?",
+                              style: Theme.of(context).textTheme.bodyMedium,
+                            ),
+                          )
+                        ],
+                      )
                     ],
                   ),
                 ),

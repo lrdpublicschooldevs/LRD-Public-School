@@ -3,8 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Auth/loginPage.dart';
-import 'package:myapp/Pages/Teacher_Page/Tdashboard/dashboard.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
+
+import '../tauth/tLoginPage.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -81,7 +82,7 @@ class WelcomePage extends StatelessWidget {
                     PrimaryBtn(
                       btnName: "Teacher Login",
                       ontap: () {
-                        Get.to(const TDashboardPage());
+                        Get.to(const TeacherLoginPage());
                       },
                     ),
                   ],
