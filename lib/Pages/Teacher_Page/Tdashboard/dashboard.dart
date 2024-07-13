@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:myapp/Config/colors.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Teacher_Page/widgets/DashboardBody.dart';
 import 'package:myapp/Pages/Teacher_Page/widgets/DashboardHeader.dart';
@@ -20,31 +19,32 @@ class _TDashboardPageState extends State<TDashboardPage> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Stack(
-          children: [
-            SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
-            ),
-            ListView(
-              children: const [
-                SizedBox(height: 10),
-                TDashboardHeader(),
-                SizedBox(height: 20),
-                TDashboardBody(),
-                SizedBox(height: 30)
-              ],
-            ),
-          ],
-        ),
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          SvgPicture.asset(
+            AssetsIamge.bgDesignSVG,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          ListView(
+            children: const [
+              SizedBox(height: 10),
+              TDashboardHeader(),
+              SizedBox(height: 20),
+              TDashboardBody(),
+              SizedBox(height: 30)
+            ],
+          ),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icons/home.svg', height: 24, width: 24),
@@ -64,10 +64,8 @@ class _TDashboardPageState extends State<TDashboardPage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: dOnBackgroundColor,
-        unselectedItemColor: Colors.white.withOpacity(0.7),
-        selectedLabelStyle: const TextStyle(color: Colors.white),
-        unselectedLabelStyle: const TextStyle(color: Colors.white),
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black,
         onTap: _onItemTapped,
       ),
     );

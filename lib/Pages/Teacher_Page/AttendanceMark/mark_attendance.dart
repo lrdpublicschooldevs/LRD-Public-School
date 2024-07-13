@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:intl/intl.dart'; // Import the intl package
+import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+import 'package:myapp/Config/images.dart';
+import 'package:myapp/Widgets/primaryBtn.dart'; // Import the intl package
 
 class MarkAttendancePage extends StatefulWidget {
   const MarkAttendancePage({super.key});
@@ -47,10 +50,7 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
     if (query.isEmpty) {
       results = students;
     } else {
-      results = students
-          .where((student) =>
-          student.name.toLowerCase().contains(query.toLowerCase()))
-          .toList();
+      results = students.where((student) => student.name.toLowerCase().contains(query.toLowerCase())).toList();
     }
 
     setState(() {
@@ -64,94 +64,89 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Attendance'),
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          "Attendance Marking",
+          style: Theme.of(context).textTheme.displayMedium,
+        ),
+        leading: InkWell(
+          onTap: () {
+            Get.back();
+          },
+          child: const Icon(Icons.arrow_back_ios_new_outlined),
+        ),
       ),
       body: Stack(
         children: [
-          // Background SVG
-          Positioned.fill(
-            child: SvgPicture.asset(
-              'assets/background.svg', // Replace with your SVG file path
-              fit: BoxFit.cover,
-            ),
+          SvgPicture.asset(
+            AssetsIamge.bgDesignSVG,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 10, right: 10),
             child: Column(
               children: [
-                // Header Card
-                Card(
-                  elevation: 15,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    side: const BorderSide(
-                      color: Colors.black54, // Add your preferred border color
-                      width: 1, // Add your preferred border width
-                    ),
+                Container(
+                  padding: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: const Color.fromRGBO(250, 225, 225, 0.6),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Center(
-                          child: Text(
-                            '5th B Hindi',
-                            style: Theme.of(context).textTheme.bodyLarge,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(currentDate),
+                          const Text('8:30 a.m. to 9:15 a.m.'),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('${students.length} Students'),
+                          Row(
+                            children: [
+                              const Text('Mark All Present'),
+                              Checkbox(
+                                value: allPresent,
+                                onChanged: (value) {
+                                  if (value != null) {
+                                    markAllPresent(value);
+                                  }
+                                },
+                              ),
+                            ],
                           ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(currentDate),
-                            Text('8:30 a.m. to 9:15 a.m.'),
-                          ],
-                        ),
-                        const SizedBox(height: 12),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text('${students.length} Students'),
-                            Row(
-                              children: [
-                                const Text('Mark All Present'),
-                                Checkbox(
-                                  value: allPresent,
-                                  onChanged: (value) {
-                                    if (value != null) {
-                                      markAllPresent(value);
-                                    }
-                                  },
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 12),
-                        TextField(
-                          decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.search),
-                            hintText: 'Search Student ...',
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide.none,
-                            ),
-                            fillColor: Colors.grey[100],
-                            filled: true,
+                        ],
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          prefixIcon: const Icon(Icons.search),
+                          hintText: 'Search Student ...',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide.none,
                           ),
-                          style: const TextStyle(
-                            fontSize: 14, // Change this to the desired font size
-                          ),
-                          onChanged: (value) {
-                            filterStudents(value);
-                          },
+                          fillColor: Colors.white,
+                          filled: true,
                         ),
-                      ],
-                    ),
+                        style: const TextStyle(
+                          fontSize: 14, // Change this to the desired font size
+                        ),
+                        onChanged: (value) {
+                          filterStudents(value);
+                        },
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 12),
-                // Student List
+                const SizedBox(height: 5),
                 Expanded(
                   child: ListView.builder(
                     itemCount: filteredStudents.length,
@@ -174,21 +169,12 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
                     },
                   ),
                 ),
-                const SizedBox(height: 12),
-                // Submit Button
-                ElevatedButton(
-                  onPressed: () {
-                    // Implement submit functionality
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
-                    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-                  ),
-                  child: const Text(
-                    'Submit Attendance',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
-                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    PrimaryBtn(btnName: "Submit Attendance", ontap: () {})
+                  ],
+                )
               ],
             ),
           ),
@@ -212,20 +198,28 @@ class StudentCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 3,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: const Color.fromRGBO(250, 225, 225, 0.6),
       ),
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 5),
       child: Padding(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.all(10),
         child: Row(
           children: [
-            CircleAvatar(
-              backgroundImage: AssetImage('assets/images/profile_pic.png'), // Replace with actual profile image
+            Container(
+              height: 40,
+              width: 40,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.asset(
+                  AssetsIamge.proflePicImg,
+                  fit: BoxFit.contain,
+                ),
+              ),
             ),
-            const SizedBox(width: 12),
+            const SizedBox(width: 10),
             Expanded(
               child: Text(
                 student.name,
@@ -248,7 +242,7 @@ class StudentCard extends StatelessWidget {
                   onAbsentChanged(value);
                 }
               },
-              activeColor: Colors.red,
+              activeColor: Theme.of(context).colorScheme.primary,
             ),
           ],
         ),
