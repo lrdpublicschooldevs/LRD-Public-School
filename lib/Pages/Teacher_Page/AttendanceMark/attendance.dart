@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/Attendance.dart';
 import 'package:myapp/Pages/Teacher_Page/AttendanceMark/widgets/AttendanceCard.dart';
 
 class AttendancePage extends StatelessWidget {
