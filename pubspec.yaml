@@ -23,6 +23,7 @@ dependencies:
   navigation_view: ^1.0.6
   percent_indicator: ^4.2.3
   intl: ^0.19.0
+  date_picker_timeline: ^1.2.6
 
 
 

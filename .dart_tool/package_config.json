@@ -50,6 +50,12 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "date_picker_timeline",
+      "rootUri": "file:///C:/Users/anshr/AppData/Local/Pub/Cache/hosted/pub.dev/date_picker_timeline-1.2.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "dropdown_button2",
       "rootUri": "file:///C:/Users/anshr/AppData/Local/Pub/Cache/hosted/pub.dev/dropdown_button2-2.3.9",
       "packageUri": "lib/",
@@ -290,7 +296,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-07-07T11:34:05.300148Z",
+  "generated": "2024-07-13T11:14:58.982596Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }
