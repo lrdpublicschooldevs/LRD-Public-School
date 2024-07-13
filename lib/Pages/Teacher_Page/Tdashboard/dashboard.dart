@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Teacher_Page/widgets/DashboardBody.dart';
-import 'package:myapp/Pages/Teacher_Page/widgets/DashboardHeader.dart';
+import 'package:myapp/Pages/Teacher_Page/Tdashboard/widgets/DashboardBody.dart';
+import 'package:myapp/Pages/Teacher_Page/Tdashboard/widgets/DashboardHeader.dart';
 
 class TDashboardPage extends StatefulWidget {
   const TDashboardPage({super.key});
