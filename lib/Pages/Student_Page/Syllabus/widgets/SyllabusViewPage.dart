@@ -44,24 +44,37 @@ class SyllabusViewPage extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    Text("5th", style: Theme.of(context).textTheme.bodyLarge),
-                    Text("Mathematics", style: Theme.of(context).textTheme.bodyLarge),
-                    const Divider(
-                      height: 1,
-                      color: Colors.black45,
-                    ),
+                    Text("5th", style: Theme.of(context).textTheme.headlineMedium),
+                    Text("Mathematics", style: Theme.of(context).textTheme.headlineMedium),
+                    const SizedBox(height: 10),
+                    const Divider(height: 1, color: Colors.black45),
+                    const SizedBox(height: 15),
                     const StudentEditDetail(text: "Lesson 1", detail: "The Fish Tale"),
+                    const SizedBox(height: 5),
                     const StudentEditDetail(text: "Lesson 2", detail: "Shapes & Angles"),
+                    const SizedBox(height: 5),
                     const StudentEditDetail(text: "Lesson 3", detail: "How many Squares?"),
+                    const SizedBox(height: 5),
                     const StudentEditDetail(text: "Lesson 4", detail: "Parts & Wholes"),
+                    const SizedBox(height: 5),
                     const StudentEditDetail(text: "Lesson 5", detail: "Does it look the Same?"),
+                    const SizedBox(height: 5),
                     const StudentEditDetail(text: "Lesson 6", detail: "Be my Multiple, I’ll be your Factor"),
+                    const SizedBox(height: 5),
                     const StudentEditDetail(text: "Lesson 7", detail: "Can you see the Pattern?"),
+                    const SizedBox(height: 5),
                     const StudentEditDetail(text: "Lesson 8", detail: "Mapping your Way"),
+                    const SizedBox(height: 5),
                     const StudentEditDetail(text: "Lesson 9", detail: "Boxes & Sketches "),
+                    const SizedBox(height: 5),
                     const StudentEditDetail(text: "Lesson 10", detail: "Tenths & Hundredths"),
                     const SizedBox(height: 10),
-                    PrimaryBtn(btnName: "Download", ontap: () {})
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        PrimaryBtn(btnName: "Download", ontap: () {}),
+                      ],
+                    )
                   ],
                 ),
               )

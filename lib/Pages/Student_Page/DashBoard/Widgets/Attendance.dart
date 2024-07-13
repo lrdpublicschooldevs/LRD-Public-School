@@ -51,7 +51,7 @@ class AttendanceCard extends StatelessWidget {
                   children: [
                     Container(
                       height: 30,
-                      width: 200,
+                      width: MediaQuery.of(context).size.width * 0.45,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -65,7 +65,7 @@ class AttendanceCard extends StatelessWidget {
                     const SizedBox(height: 10),
                     Container(
                       height: 30,
-                      width: 200,
+                      width: MediaQuery.of(context).size.width * 0.45,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
