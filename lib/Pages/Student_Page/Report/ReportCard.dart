@@ -35,19 +35,24 @@ class ReportCardPage extends StatelessWidget {
           ),
           ListView(
             children: [
-              Image.asset(
-                AssetsIamge.logoImg,
-                width: 150,
-                height: 150,
-                // fit: BoxFit.contain,
-              ),
-              Text(
-                "LRD Public School",
-                style: Theme.of(context).textTheme.headlineLarge,
-              ),
-              Text(
-                "Afflicted to CBSE Board",
-                style: Theme.of(context).textTheme.bodyMedium,
+              Column(
+                children: [
+                  Image.asset(
+                    AssetsIamge.logoImg,
+                    width: 150,
+                    height: 150,
+                    // fit: BoxFit.contain,
+                  ),
+                  Text(
+                    "LRD Public School",
+                    style: Theme.of(context).textTheme.headlineLarge,
+                  ),
+                  Text(
+                    "Afflicted to CBSE Board",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  const SizedBox(height: 15),
+                ],
               ),
               const ReportCardBox()
             ],

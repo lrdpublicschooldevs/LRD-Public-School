@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:myapp/Pages/Student_Page/Syllabus/widgets/SyllabusViewPage.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class SyllabusBox extends StatefulWidget {
@@ -21,6 +23,7 @@ class _SyllabusBoxState extends State<SyllabusBox> {
         color: const Color.fromRGBO(250, 225, 225, 0.6),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "Select Class",
@@ -84,7 +87,16 @@ class _SyllabusBoxState extends State<SyllabusBox> {
             ),
           ),
           const SizedBox(height: 15),
-          PrimaryBtn(btnName: "Preview", ontap: () {})
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              PrimaryBtn(
+                  btnName: "Preview",
+                  ontap: () {
+                    Get.to(() => const SyllabusViewPage());
+                  }),
+            ],
+          )
         ],
       ),
     );

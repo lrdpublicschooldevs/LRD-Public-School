@@ -51,41 +51,35 @@ class FeeCard extends StatelessWidget {
                   children: [
                     Container(
                       height: 23,
-                      width: 200,
-                      alignment: Alignment.center,
+                      width: MediaQuery.of(context).size.width * 0.45,
+                      alignment: Alignment.centerLeft,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.white,
                       ),
-                      child: Row(
-                        children: [
-                          const SizedBox(width: 15),
-                          Text(
-                            "Total Fee : 100",
-                            style: Theme.of(context).textTheme.bodyMedium,
-                            textAlign: TextAlign.end,
-                          ),
-                        ],
+                      child: Text(
+                        " Total Fee : 100",
+                        style: Theme.of(context).textTheme.bodyMedium,
                       ),
                     ),
                     const SizedBox(height: 7),
                     Container(
                       height: 23,
-                      width: 200,
+                      width: MediaQuery.of(context).size.width * 0.45,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.white,
                       ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Paid : 750",
+                            " Paid : 750",
                             style: Theme.of(context).textTheme.bodyMedium,
                           ),
                           Text(
-                            "36 ago",
+                            "36 ago ",
                             style: Theme.of(context).textTheme.labelLarge,
                           ),
                         ],
@@ -94,7 +88,7 @@ class FeeCard extends StatelessWidget {
                     const SizedBox(height: 7),
                     Container(
                       height: 23,
-                      width: 220,
+                      width: MediaQuery.of(context).size.width * 0.47,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
