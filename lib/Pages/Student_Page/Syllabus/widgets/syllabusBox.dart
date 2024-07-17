@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Pages/Student_Page/Syllabus/widgets/SyllabusViewPage.dart';
+import 'package:myapp/Widgets/customDropDown.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class SyllabusBox extends StatefulWidget {
@@ -13,8 +14,6 @@ class SyllabusBox extends StatefulWidget {
 class _SyllabusBoxState extends State<SyllabusBox> {
   @override
   Widget build(BuildContext context) {
-    String? _selectedClass;
-    String? _selectedSubject;
     return Container(
       margin: const EdgeInsets.only(right: 20, left: 20),
       padding: const EdgeInsets.all(20),
@@ -29,63 +28,47 @@ class _SyllabusBoxState extends State<SyllabusBox> {
             "Select Class",
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          DropdownButton<String>(
-            isExpanded: true,
-            value: _selectedClass,
-            dropdownColor: const Color.fromRGBO(250, 225, 225, 0.8),
-            hint: const Text("Choose Class"),
-            onChanged: (String? newValue) {
-              setState(() {
-                _selectedClass = newValue!;
-              });
+          const CustomDropdown(items: [
+            {
+              'value': '1',
+              'label': '1'
             },
-            items: <String>[
-              '1',
-              '2',
-              '3',
-              '4'
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-            underline: Container(
-              height: 1,
-              color: Colors.grey,
-            ),
-          ),
+            {
+              'value': '2',
+              'label': '2'
+            },
+            {
+              'value': '3',
+              'label': '3'
+            },
+            {
+              'value': '4',
+              'label': '4'
+            },
+          ], hint: "Choose Class"),
           const SizedBox(height: 15),
           Text(
             "Select Subjects",
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          DropdownButton<String>(
-            isExpanded: true,
-            value: _selectedSubject,
-            dropdownColor: const Color.fromRGBO(250, 225, 225, 0.8),
-            hint: const Text("Choose Subject"),
-            onChanged: (String? newValue) {
-              setState(() {
-                _selectedSubject = newValue!;
-              });
+          const CustomDropdown(items: [
+            {
+              'value': 'science',
+              'label': 'Science'
             },
-            items: <String>[
-              'Science',
-              'Mathmetaics',
-              'Computer',
-              'Hindi'
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-            underline: Container(
-              height: 1,
-              color: Colors.grey,
-            ),
-          ),
+            {
+              'value': 'english',
+              'label': 'English'
+            },
+            {
+              'value': 'mathematics',
+              'label': 'Mathematics'
+            },
+            {
+              'value': 'computer',
+              'label': 'Computer'
+            },
+          ], hint: "Choose Subject"),
           const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:myapp/Widgets/customDropDown.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class LeaveSheetBox extends StatefulWidget {
@@ -10,7 +11,6 @@ class LeaveSheetBox extends StatefulWidget {
 }
 
 class _LeaveSheetBoxState extends State<LeaveSheetBox> {
-  String? _selectedTeacher;
   DateTime? _selectedDate;
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _descriptionController = TextEditingController();
@@ -45,32 +45,24 @@ class _LeaveSheetBoxState extends State<LeaveSheetBox> {
               "Select Class Teacher",
               style: Theme.of(context).textTheme.bodyLarge,
             ),
-            DropdownButton<String>(
-              isExpanded: true,
-              value: _selectedTeacher,
-              dropdownColor: Theme.of(context).colorScheme.onPrimary,
-              hint: Text("Choose Teacher"),
-              onChanged: (String? newValue) {
-                setState(() {
-                  _selectedTeacher = newValue!;
-                });
-              },
-              items: <String>[
-                'Teacher 1',
-                'Teacher 2',
-                'Teacher 3',
-                'Teacher 4'
-              ].map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              underline: Container(
-                height: 1,
-                color: Colors.grey,
-              ),
-            ),
+            const CustomDropdown(items: [
+            {
+              'value': 'teacher1',
+              'label': 'Teacher 1'
+            },
+            {
+              'value': 'teacher2',
+              'label': 'Teacher 2'
+            },
+            {
+              'value': 'teacher3',
+              'label': 'Teacher 3'
+            },
+            {
+              'value': 'teacher4',
+              'label': 'Teacher 4'
+            },
+          ], hint: "Choose Teacher"),
             const SizedBox(height: 20),
             Text(
               "Select Date",
@@ -81,15 +73,15 @@ class _LeaveSheetBoxState extends State<LeaveSheetBox> {
               child: InputDecorator(
                 decoration: InputDecoration(
                   hintText: _selectedDate == null ? 'Choose Date' : "${_selectedDate!.toLocal()}".split(' ')[0],
-                  hintStyle: TextStyle(color: Colors.black),
-                  border: UnderlineInputBorder(
+                  hintStyle: const TextStyle(color: Colors.black),
+                  border: const UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
                   ),
-                  suffixIcon: Icon(Icons.calendar_today, color: Colors.black),
+                  suffixIcon: const Icon(Icons.calendar_today, color: Colors.black),
                 ),
                 child: Text(
                   _selectedDate == null ? '-- Select Date --' : "${_selectedDate!.toLocal()}".split(' ')[0],
-                  style: TextStyle(color: Colors.black),
+                  style: const TextStyle(color: Colors.black),
                 ),
               ),
             ),
@@ -104,7 +96,7 @@ class _LeaveSheetBoxState extends State<LeaveSheetBox> {
             TextField(
               controller: _titleController,
               maxLines: 2,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Enter title (e.g., Fever, Emergency, Marriage)",
                 border: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
@@ -122,7 +114,7 @@ class _LeaveSheetBoxState extends State<LeaveSheetBox> {
             TextField(
               controller: _descriptionController,
               maxLines: 3,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Enter detailed description",
                 border: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
