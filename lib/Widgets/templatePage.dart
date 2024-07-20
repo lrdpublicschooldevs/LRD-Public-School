@@ -40,6 +40,9 @@ class DashBorad extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   color: const Color.fromRGBO(250, 225, 225, 0.6),
                 ),
+                child: Column(
+                  children: [],
+                ),
               )
             ],
           )

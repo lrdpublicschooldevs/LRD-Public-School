@@ -3,12 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Widgets/customDropDown.dart';
 import 'package:myapp/Widgets/dateTimePick.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
-class THomeWorkPage extends StatelessWidget {
-  const THomeWorkPage({super.key});
+class TeacherLeavePage extends StatelessWidget {
+  const TeacherLeavePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class THomeWorkPage extends StatelessWidget {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          "Home Work",
+          "Teacher Leave",
           style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
@@ -48,36 +47,16 @@ class THomeWorkPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 5),
-                    Text("Subject", style: Theme.of(context).textTheme.bodyLarge),
-                    const CustomDropdown(items: [
-                      {
-                        'value': 'English',
-                        'label': 'English'
-                      },
-                      {
-                        'value': 'Computer',
-                        'label': 'Computer'
-                      },
-                      {
-                        'value': 'Mathematics',
-                        'label': 'Mathematics'
-                      },
-                      {
-                        'value': 'English',
-                        'label': 'English'
-                      },
-                    ], hint: "-- Select Subject --"),
+                    Text("Leave Date", style: Theme.of(context).textTheme.bodyLarge),
+                    const DateTimePick(),
                     const SizedBox(height: 15),
-                    Text("Topic", style: Theme.of(context).textTheme.bodyLarge),
+                    Text("Application Title", style: Theme.of(context).textTheme.bodyLarge),
                     const TextField(
                       decoration: InputDecoration(
-                        hintText: "Enter your topic name",
+                        hintText: "Enter your tile",
                         border: UnderlineInputBorder(),
                       ),
                     ),
-                    const SizedBox(height: 15),
-                    Text("Submission Date", style: Theme.of(context).textTheme.bodyLarge),
-                    const DateTimePick(),
                     const SizedBox(height: 15),
                     Text("Description", style: Theme.of(context).textTheme.bodyLarge),
                     TextField(
@@ -93,19 +72,10 @@ class THomeWorkPage extends StatelessWidget {
                         LengthLimitingTextInputFormatter(500)
                       ],
                     ),
-                    const SizedBox(height: 15),
-                    Text("Image", style: Theme.of(context).textTheme.bodyLarge),
-                    const TextField(
-                      decoration: InputDecoration(
-                        hintText: "Upload Image",
-                        border: UnderlineInputBorder(),
-                        suffixIcon: Icon(Icons.image_outlined),
-                      ),
-                    ),
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 100),
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                       PrimaryBtn(
-                        btnName: "Add Home Work",
+                        btnName: "Approve",
                         ontap: () {},
                       ),
                     ]),
