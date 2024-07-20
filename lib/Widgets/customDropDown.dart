@@ -25,7 +25,6 @@ class _CustomDropdownState extends State<CustomDropdown> {
       isExpanded: true,
       value: _selectedItem,
       dropdownColor: widget.dropdownColor,
-      
       hint: Text(widget.hint),
       onChanged: (String? newValue) {
         setState(() {
@@ -37,11 +36,10 @@ class _CustomDropdownState extends State<CustomDropdown> {
           value: item['value'],
           child: Text(item['label']!),
         );
-      }
-      ).toList(),
+      }).toList(),
       underline: Container(
         height: 1,
-        color: Colors.grey,
+        color: Colors.black,
       ),
     );
   }

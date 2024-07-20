@@ -188,6 +188,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "simple_gesture_detector",
+      "rootUri": "file:///C:/Users/anshr/AppData/Local/Pub/Cache/hosted/pub.dev/simple_gesture_detector-0.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///D:/Software/flutter_windows_3.19.0-stable/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -216,6 +222,12 @@
       "rootUri": "file:///C:/Users/anshr/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "table_calendar",
+      "rootUri": "file:///C:/Users/anshr/AppData/Local/Pub/Cache/hosted/pub.dev/table_calendar-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "term_glyph",
@@ -284,7 +296,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-07-17T14:22:49.828707Z",
+  "generated": "2024-07-19T04:38:40.023049Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }
