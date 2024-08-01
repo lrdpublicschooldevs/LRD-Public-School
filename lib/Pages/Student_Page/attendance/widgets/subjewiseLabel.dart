@@ -30,12 +30,13 @@ class SubjectWiseLabel extends StatelessWidget {
                   children: [
                     Text(
                       date,
-                      style: Theme.of(context).textTheme.labelLarge,
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
                     Text(
                       "Present : $present",
-                      style: Theme.of(context).textTheme.labelLarge,
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
+
                   ],
                 ),
                 const SizedBox(height: 10),
@@ -44,11 +45,11 @@ class SubjectWiseLabel extends StatelessWidget {
                   children: [
                     Text(
                       subject,
-                      style: Theme.of(context).textTheme.bodyLarge,
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
                     Text(
                       "Absent : $absent",
-                      style: Theme.of(context).textTheme.labelLarge,
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
                   ],
                 )
@@ -57,10 +58,10 @@ class SubjectWiseLabel extends StatelessWidget {
           ),
           const SizedBox(width: 7),
           CircleAvatar(
-            radius: 25,
+            radius: 22,
             child: Text(
               precentage,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
+              style: Theme.of(context).textTheme.labelSmall?.copyWith(color: Colors.white),
             ),
           )
         ],
