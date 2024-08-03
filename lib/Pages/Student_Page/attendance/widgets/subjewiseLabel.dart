@@ -57,7 +57,7 @@ class SubjectWiseLabel extends StatelessWidget {
           ),
           const SizedBox(width: 7),
           CircleAvatar(
-            radius: 25,
+            radius: 22,
             child: Text(
               precentage,
               style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),

@@ -122,7 +122,7 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   CircleAvatar(
-                    radius: 30,
+                    radius: 22,
                     child: Text(
                       "45%",
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),

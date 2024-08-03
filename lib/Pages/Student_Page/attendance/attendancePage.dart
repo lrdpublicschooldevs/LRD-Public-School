@@ -10,7 +10,7 @@ class AttendancePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RxBool isLogin = false.obs;
+    RxBool isLogin = true.obs;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -57,7 +57,7 @@ class AttendancePage extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Subject Wise",
+                              "Over All",
                               style: isLogin.value
                                   ? Theme.of(context).textTheme.bodyLarge?.copyWith(
                                         color: Colors.white,
@@ -80,7 +80,7 @@ class AttendancePage extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              "Over All",
+                              "Subject Wise",
                               style: isLogin.value
                                   ? Theme.of(context).textTheme.bodyMedium
                                   : Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -94,7 +94,7 @@ class AttendancePage extends StatelessWidget {
                   ),
                 ),
                 Obx(
-                  () => isLogin.value ? const OverAllBox() : SubjectWiseBox(),
+                  () => isLogin.value ? OverAll() : SubjectWiseBox(),
                 )
               ],
             ),
