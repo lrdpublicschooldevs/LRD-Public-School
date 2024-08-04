@@ -3,9 +3,11 @@ import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
 import 'package:myapp/Widgets/splash_screen.dart';
 
-Future<void> main() async {
+
+void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
