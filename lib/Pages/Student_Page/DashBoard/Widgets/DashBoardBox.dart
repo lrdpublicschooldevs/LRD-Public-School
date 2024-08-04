@@ -14,13 +14,12 @@ Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath, S
         children: [
           SvgPicture.asset(
             iconPath,
-            width: 40, // Fixed width
-            height: 40, // Fixed height
-            color: Colors.black,
+            width: 30, // Fixed width
+            height: 30, // Fixed height
           ),
           Text(
             iconName,
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.titleMedium,
             textAlign: TextAlign.center, // Center align the text
           ),
         ],
