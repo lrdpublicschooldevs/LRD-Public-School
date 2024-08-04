@@ -6,7 +6,7 @@ Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath, S
     onTap: onTap,
     child: Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(10),
         color: Colors.white,
       ),
       child: Column(
