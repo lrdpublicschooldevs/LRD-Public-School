@@ -4,6 +4,7 @@ import 'package:myapp/Config/theme.dart';
 import 'package:myapp/Pages/Student_Page/Library/LibraryPage.dart';
 import 'package:myapp/Widgets/splash_screen.dart';
 
+import 'Pages/Student_Page/DashBoard/dashboard.dart';
 import 'Pages/Student_Page/attendance/attendancePage.dart';
 
 
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       themeMode: ThemeMode.light,
-      home: const LibraryPage(),
+      home: const DashboardPage(),
     );
   }
 }
+
