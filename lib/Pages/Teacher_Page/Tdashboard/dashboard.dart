@@ -24,6 +24,7 @@ class _TDashboardPageState extends State<TDashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: PreferredSize(preferredSize: const Size.fromHeight(0.0), child: Container()),
       body: Stack(
         children: [
           SvgPicture.asset(
@@ -36,15 +37,15 @@ class _TDashboardPageState extends State<TDashboardPage> {
             children: const [
               SizedBox(height: 10),
               TDashboardHeader(),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               TDashboardBody(),
-              SizedBox(height: 30)
+              SizedBox(height: 10)
             ],
           ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: Colors.black,
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icons/home.svg', height: 24, width: 24),
@@ -66,6 +67,9 @@ class _TDashboardPageState extends State<TDashboardPage> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.black,
+        showUnselectedLabels: true,
+        // mouseCursor: MouseCursor.defer,
+
         onTap: _onItemTapped,
       ),
     );

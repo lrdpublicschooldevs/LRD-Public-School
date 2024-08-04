@@ -16,7 +16,7 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.only(right: 30, left: 30, top: 10),
+          margin: const EdgeInsets.only(right: 20, left: 20, top: 10),
           padding: const EdgeInsets.all(20),
           height: 60,
           decoration: BoxDecoration(
@@ -61,7 +61,7 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
             children: [
               Text(
                 "April",
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: 10),
               const Divider(color: Colors.black, height: 1),
@@ -119,10 +119,10 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
                 children: [
                   Text(
                     "Overall April Attendance : ",
-                    style: Theme.of(context).textTheme.titleLarge,
+                    style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   CircleAvatar(
-                    radius: 25,
+                    radius: 30,
                     child: Text(
                       "45%",
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),

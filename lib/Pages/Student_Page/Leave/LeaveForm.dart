@@ -38,6 +38,7 @@ class _LeaveFormState extends State<LeaveForm> {
             height: double.infinity,
           ),
           ListView(
+            padding: const EdgeInsets.only(left: 20, right: 20),
             children: [
               LeaveSheetBox()
             ],
