@@ -59,7 +59,7 @@ class FeeCard extends StatelessWidget {
                       ),
                       child: Text(
                         " Total Fee : 100",
-                        style: Theme.of(context).textTheme.bodyMedium,
+                        style: Theme.of(context).textTheme.titleSmall,
                       ),
                     ),
                     const SizedBox(height: 7),
@@ -76,11 +76,11 @@ class FeeCard extends StatelessWidget {
                         children: [
                           Text(
                             " Paid : 750",
-                            style: Theme.of(context).textTheme.bodyMedium,
+                            style: Theme.of(context).textTheme.titleSmall,
                           ),
                           Text(
                             "36 ago ",
-                            style: Theme.of(context).textTheme.labelLarge,
+                            style: Theme.of(context).textTheme.titleSmall,
                           ),
                         ],
                       ),
@@ -99,11 +99,11 @@ class FeeCard extends StatelessWidget {
                         children: [
                           Text(
                             "Pending : 250",
-                            style: Theme.of(context).textTheme.bodyMedium,
+                            style: Theme.of(context).textTheme.titleSmall,
                           ),
                           Text(
                             "7 day rem",
-                            style: Theme.of(context).textTheme.labelLarge,
+                            style: Theme.of(context).textTheme.titleSmall,
                           ),
                         ],
                       ),

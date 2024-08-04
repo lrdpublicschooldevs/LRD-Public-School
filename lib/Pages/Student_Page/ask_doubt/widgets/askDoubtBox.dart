@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:myapp/Widgets/customDropDown.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class AskDoubtBox extends StatefulWidget {
@@ -10,8 +11,6 @@ class AskDoubtBox extends StatefulWidget {
 }
 
 class _AskDoubtBoxState extends State<AskDoubtBox> {
-  String? _selectedTeacher;
-  String? _selectedSubject;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,63 +26,47 @@ class _AskDoubtBoxState extends State<AskDoubtBox> {
             "Select Teacher",
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          DropdownButton<String>(
-            isExpanded: true,
-            value: _selectedTeacher,
-            dropdownColor: const Color.fromRGBO(250, 225, 225, 0.8),
-            hint: const Text("Choose Teacher"),
-            onChanged: (String? newValue) {
-              setState(() {
-                _selectedTeacher = newValue!;
-              });
+          const CustomDropdown(items: [
+            {
+              'value': 'teacher1',
+              'label': 'Teacher 1'
             },
-            items: <String>[
-              'Teacher 1',
-              'Teacher 2',
-              'Teacher 3',
-              'Teacher 4'
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-            underline: Container(
-              height: 1,
-              color: Colors.grey,
-            ),
-          ),
+            {
+              'value': 'teacher2',
+              'label': 'Teacher 2'
+            },
+            {
+              'value': 'teacher3',
+              'label': 'Teacher 3'
+            },
+            {
+              'value': 'teacher4',
+              'label': 'Teacher 4'
+            },
+          ], hint: "Choose Teacher"),
           const SizedBox(height: 15),
           Text(
             "Select Subject",
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          DropdownButton<String>(
-            isExpanded: true,
-            value: _selectedSubject,
-            dropdownColor: const Color.fromRGBO(250, 225, 225, 0.8),
-            hint: const Text("Choose Teacher"),
-            onChanged: (String? newValue) {
-              setState(() {
-                _selectedSubject = newValue!;
-              });
+          const CustomDropdown(items: [
+            {
+              'value': 'subject 1',
+              'label': 'Subject 1'
             },
-            items: <String>[
-              'Subject 1',
-              'Subject 2',
-              'Subject 3',
-              'Subject 4'
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-            underline: Container(
-              height: 1,
-              color: Colors.grey,
-            ),
-          ),
+            {
+              'value': 'subject 2',
+              'label': 'Subject 2'
+            },
+            {
+              'value': 'subject 3',
+              'label': 'Subject 3'
+            },
+            {
+              'value': 'subject 4',
+              'label': 'Subject 4'
+            },
+          ], hint: "Choose Subject"),
           const SizedBox(height: 15),
           Text("Title", style: Theme.of(context).textTheme.bodyLarge),
           const TextField(

@@ -15,7 +15,7 @@ class DashboardHeader extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hi Student",
+              "Hi Student ",
               style: Theme.of(context).textTheme.displaySmall,
             ),
             Text(

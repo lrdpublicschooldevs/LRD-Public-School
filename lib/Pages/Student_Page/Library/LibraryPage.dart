@@ -16,7 +16,7 @@ class LibraryPage extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Library",
-          style: Theme.of(context).textTheme.displayMedium,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         leading: InkWell(
           onTap: () {
@@ -53,7 +53,7 @@ class LibraryPage extends StatelessWidget {
                 onTap: () {
                   Get.to(const BookDetailsPage());
                 },
-                dateOfIsuue: "27 July 2024, Thursday",
+                dateOfIssue: "27 July 2024, Thursday",
                 dateOfReturn: "05 June 2024, Friday",
               ),
               const SizedBox(height: 10),
@@ -62,7 +62,7 @@ class LibraryPage extends StatelessWidget {
                 onTap: () {
                   Get.to(const BookDetailsPage());
                 },
-                dateOfIsuue: "27 July 2024, Thursday",
+                dateOfIssue: "27 July 2024, Thursday",
                 dateOfReturn: "05 June 2024, Friday",
               ),
               const SizedBox(height: 10),
@@ -71,7 +71,7 @@ class LibraryPage extends StatelessWidget {
                 onTap: () {
                   Get.to(const BookDetailsPage());
                 },
-                dateOfIsuue: "27 July 2024, Thursday",
+                dateOfIssue: "27 July 2024, Thursday",
                 dateOfReturn: "05 June 2024, Friday",
               ),
             ],
@@ -83,6 +83,7 @@ class LibraryPage extends StatelessWidget {
 }
 
 Widget CradLebel(BuildContext context, VoidCallback ontap, String labelName) {
+
   return Expanded(
     child: InkWell(
       onTap: ontap,
@@ -98,7 +99,7 @@ Widget CradLebel(BuildContext context, VoidCallback ontap, String labelName) {
         child: Center(
           child: Text(
             labelName,
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
       ),
