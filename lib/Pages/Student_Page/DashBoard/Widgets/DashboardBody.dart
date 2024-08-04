@@ -65,8 +65,8 @@ class DashboardBody extends StatelessWidget {
                 return GridView(
                   scrollDirection: Axis.vertical,
                   padding: const EdgeInsets.only(left: 10, right: 10),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: crossAxisCount,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                   ),
