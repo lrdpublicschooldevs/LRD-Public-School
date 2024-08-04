@@ -46,7 +46,7 @@ class TimeTablePage extends StatelessWidget {
                   children: [
                     DatePicker(
                       DateTime.now(),
-                      height: 75,
+                      height: 85,
                       width: 45,
                       initialSelectedDate: DateTime.now(),
                       selectionColor: Theme.of(context).colorScheme.primary,
