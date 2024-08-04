@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/DashBoardBox.dart';
 import 'package:myapp/Pages/Teacher_Page/AttendanceMark/attendance.dart';
+import 'package:myapp/Pages/Teacher_Page/ExamSheet/ExamSheetPage.dart';
 import 'package:myapp/Pages/Teacher_Page/HomeWork/homeworkPage.dart';
 import 'package:myapp/Pages/Teacher_Page/Teacher%20Leave/TeacherLeave.dart';
 
@@ -74,7 +75,9 @@ class TDashboardBody extends StatelessWidget {
                     DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus "),
                     DashboardBox(context, () {}, AssetsIamge.tPerformanceRprtSVG, "Performance Report"),
                     DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
-                    DashboardBox(context, () {}, AssetsIamge.dExamDatesheetSVG, "Exam Datesheet"),
+                    DashboardBox(context, () {
+                      Get.to(const ExamSheetPage());
+                    }, AssetsIamge.dExamDatesheetSVG, "Exam Datesheet"),
                     DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academic Calendar"),
                     DashboardBox(context, () {
                       Get.to(const TeacherLeavePage());
