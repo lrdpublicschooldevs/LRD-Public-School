@@ -12,6 +12,13 @@ class WelcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Get screen width
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    // Define font sizes based on screen width
+    double headlineFontSize = screenWidth > 420 ? 24 : screenWidth * 0.06; // Fixed size of 24 for wide screens
+    double bodyFontSize = screenWidth > 420 ? 16 : screenWidth * 0.04; // Fixed size of 16 for wide screens
+
     return Scaffold(
       body: Stack(
         children: [
@@ -46,7 +53,9 @@ class WelcomePage extends StatelessWidget {
                   children: [
                     Text(
                       'Welcome to', // Add text between the buttons
-                      style: Theme.of(context).textTheme.headlineSmall,
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        fontSize: headlineFontSize,
+                      ),
                     ),
                   ],
                 ),
@@ -55,11 +64,12 @@ class WelcomePage extends StatelessWidget {
                   children: [
                     Text(
                       'LRD Public School', // Add text between the buttons
-                      style: Theme.of(context).textTheme.headlineSmall,
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        fontSize: headlineFontSize,
+                      ),
                     ),
                   ],
                 ),
-
                 const SizedBox(
                   height: 25,
                 ),
