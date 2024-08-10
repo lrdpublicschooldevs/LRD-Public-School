@@ -27,7 +27,7 @@ class ReportCardPage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
+            AssetsImage.bgDesignSVG,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -37,7 +37,7 @@ class ReportCardPage extends StatelessWidget {
               Column(
                 children: [
                   Image.asset(
-                    AssetsIamge.logoImg,
+                    AssetsImage.logoImg,
                     width: 150,
                     height: 150,
                     // fit: BoxFit.contain,

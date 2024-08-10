@@ -1,43 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Widgets/Auth/loginPage.dart';
+import 'package:myapp/Pages/Widgets/tauth/tLoginPage.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
-import '../tauth/tLoginPage.dart';
-
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+class TabWelcomePage extends StatelessWidget {
+  const TabWelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          // Background SVG
           SvgPicture.asset(
-            AssetsIamge.splashBgSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.splashBgSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
-          // Logo PNG
           Positioned(
-            top: 150,
+            top: MediaQuery.of(context).size.height * 0.15,
             left: 0,
             right: 0,
+            bottom: MediaQuery.of(context).size.height * 0.5,
             child: Image.asset(
-              AssetsIamge.logoImg,
+              AssetsImage.logoImg,
               width: 150,
               height: 150,
-              fit: BoxFit.contain,
             ),
           ),
           Positioned(
+            top: MediaQuery.of(context).size.height * 0.4,
             left: 0,
             right: 0,
-            top: 300,
+            bottom: MediaQuery.of(context).size.height * 0.25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -45,7 +43,7 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Welcome to', // Add text between the buttons
+                      'Welcome to',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ],
@@ -54,7 +52,7 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'LRD Public School', // Add text between the buttons
+                      'LRD Public School',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ],
@@ -75,7 +73,6 @@ class WelcomePage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                // Add spacing between the text and buttons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

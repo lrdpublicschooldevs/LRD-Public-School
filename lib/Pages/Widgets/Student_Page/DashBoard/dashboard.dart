@@ -6,7 +6,6 @@ import 'package:myapp/Pages/Widgets/Student_Page/DashBoard/Widgets/DashboardBody
 import 'package:myapp/Pages/Widgets/Student_Page/DashBoard/Widgets/DashboardHeader.dart';
 import 'package:myapp/Pages/Widgets/Student_Page/DashBoard/Widgets/Fee.dart';
 
-
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
 
@@ -18,7 +17,7 @@ class DashboardPage extends StatelessWidget {
         body: Stack(
           children: [
             SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
+              AssetsImage.bgDesignSVG,
               fit: BoxFit.cover,
               width: double.infinity,
               height: double.infinity,

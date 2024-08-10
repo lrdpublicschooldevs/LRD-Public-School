@@ -27,7 +27,7 @@ class BookDetailsPage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
+            AssetsImage.bgDesignSVG,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -48,7 +48,7 @@ class BookDetailsPage extends StatelessWidget {
                       style: Theme.of(context).textTheme.headlineMedium,
                     ),
                     const SizedBox(height: 10),
-                        const Divider(color: Colors.black, height: 1),
+                    const Divider(color: Colors.black, height: 1),
                     const SizedBox(height: 15),
                     const StudentEditDetail(text: "Serial No :", detail: "#28780"),
                     const SizedBox(height: 10),

@@ -33,7 +33,7 @@ class _AskDoubtPageState extends State<AskDoubtPage> {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
+            AssetsImage.bgDesignSVG,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,

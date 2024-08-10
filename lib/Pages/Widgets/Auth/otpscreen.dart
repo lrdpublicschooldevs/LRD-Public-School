@@ -79,7 +79,7 @@ class _OtpScreenState extends State<OtpScreen> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
+              AssetsImage.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
@@ -88,7 +88,7 @@ class _OtpScreenState extends State<OtpScreen> {
             left: 20,
             right: 20,
             child: Image.asset(
-              AssetsIamge.otpImg,
+              AssetsImage.otpImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,

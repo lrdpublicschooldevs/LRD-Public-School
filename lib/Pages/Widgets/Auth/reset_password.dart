@@ -25,7 +25,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
+              AssetsImage.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
@@ -34,7 +34,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             left: 20,
             right: 20,
             child: Image.asset(
-              AssetsIamge.forgotImg,
+              AssetsImage.forgotImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,

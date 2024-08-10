@@ -23,7 +23,7 @@ class _TeacherLoginPageState extends State<TeacherLoginPage> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
+              AssetsImage.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
@@ -32,7 +32,7 @@ class _TeacherLoginPageState extends State<TeacherLoginPage> {
             left: 20,
             right: 20,
             child: Image.asset(
-              AssetsIamge.lockImg,
+              AssetsImage.lockImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,

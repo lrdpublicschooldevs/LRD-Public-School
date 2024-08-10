@@ -5,7 +5,6 @@ import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Widgets/Student_Page/attendance/widgets/overAll.dart';
 import 'package:myapp/Pages/Widgets/Student_Page/attendance/widgets/subjectWise.dart';
 
-
 class AttendancePage extends StatelessWidget {
   const AttendancePage({super.key});
 
@@ -32,7 +31,7 @@ class AttendancePage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
+            AssetsImage.bgDesignSVG,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
