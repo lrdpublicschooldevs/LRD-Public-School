@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 
-class DashBorad extends StatelessWidget {
-  const DashBorad({super.key});
+class GalleryPage extends StatelessWidget {
+  const GalleryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class DashBorad extends StatelessWidget {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          "Fee",
+          "Gallery",
           style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
@@ -27,9 +27,9 @@ class DashBorad extends StatelessWidget {
         children: [
           SvgPicture.asset(
             AssetsImage.bgDesignSVG,
-              fit: BoxFit.fill,
-              width: double.maxFinite,
-              height: double.maxFinite
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
           ListView(
             children: [
@@ -39,9 +39,6 @@ class DashBorad extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: const Color.fromRGBO(250, 225, 225, 0.6),
-                ),
-                child: Column(
-                  children: [],
                 ),
               )
             ],

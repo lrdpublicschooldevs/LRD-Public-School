@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Views/LayoutView.dart';
+import 'package:myapp/Pages/Wecome/WelcomePage.dart';
 
 class SplashScren extends StatelessWidget {
   const SplashScren({super.key});
@@ -33,7 +33,7 @@ class SplashScren extends StatelessWidget {
             ),
           );
         } else {
-          return const LayoutView();
+          return const WelcomePage();
         }
       },
     );

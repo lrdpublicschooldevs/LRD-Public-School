@@ -2,18 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/Student_Page/ask_doubt/widgets/askDoubtBox.dart';
 
-class DashBorad extends StatelessWidget {
-  const DashBorad({super.key});
+class AskDoubtPage extends StatefulWidget {
+  const AskDoubtPage({super.key});
 
+  @override
+  State<AskDoubtPage> createState() => _AskDoubtPageState();
+}
+
+class _AskDoubtPageState extends State<AskDoubtPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          "Fee",
+          "Ask Doubt",
           style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
@@ -27,24 +34,17 @@ class DashBorad extends StatelessWidget {
         children: [
           SvgPicture.asset(
             AssetsImage.bgDesignSVG,
-              fit: BoxFit.fill,
-              width: double.maxFinite,
-              height: double.maxFinite
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
-          ListView(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(right: 20, left: 20),
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromRGBO(250, 225, 225, 0.6),
-                ),
-                child: Column(
-                  children: [],
-                ),
-              )
-            ],
+          Padding(
+            padding: const EdgeInsets.only(right: 20, left: 20),
+            child: ListView(
+              children: const [
+                AskDoubtBox()
+              ],
+            ),
           )
         ],
       ),
