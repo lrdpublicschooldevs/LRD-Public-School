@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/CircleProgressBar.dart';
+import 'package:myapp/Pages/Student_Page/Exam/ExamPage.dart';
 import 'package:myapp/Pages/Student_Page/Fee/FeePage.dart';
 import 'package:myapp/Widgets/responsiveLayout.dart';
 
@@ -66,7 +68,7 @@ class FeeCard extends StatelessWidget {
                         child: Text(
                           overflow: TextOverflow.ellipsis,
                           " Total Fee : 100",
-                          style: Theme.of(context).textTheme.titleSmall,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ),
                       const SizedBox(height: 7),
@@ -83,12 +85,12 @@ class FeeCard extends StatelessWidget {
                             Text(
                               overflow: TextOverflow.ellipsis,
                               " Paid : 750",
-                              style: Theme.of(context).textTheme.titleSmall,
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
                             Text(
                               overflow: TextOverflow.ellipsis,
                               "36 ago ",
-                              style: Theme.of(context).textTheme.titleSmall,
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ],
                         ),
@@ -105,16 +107,20 @@ class FeeCard extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              overflow: TextOverflow.ellipsis,
-                              "Pending : 250",
-                              style: Theme.of(context).textTheme.titleSmall,
+                            Expanded(
+                              child: Text(
+                                overflow: TextOverflow.ellipsis,
+                                "Pending : 250",
+                                style: Theme.of(context).textTheme.titleMedium,
+                              ),
                             ),
                             const SizedBox(width: 5),
-                            Text(
-                              overflow: TextOverflow.ellipsis,
-                              "7 day rem",
-                              style: Theme.of(context).textTheme.titleSmall,
+                            Expanded(
+                              child: Text(
+                                overflow: TextOverflow.ellipsis,
+                                "7 day rem",
+                                style: Theme.of(context).textTheme.titleMedium,
+                              ),
                             ),
                           ],
                         ),

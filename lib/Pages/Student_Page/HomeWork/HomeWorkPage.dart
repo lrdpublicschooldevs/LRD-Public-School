@@ -50,7 +50,41 @@ class HomeWorkPage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
+            HomeWorkBox(
+              labelColor: Colors.yellow,
+              labelName: "Mathematics",
+              subjectName: "Surface Area",
+              assignDate: "27 May 2024",
+              submitDate: "05 June 2024",
+              primBtn: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  PrimaryBtn(
+                    btnName: "Details",
+                    ontap: () {},
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 10),
+            HomeWorkBox(
+              labelColor: Colors.yellow,
+              labelName: "Mathematics",
+              subjectName: "Surface Area",
+              assignDate: "27 May 2024",
+              submitDate: "05 June 2024",
+              primBtn: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  PrimaryBtn(
+                    btnName: "Details",
+                    ontap: () {},
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 10),
             HomeWorkBox(
               labelColor: Colors.yellow,
               labelName: "Mathematics",
@@ -68,39 +102,6 @@ class HomeWorkPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            HomeWorkBox(
-              labelColor: Colors.yellow,
-              labelName: "Mathematics",
-              subjectName: "Surface Area",
-              assignDate: "27 May 2024",
-              submitDate: "05 June 2024",
-              primBtn: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  PrimaryBtn(
-                    btnName: "Details",
-                    ontap: () {},
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 20),
-            HomeWorkBox(
-              labelColor: Colors.yellow,
-              labelName: "Mathematics",
-              subjectName: "Surface Area",
-              assignDate: "27 May 2024",
-              submitDate: "05 June 2024",
-              primBtn: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  PrimaryBtn(
-                    btnName: "Details",
-                    ontap: () {},
-                  ),
-                ],
-              ),
-            ),
           ])
         ],
       ),

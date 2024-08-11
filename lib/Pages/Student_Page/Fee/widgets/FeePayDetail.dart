@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class FeePayDetail extends StatelessWidget {
   final String receiptNo;
@@ -18,7 +20,7 @@ class FeePayDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromRGBO(250, 225, 225, 0.6),
@@ -30,27 +32,27 @@ class FeePayDetail extends StatelessWidget {
             children: [
               Text(
                 "Receipt No. : ",
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               Text(
                 receiptNo,
-                style: Theme.of(context).textTheme.labelLarge,
+                style: Theme.of(context).textTheme.titleMedium,
               )
             ],
           ),
           const SizedBox(height: 10),
           const Divider(color: Colors.black38, height: 1),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "Month : ",
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
               Text(
                 month,
-                style: Theme.of(context).textTheme.labelLarge,
+                style: Theme.of(context).textTheme.titleMedium,
               )
             ],
           ),
@@ -58,33 +60,39 @@ class FeePayDetail extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Last Payment Date : ",
-                style: Theme.of(context).textTheme.bodyLarge,
+              Expanded(
+                child: Text(
+                  overflow: TextOverflow.ellipsis,
+                  "Last Payment Date : ",
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
               ),
               Text(
                 paymentDate,
-                style: Theme.of(context).textTheme.labelLarge,
+                style: Theme.of(context).textTheme.titleMedium,
               )
             ],
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           const Divider(color: Colors.black, height: 1),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Total Pending Amount : ",
-                style: Theme.of(context).textTheme.bodyLarge,
+              Expanded(
+                child: Text(
+                  overflow: TextOverflow.ellipsis,
+                  "Total Pending Amount : ",
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
               ),
               Text(
                 pendingAmount,
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: Theme.of(context).textTheme.titleMedium,
               )
             ],
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           primaryBtn
         ],
       ),

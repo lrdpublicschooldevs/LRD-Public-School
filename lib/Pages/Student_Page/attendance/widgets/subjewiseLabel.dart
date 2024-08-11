@@ -26,14 +26,14 @@ class SubjectWiseLabel extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  // mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
                       overflow: TextOverflow.ellipsis,
                       date,
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
+                    const Spacer(),
                     Text(
                       overflow: TextOverflow.ellipsis,
                       "Present : $present",
@@ -43,13 +43,14 @@ class SubjectWiseLabel extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
                       overflow: TextOverflow.ellipsis,
                       subject,
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
+                    const Spacer(),
                     Text(
                       overflow: TextOverflow.ellipsis,
                       "Absent : $absent",

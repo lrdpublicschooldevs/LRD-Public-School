@@ -66,7 +66,7 @@ class AttendanceCard extends StatelessWidget {
                         child: Text(
                           overflow: TextOverflow.ellipsis,
                           "April Attendance : 75%",
-                          style: Theme.of(context).textTheme.titleSmall,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ),
                       const SizedBox(height: 10),
@@ -81,7 +81,7 @@ class AttendanceCard extends StatelessWidget {
                         child: Text(
                           overflow: TextOverflow.ellipsis,
                           "Total Attendance : 90%",
-                          style: Theme.of(context).textTheme.titleSmall,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ),
                       const SizedBox(height: 10),
