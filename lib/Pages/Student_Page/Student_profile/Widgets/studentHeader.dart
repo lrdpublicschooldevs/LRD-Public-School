@@ -10,7 +10,6 @@ class StudentHeader extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: Container(
         padding: const EdgeInsets.all(10),
-        // height: 120,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: const Color.fromRGBO(250, 225, 225, 0.6),
@@ -22,9 +21,9 @@ class StudentHeader extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {},
-                  child: Container(
-                    height: 80,
-                    width: 80,
+                  child: SizedBox(
+                    height: 70,
+                    width: 70,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(100),
                       child: Image.asset(
@@ -38,7 +37,7 @@ class StudentHeader extends StatelessWidget {
                   children: [
                     Text(
                       "Student Name",
-                      style: Theme.of(context).textTheme.bodyLarge,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     const SizedBox(height: 7),
                     Row(
@@ -56,10 +55,6 @@ class StudentHeader extends StatelessWidget {
                     )
                   ],
                 ),
-                const Icon(
-                  Icons.camera_alt_outlined,
-                  size: 40,
-                )
               ],
             ),
           ],

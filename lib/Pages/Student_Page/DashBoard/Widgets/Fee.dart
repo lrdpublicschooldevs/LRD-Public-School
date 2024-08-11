@@ -1,9 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/CircleProgressBar.dart';
-import 'package:myapp/Pages/Student_Page/Exam/ExamPage.dart';
 import 'package:myapp/Pages/Student_Page/Fee/FeePage.dart';
 import 'package:myapp/Widgets/responsiveLayout.dart';
 

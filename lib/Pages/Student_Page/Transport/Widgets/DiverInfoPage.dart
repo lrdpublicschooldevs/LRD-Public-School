@@ -18,7 +18,7 @@ class DriverInfoPage extends StatelessWidget {
           children: [
             Text(
               "Driver's Information",
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 10),
             const Divider(color: Colors.black, height: 1),

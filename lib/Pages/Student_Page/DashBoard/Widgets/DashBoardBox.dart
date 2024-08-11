@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:myapp/Widgets/responsiveLayout.dart';
 
 Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath, String iconName) {
+  final w = Responsive.width(context);
+  final h = Responsive.height(context);
   return InkWell(
     onTap: onTap,
     child: Container(
@@ -15,15 +19,16 @@ Widget DashboardBox(BuildContext context, VoidCallback onTap, String iconPath, S
         children: [
           SvgPicture.asset(
             iconPath,
-            width: MediaQuery.of(context).size.width * .08, // Fixed width
-            height: MediaQuery.of(context).size.height * .05, // Fixed height
+            width: w * .09, // Fixed width
+            height: h * .05, // Fixed height
             color: Colors.black,
           ),
           Text(
+            maxLines: 1,
             iconName,
             overflow: TextOverflow.ellipsis,
             style: Theme.of(context).textTheme.labelMedium,
-            textAlign: TextAlign.center, // Center align the text
+            textAlign: TextAlign.justify, // Center align the text
           ),
         ],
       ),
