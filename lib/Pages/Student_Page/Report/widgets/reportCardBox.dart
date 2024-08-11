@@ -8,7 +8,7 @@ class ReportCardBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 20, left: 20),
+      margin: const EdgeInsets.only(right: 15, left: 15),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),

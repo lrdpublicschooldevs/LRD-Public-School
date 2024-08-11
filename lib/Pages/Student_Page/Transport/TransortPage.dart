@@ -38,11 +38,11 @@ class TransportPage extends StatelessWidget {
           ListView(
             children: const [
               BusInfoPage(),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               DriverInfoPage(),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               HelplinePage(),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
             ],
           )
         ],

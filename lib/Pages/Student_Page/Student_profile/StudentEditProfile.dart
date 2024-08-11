@@ -36,7 +36,7 @@ class StudentEditProfile extends StatelessWidget {
             ListView(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
                   child: Container(
                     padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(

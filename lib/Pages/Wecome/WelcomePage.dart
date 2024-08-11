@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
+import 'package:myapp/Pages/Auth/loginPage.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/dashboard.dart';
 import 'package:myapp/Pages/tauth/tLoginPage.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
@@ -43,7 +44,7 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Welcome to', 
+                      'Welcome to',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ],
@@ -52,12 +53,11 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'LRD Public School', 
+                      'LRD Public School',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ],
                 ),
-
                 const SizedBox(
                   height: 20,
                 ),
@@ -67,7 +67,7 @@ class WelcomePage extends StatelessWidget {
                     PrimaryBtn(
                       btnName: 'Student/Parent Login',
                       ontap: () {
-                        Get.to(() => const DashboardPage());
+                        Get.to(() => const LoginPage());
                       },
                     ),
                   ],
