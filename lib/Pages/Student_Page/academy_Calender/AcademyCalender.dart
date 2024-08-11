@@ -32,7 +32,7 @@ class AcademyCalenderPage extends StatelessWidget {
             width: double.maxFinite,
             height: double.maxFinite,
           ),
-          AcademyBox()
+          const AcademyBox()
         ],
       ),
     );

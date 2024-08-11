@@ -39,7 +39,7 @@ class _AskDoubtPageState extends State<AskDoubtPage> {
             height: double.maxFinite,
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 20, left: 20),
+            padding: const EdgeInsets.only(right: 15, left: 15),
             child: ListView(
               children: const [
                 AskDoubtBox()

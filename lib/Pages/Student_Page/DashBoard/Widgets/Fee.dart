@@ -12,7 +12,7 @@ class FeeCard extends StatelessWidget {
     final isMobile = Responsive.isMobile(context);
     final w = Responsive.width(context);
     return Container(
-      margin: const EdgeInsets.only(right: 20, left: 5),
+      margin: const EdgeInsets.only(right: 15, left: 5),
       width: isMobile ? w * .85 : 450,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),

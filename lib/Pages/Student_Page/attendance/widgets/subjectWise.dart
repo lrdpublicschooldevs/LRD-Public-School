@@ -16,7 +16,7 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.only(right: 20, left: 20, top: 10),
+          margin: const EdgeInsets.only(right: 15, left: 15, top: 10),
           padding: const EdgeInsets.all(20),
           height: 60,
           decoration: BoxDecoration(

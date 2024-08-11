@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ExamSheetLabel extends StatelessWidget {
   final String date;
@@ -28,17 +30,22 @@ class ExamSheetLabel extends StatelessWidget {
               const SizedBox(width: 8),
               Text(
                 date,
-                style: Theme.of(context).textTheme.bodyMedium,
+                style: Theme.of(context).textTheme.labelMedium,
               ),
               const SizedBox(width: 22),
-              Text(
-                subject,
-                style: Theme.of(context).textTheme.bodyMedium,
+              Expanded(
+                child: Text(
+                  overflow: TextOverflow.ellipsis,
+                  subject,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
               ),
-              Spacer(),
-              Text(
-                "From : ${from}",
-                style: Theme.of(context).textTheme.bodyMedium,
+              Expanded(
+                child: Text(
+                  overflow: TextOverflow.ellipsis,
+                  "From : $from",
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
               ),
             ],
           ),
@@ -50,14 +57,19 @@ class ExamSheetLabel extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
               const SizedBox(width: 10),
-              Text(
-                day,
-                style: Theme.of(context).textTheme.bodyMedium,
+              Expanded(
+                child: Text(
+                  overflow: TextOverflow.ellipsis,
+                  day,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
               ),
-              Spacer(),
-              Text(
-                "To : ${to}",
-                style: Theme.of(context).textTheme.bodyMedium,
+              Expanded(
+                child: Text(
+                  overflow: TextOverflow.ellipsis,
+                  "To : $to",
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
               ),
             ],
           )

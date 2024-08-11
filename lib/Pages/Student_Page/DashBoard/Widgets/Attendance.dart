@@ -12,7 +12,7 @@ class AttendanceCard extends StatelessWidget {
     final isMobile = Responsive.isMobile(context);
     final w = Responsive.width(context);
     return Container(
-      margin: const EdgeInsets.only(right: 5, left: 20),
+      margin: const EdgeInsets.only(right: 5, left: 15),
       width: isMobile ? w * .85 : 450,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),

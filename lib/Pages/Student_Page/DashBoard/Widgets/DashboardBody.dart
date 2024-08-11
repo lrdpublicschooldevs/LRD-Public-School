@@ -23,7 +23,7 @@ class DashboardBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 20, left: 20),
+      margin: const EdgeInsets.only(right: 15, left: 15),
       height: MediaQuery.of(context).size.height * 0.55,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
