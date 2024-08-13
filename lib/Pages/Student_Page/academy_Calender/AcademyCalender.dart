@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_Page/academy_Calender/widgets/academyBox.dart';
+import 'package:myapp/Pages/Student_Page/academy_Calender/widgets/AcademyBox.dart';
 
 class AcademyCalenderPage extends StatelessWidget {
   const AcademyCalenderPage({super.key});
@@ -27,12 +27,12 @@ class AcademyCalenderPage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.bgDesignSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
-          AcademyBox()
+          const AcademyBox()
         ],
       ),
     );

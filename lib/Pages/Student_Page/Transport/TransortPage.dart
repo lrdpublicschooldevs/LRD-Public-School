@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
@@ -29,21 +30,20 @@ class TransportPage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.bgDesignSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
-          SingleChildScrollView(
-            child: Column(
-              children: [
-                BusInfoPage(),
-                const SizedBox(height: 20),
-                DriverInfoPage(),
-                const SizedBox(height: 20),
-                HelplinePage()
-              ],
-            ),
+          ListView(
+            children: const [
+              BusInfoPage(),
+              SizedBox(height: 10),
+              DriverInfoPage(),
+              SizedBox(height: 10),
+              HelplinePage(),
+              SizedBox(height: 10),
+            ],
           )
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class TeacherDetailBox extends StatelessWidget {
   final String teacherName;
@@ -49,9 +50,12 @@ class TeacherDetailBox extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Email Id : ",
-                style: Theme.of(context).textTheme.bodyLarge,
+              Expanded(
+                child: Text(
+                  overflow: TextOverflow.ellipsis,
+                  "Email Id : ",
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
               ),
               Text(
                 emailId,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:myapp/Widgets/responsiveLayout.dart';
 
 class StudentEditDetail extends StatelessWidget {
   final String text;
@@ -8,22 +8,23 @@ class StudentEditDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final w = Responsive.width(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          width: MediaQuery.of(context).size.width * 0.43,
+        SizedBox(
+          width: w * 0.44,
           child: Text(
             text,
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
         Expanded(
-          child: Container(
-            width: MediaQuery.of(context).size.width * 0.4,
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width * 0.3,
             child: Text(
               detail,
-              style: Theme.of(context).textTheme.labelLarge,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
           ),
         ),

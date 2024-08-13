@@ -26,28 +26,33 @@ class SubjectWiseLabel extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
+                      overflow: TextOverflow.ellipsis,
                       date,
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
+                    const Spacer(),
                     Text(
+                      overflow: TextOverflow.ellipsis,
                       "Present : $present",
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
-
                   ],
                 ),
                 const SizedBox(height: 10),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
+                      overflow: TextOverflow.ellipsis,
                       subject,
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
+                    const Spacer(),
                     Text(
+                      overflow: TextOverflow.ellipsis,
                       "Absent : $absent",
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
@@ -58,10 +63,14 @@ class SubjectWiseLabel extends StatelessWidget {
           ),
           const SizedBox(width: 7),
           CircleAvatar(
-            radius: 22,
+            minRadius: 15,
+            maxRadius: 20,
             child: Text(
+              maxLines: 1,
               precentage,
-              style: Theme.of(context).textTheme.labelSmall?.copyWith(color: Colors.white),
+              style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                    color: Colors.white,
+                  ),
             ),
           )
         ],

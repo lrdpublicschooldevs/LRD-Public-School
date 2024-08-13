@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
-import 'package:myapp/Widgets/splash_screen.dart';
+import 'package:myapp/Widgets/splashScreen.dart';
 
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       themeMode: ThemeMode.light,
-      home: const SplashScreen(),
+      home: const SplashScren(),
     );
   }
 }

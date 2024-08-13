@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class AllBookDetail extends StatelessWidget {
   final String bookName;
@@ -64,9 +66,12 @@ class AllBookDetail extends StatelessWidget {
                     "Date of Issue : ",
                     style: adjustTextStyle(textTheme.titleLarge),
                   ),
-                  Text(
-                    dateOfIssue,
-                    style: adjustTextStyle(textTheme.bodySmall)?.copyWith(color: Colors.grey.shade800),
+                  Expanded(
+                    child: Text(
+                      overflow: TextOverflow.ellipsis,
+                      dateOfIssue,
+                      style: adjustTextStyle(textTheme.bodySmall)?.copyWith(color: Colors.grey.shade800),
+                    ),
                   ),
                 ],
               ),
@@ -78,9 +83,12 @@ class AllBookDetail extends StatelessWidget {
                     "Date of Return : ",
                     style: adjustTextStyle(textTheme.titleLarge),
                   ),
-                  Text(
-                    dateOfReturn,
-                    style: adjustTextStyle(textTheme.bodySmall)?.copyWith(color: Colors.grey.shade800),
+                  Expanded(
+                    child: Text(
+                      overflow: TextOverflow.ellipsis,
+                      dateOfReturn,
+                      style: adjustTextStyle(textTheme.titleMedium),
+                    ),
                   ),
                 ],
               ),

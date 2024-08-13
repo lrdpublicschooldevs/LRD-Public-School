@@ -16,7 +16,7 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.only(right: 20, left: 20, top: 10),
+          margin: const EdgeInsets.only(right: 15, left: 15, top: 10),
           padding: const EdgeInsets.all(20),
           height: 60,
           decoration: BoxDecoration(
@@ -52,7 +52,7 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
         ),
         Container(
           margin: const EdgeInsets.only(right: 20, left: 20, top: 10),
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: const Color.fromRGBO(250, 225, 225, 0.6),
@@ -66,7 +66,7 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
               const SizedBox(height: 10),
               const Divider(color: Colors.black, height: 1),
               const SubjectWiseLabel(
-                date: "09/06/24 - 09/06/24",
+                date: "09/06/24-09/06/24",
                 present: "15",
                 subject: "Science",
                 absent: "5",
@@ -74,7 +74,7 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
               ),
               const Divider(color: Colors.black38, height: 1),
               const SubjectWiseLabel(
-                date: "09/06/24 - 09/06/24",
+                date: "09/06/24-09/06/24",
                 present: "15",
                 subject: "Mathematics",
                 absent: "5",
@@ -82,15 +82,15 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
               ),
               const Divider(color: Colors.black38, height: 1),
               const SubjectWiseLabel(
-                date: "09/06/24 - 09/06/24",
+                date: "09/06/24-09/06/24",
                 present: "15",
-                subject: "Computer Science",
+                subject: "Computer",
                 absent: "5",
                 precentage: "63.3%",
               ),
               const Divider(color: Colors.black38, height: 1),
               const SubjectWiseLabel(
-                date: "09/06/24 - 09/06/24",
+                date: "09/06/24-09/06/24",
                 present: "15",
                 subject: "Hindi",
                 absent: "5",
@@ -98,7 +98,7 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
               ),
               const Divider(color: Colors.black38, height: 1),
               const SubjectWiseLabel(
-                date: "09/06/24 - 09/06/24",
+                date: "09/06/24-09/06/24",
                 present: "15",
                 subject: "English",
                 absent: "5",
@@ -106,11 +106,11 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
               ),
               const Divider(color: Colors.black38, height: 1),
               const SubjectWiseLabel(
-                date: "09/06/24 - 09/06/24",
+                date: "09/06/24-09/06/24",
                 present: "15",
-                subject: "Social Science",
+                subject: "Social ",
                 absent: "5",
-                precentage: "63.3",
+                precentage: "63.3%",
               ),
               const Divider(color: Colors.black38, height: 1),
               const SizedBox(height: 30),
@@ -118,11 +118,13 @@ class _SubjectWiseBoxState extends State<SubjectWiseBox> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Overall April Attendance : ",
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    overflow: TextOverflow.ellipsis,
+                    "Overall Attendance : ",
+                    style: Theme.of(context).textTheme.labelMedium,
                   ),
                   CircleAvatar(
-                    radius: 30,
+                    minRadius: 15,
+                    maxRadius: 20,
                     child: Text(
                       "45%",
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),

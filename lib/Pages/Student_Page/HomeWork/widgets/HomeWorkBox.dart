@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeWorkBox extends StatelessWidget {
   final Color labelColor;
@@ -20,7 +22,7 @@ class HomeWorkBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: Container(
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
@@ -34,19 +36,19 @@ class HomeWorkBox extends StatelessWidget {
               children: [
                 Card(
                   color: labelColor,
-                  elevation: 2,
+                  elevation: 3,
                   child: Row(
                     children: [
                       const SizedBox(width: 5),
                       const Icon(
                         Icons.check_circle_outline,
                         color: Colors.black,
-                        size: 20,
+                        size: 17,
                       ),
                       const SizedBox(width: 5),
                       Text(
                         labelName,
-                        style: Theme.of(context).textTheme.bodyLarge,
+                        style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       const SizedBox(width: 10),
                     ],
@@ -54,25 +56,35 @@ class HomeWorkBox extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 10),
             Text(
               subjectName,
               style: Theme.of(context).textTheme.bodyLarge,
-            ),
-            const SizedBox(height: 15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Assign Date : ", style: Theme.of(context).textTheme.bodyMedium),
-                Text(assignDate, style: Theme.of(context).textTheme.bodyMedium),
-              ],
             ),
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Last Submission Date : ", style: Theme.of(context).textTheme.bodyMedium),
-                Text(submitDate, style: Theme.of(context).textTheme.bodyMedium),
+                Text("Assign Date : ", style: Theme.of(context).textTheme.labelLarge),
+                Text(assignDate, style: Theme.of(context).textTheme.titleMedium),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Expanded(
+                  child: Text(
+                    overflow: TextOverflow.ellipsis,
+                    "Last Submission Date : ",
+                    style: Theme.of(context).textTheme.labelMedium,
+                  ),
+                ),
+                Text(
+                  overflow: TextOverflow.ellipsis,
+                  submitDate,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
               ],
             ),
             const SizedBox(height: 15),

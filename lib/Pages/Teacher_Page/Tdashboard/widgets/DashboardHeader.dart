@@ -44,7 +44,7 @@ class TDashboardHeader extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(100),
                     child: Image.asset(
-                      AssetsIamge.proflePicImg,
+                      AssetsImage.proflePicImg,
                       fit: BoxFit.contain,
                     ),
                   ),

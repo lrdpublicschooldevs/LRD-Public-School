@@ -12,9 +12,9 @@ class PrimaryBtn extends StatelessWidget {
       highlightColor: Colors.transparent,
       onTap: ontap,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(20),
           color: Theme.of(context).colorScheme.primary,
         ),
         child: Row(
@@ -22,7 +22,7 @@ class PrimaryBtn extends StatelessWidget {
           children: [
             Text(
               btnName,
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white),
             )
           ],
         ),

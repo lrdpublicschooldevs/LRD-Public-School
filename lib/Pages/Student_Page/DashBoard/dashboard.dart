@@ -17,15 +17,15 @@ class DashboardPage extends StatelessWidget {
         body: Stack(
           children: [
             SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
+              AssetsImage.bgDesignSVG,
+              fit: BoxFit.fill,
+              width: double.maxFinite,
+              height: double.maxFinite,
             ),
             ListView(
               children: const [
                 Padding(
-                  padding: EdgeInsets.only(right: 20, left: 20, top: 10),
+                  padding: EdgeInsets.only(right: 15, left: 15, top: 10),
                   child: DashboardHeader(),
                 ),
                 SizedBox(height: 15),

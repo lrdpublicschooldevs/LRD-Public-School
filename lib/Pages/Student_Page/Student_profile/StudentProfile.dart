@@ -30,17 +30,17 @@ class StudentProfilePage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.bgDesignSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
           ListView(
             children: [
               const StudentHeader(),
               const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20),
+                padding: const EdgeInsets.only(left: 15, right: 15),
                 child: Container(
                   padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(

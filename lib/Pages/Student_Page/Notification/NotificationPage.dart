@@ -28,13 +28,13 @@ class NotificationPage1 extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.bgDesignSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 20, left: 20),
+            padding: const EdgeInsets.only(right: 15, left: 15),
             child: ListView(
               children: [
                 NotificationBox(
@@ -60,6 +60,7 @@ class NotificationPage1 extends StatelessWidget {
                   time: "08:00 AM",
                   message: "Dear Student, wishing you a very happy birthday. Always keep your goals in mind, learn something new everyday and make your life a great sucess",
                 ),
+                const SizedBox(height: 20),
               ],
             ),
           )

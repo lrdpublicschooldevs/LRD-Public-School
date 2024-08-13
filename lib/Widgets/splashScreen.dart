@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Welcome/welcome_page.dart';
+import 'package:myapp/Pages/Wecome/WelcomePage.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+class SplashScren extends StatelessWidget {
+  const SplashScren({super.key});
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: Future.delayed(const Duration(seconds: 3)), 
+      future: Future.delayed(const Duration(seconds: 3)),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Scaffold(
             body: Stack(
               children: [
                 SvgPicture.asset(
-                  AssetsIamge.splashBgSVG,
-                  fit: BoxFit.cover,
-                  width: double.infinity,
-                  height: double.infinity,
+                  AssetsImage.splashBgSVG,
+                  fit: BoxFit.fill,
+                  width: double.maxFinite,
+                  height: double.maxFinite,
                 ),
                 Center(
                   child: Image.asset(
-                    AssetsIamge.logoImg,
+                    AssetsImage.logoImg,
                     width: 150,
                     height: 150,
                     fit: BoxFit.contain,

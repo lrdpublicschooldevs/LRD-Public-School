@@ -28,15 +28,15 @@ class TimeTablePage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.bgDesignSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
           ListView(
             children: [
               Container(
-                margin: const EdgeInsets.only(right: 20, left: 20),
+                margin: const EdgeInsets.only(right: 15, left: 15),
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -46,8 +46,9 @@ class TimeTablePage extends StatelessWidget {
                   children: [
                     DatePicker(
                       DateTime.now(),
-                      height: 75,
-                      width: 45,
+                      height: 90,
+                      width: 50,
+                      // daysCount: 7,
                       initialSelectedDate: DateTime.now(),
                       selectionColor: Theme.of(context).colorScheme.primary,
                       dateTextStyle: const TextStyle(fontSize: 18, color: Colors.black54),

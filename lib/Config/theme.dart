@@ -33,8 +33,8 @@ var lightTheme = ThemeData(
     labelLarge: TextStyle(fontSize: 16, color: textMedium, fontFamily: "Poppins", fontWeight: FontWeight.w400),
     labelMedium: TextStyle(fontSize: 15, color: textBold, fontFamily: "Poppins", fontWeight: FontWeight.w400),
     labelSmall: TextStyle(fontSize: 13, color: textBold, fontFamily: "Poppins", fontWeight: FontWeight.w300),
-    titleSmall: TextStyle(fontSize: 14, color: textBold, fontFamily: "Poppins", fontWeight: FontWeight.w600),
+    titleSmall: TextStyle(fontSize: 13, color: textMedium, fontFamily: "Poppins", fontWeight: FontWeight.w500),
     titleLarge: TextStyle(fontSize: 16, color: textBold, fontFamily: "Poppins", fontWeight: FontWeight.w600),
-    titleMedium: TextStyle(fontSize: 15, color: textMedium, fontFamily: "Poppins", fontWeight: FontWeight.w600),
+    titleMedium: TextStyle(fontSize: 14, color: textMedium, fontFamily: "Poppins", fontWeight: FontWeight.w500),
   ),
 );

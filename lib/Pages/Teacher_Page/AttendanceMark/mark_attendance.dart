@@ -80,10 +80,10 @@ class MarkAttendancePageState extends State<MarkAttendancePage> {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.bgDesignSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),
@@ -214,7 +214,7 @@ class StudentCard extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(100),
                 child: Image.asset(
-                  AssetsIamge.proflePicImg,
+                  AssetsImage.proflePicImg,
                   fit: BoxFit.contain,
                 ),
               ),

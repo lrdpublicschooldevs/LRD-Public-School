@@ -25,7 +25,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
+              AssetsImage.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
@@ -34,7 +34,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             left: 20,
             right: 20,
             child: Image.asset(
-              AssetsIamge.forgotImg,
+              AssetsImage.forgotImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -52,13 +52,13 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
-                color: Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
+                color: const Color.fromRGBO(255, 255, 255, 0.8), // Semi-transparent white color
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(padding: EdgeInsets.all(5)),
+                      const Padding(padding: EdgeInsets.all(5)),
                       Center(
                         child: Text(
                           'Reset Password',
@@ -108,11 +108,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                           PrimaryBtn(
                               btnName: "Upadte",
                               ontap: () {
-                                Get.to(DashboardPage());
+                                Get.to(const DashboardPage());
                               })
                         ],
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                     ],
                   ),
                 ),
