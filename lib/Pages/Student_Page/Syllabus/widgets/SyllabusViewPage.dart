@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_Page/Student_profile/Widgets/studentEditBox.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
 class SyllabusViewPage extends StatelessWidget {
@@ -10,6 +11,10 @@ class SyllabusViewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentWidth = MediaQuery.of(context).size.width;
+    final bool isDesktop = currentWidth > 1000;
+    final bool isTablet = currentWidth > 600;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -33,10 +38,17 @@ class SyllabusViewPage extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          Column(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(right: 20, left: 20),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: isDesktop
+                    ? 600
+                    : isTablet
+                        ? 600
+                        : double.infinity,
+                height: double.infinity,
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -44,42 +56,185 @@ class SyllabusViewPage extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    Text("5th", style: Theme.of(context).textTheme.headlineMedium),
-                    Text("Mathematics", style: Theme.of(context).textTheme.headlineMedium),
-                    const SizedBox(height: 10),
-                    const Divider(height: 1, color: Colors.black45),
-                    const SizedBox(height: 15),
-                    const StudentEditDetail(text: "Lesson 1", detail: "The Fish Tale"),
-                    const SizedBox(height: 5),
-                    const StudentEditDetail(text: "Lesson 2", detail: "Shapes & Angles"),
-                    const SizedBox(height: 5),
-                    const StudentEditDetail(text: "Lesson 3", detail: "How many Squares?"),
-                    const SizedBox(height: 5),
-                    const StudentEditDetail(text: "Lesson 4", detail: "Parts & Wholes"),
-                    const SizedBox(height: 5),
-                    const StudentEditDetail(text: "Lesson 5", detail: "Does it look the Same?"),
-                    const SizedBox(height: 5),
-                    const StudentEditDetail(text: "Lesson 6", detail: "Be my Multiple, I’ll be your Factor"),
-                    const SizedBox(height: 5),
-                    const StudentEditDetail(text: "Lesson 7", detail: "Can you see the Pattern?"),
-                    const SizedBox(height: 5),
-                    const StudentEditDetail(text: "Lesson 8", detail: "Mapping your Way"),
-                    const SizedBox(height: 5),
-                    const StudentEditDetail(text: "Lesson 9", detail: "Boxes & Sketches "),
-                    const SizedBox(height: 5),
-                    const StudentEditDetail(text: "Lesson 10", detail: "Tenths & Hundredths"),
-                    const SizedBox(height: 10),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        PrimaryBtn(btnName: "Download", ontap: () {}),
-                      ],
-                    )
+                    Text(
+                      "5Th",
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                    Text(
+                      "Mathemetics",
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+                    Divider(
+                      height: 3,
+                      color: Colors.black,
+                    ),
+                    Expanded(child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: [
+
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),                          Row(
+                            children: [
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),                          Row(
+                            children: [
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),                          Row(
+                            children: [
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),                          Row(
+                            children: [
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),                          Row(
+                            children: [
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),                          Row(
+                            children: [
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),                          Row(
+                            children: [
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),                          Row(
+                            children: [
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),                          Row(
+                            children: [
+                              Text("Lesson 1",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("The fish tale",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Row(
+                            children: [
+                              Text("Lesson 2",style: Theme.of(context).textTheme.titleLarge,),
+                              SizedBox(width: 50,),
+                              Expanded(child: Text("Be my Multiple, I’ll be your Factor",style: Theme.of(context).textTheme.labelMedium,))
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                        ],
+                      )
+                    )),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                        child: PrimaryBtn(btnName: "Download", ontap: () {})),
                   ],
                 ),
-              )
-            ],
-          )
+              ),
+            ),
+          ),
         ],
       ),
     );

@@ -32,12 +32,52 @@ class SyllabusPage extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          ListView(
-            children: const [
-              SyllabusBox(),
-            ],
-          )
+          LayoutBuilder(
+            builder: (context, constraints) {
+              if (constraints.maxWidth > 800) {
+                return _buildDesktopLayout();
+              } else if (constraints.maxWidth > 400) {
+                return _buildTabletLayout();
+              } else {
+                return _buildMobileLayout();
+              }
+            },
+          ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildMobileLayout() {
+    return ListView(
+      children: const [
+        SyllabusBox(),
+      ],
+    );
+  }
+
+  Widget _buildTabletLayout() {
+    return Center(
+      child: Container(
+        width: 500, // Adjust the width for tablet
+        child: ListView(
+          children: const [
+            SyllabusBox(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDesktopLayout() {
+    return Center(
+      child: Container(
+        width: 600, // Adjust the width for desktop
+        child: ListView(
+          children: const [
+            SyllabusBox(),
+          ],
+        ),
       ),
     );
   }

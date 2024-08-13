@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/theme.dart';
+import 'package:myapp/Pages/Student_Page/Syllabus/SyllabusPage.dart';
 import 'package:myapp/Widgets/splash_screen.dart';
 
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       themeMode: ThemeMode.light,
-      home: const SplashScreen(),
+      home: const SyllabusPage(),
     );
   }
 }
