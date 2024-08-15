@@ -15,8 +15,8 @@ class _SyllabusBoxState extends State<SyllabusBox> {
   @override
   Widget build(BuildContext context) {
     final currentWidth = MediaQuery.of(context).size.width;
-    final bool isDesktop = currentWidth > 1200;
-    final bool isTablet = currentWidth > 800;
+    final bool isDesktop = currentWidth > 1000;
+    final bool isTablet = currentWidth > 600;
 
     return Container(
       margin: EdgeInsets.symmetric(
