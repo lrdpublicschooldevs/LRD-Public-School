@@ -12,18 +12,22 @@ class StudentEditDetail extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          width: MediaQuery.of(context).size.width * 0.43,
-          child: Text(
-            text,
-            style: Theme.of(context).textTheme.bodyLarge,
+          // width: MediaQuery.of(context).size.width * 0.43,
+          child: Expanded(
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
           ),
         ),
         Expanded(
           child: Container(
-            width: MediaQuery.of(context).size.width * 0.4,
-            child: Text(
-              detail,
-              style: Theme.of(context).textTheme.labelLarge,
+            // width: MediaQuery.of(context).size.width * 0.4,
+            child: Expanded(
+              child: Text(
+                detail,
+                style: Theme.of(context).textTheme.labelLarge,
+              ),
             ),
           ),
         ),

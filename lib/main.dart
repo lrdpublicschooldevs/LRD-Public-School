@@ -5,6 +5,7 @@ import 'package:myapp/Pages/Student_Page/DashBoard/dashboard.dart';
 import 'package:myapp/Pages/Student_Page/Syllabus/SyllabusPage.dart';
 import 'package:myapp/Widgets/splash_screen.dart';
 
+import 'Pages/Student_Page/Report/ReportCard.dart';
 import 'Pages/Student_Page/Syllabus/widgets/SyllabusViewPage.dart';
 import 'Pages/Student_Page/Teacher Details/TeacherPage.dart';
 import 'Pages/Student_Page/official_Detail/OfficialDetail.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       themeMode: ThemeMode.light,
-      home: const TeacherPage(),
+      home: const ReportCardPage(),
     );
   }
 }
