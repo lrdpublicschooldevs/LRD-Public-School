@@ -44,7 +44,6 @@ class TeacherPage extends StatelessWidget {
                   subjectName: "Mathematics",
                   cabinNo: "1111",
                 ),
-                SizedBox(height: 10),
                 TeacherDetailBox(
                   teacherName: "Suraj Kumar",
                   mobileNo: "8899887799",
@@ -52,7 +51,6 @@ class TeacherPage extends StatelessWidget {
                   subjectName: "English",
                   cabinNo: "1112",
                 ),
-                SizedBox(height: 10),
                 TeacherDetailBox(
                   teacherName: "Pankaj Kumar",
                   mobileNo: "8899887799",
@@ -60,7 +58,6 @@ class TeacherPage extends StatelessWidget {
                   subjectName: "Hindi",
                   cabinNo: "1113",
                 ),
-                SizedBox(height: 10),
                 TeacherDetailBox(
                   teacherName: "Piyush Gupta",
                   mobileNo: "8899887799",
@@ -68,6 +65,7 @@ class TeacherPage extends StatelessWidget {
                   subjectName: "Science",
                   cabinNo: "1114",
                 ),
+                SizedBox(height: 8),
               ],
             ),
           )
