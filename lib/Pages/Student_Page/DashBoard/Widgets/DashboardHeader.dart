@@ -20,7 +20,7 @@ class DashboardHeader extends StatelessWidget {
             ),
             Text(
               "Class : 3rd | Sec : A",
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
             Card(
               child: Text(
@@ -34,15 +34,15 @@ class DashboardHeader extends StatelessWidget {
           children: [
             InkWell(
               onTap: () {
-                Get.to(() => StudentProfilePage());
+                Get.to(() => const StudentProfilePage());
               },
-              child: Container(
-                height: 90,
-                width: 90,
+              child: SizedBox(
+                height: 80,
+                width: 80,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(100),
                   child: Image.asset(
-                    AssetsIamge.proflePicImg,
+                    AssetsImage.proflePicImg,
                     fit: BoxFit.contain,
                   ),
                 ),

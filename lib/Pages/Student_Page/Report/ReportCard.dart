@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
@@ -29,17 +28,17 @@ class ReportCardPage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.bgDesignSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
           ListView(
             children: [
               Column(
                 children: [
                   Image.asset(
-                    AssetsIamge.logoImg,
+                    AssetsImage.logoImg,
                     width: 150,
                     height: 150,
                     // fit: BoxFit.contain,

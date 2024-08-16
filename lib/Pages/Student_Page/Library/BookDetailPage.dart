@@ -27,10 +27,10 @@ class BookDetailsPage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.bgDesignSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
           Column(
             children: [
@@ -45,10 +45,10 @@ class BookDetailsPage extends StatelessWidget {
                   children: [
                     Text(
                       "Book Information",
-                      style: Theme.of(context).textTheme.headlineMedium,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     const SizedBox(height: 10),
-                        const Divider(color: Colors.black, height: 1),
+                    const Divider(color: Colors.black, height: 1),
                     const SizedBox(height: 15),
                     const StudentEditDetail(text: "Serial No :", detail: "#28780"),
                     const SizedBox(height: 10),

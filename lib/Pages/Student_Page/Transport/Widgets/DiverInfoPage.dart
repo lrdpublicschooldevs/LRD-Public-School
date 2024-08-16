@@ -7,7 +7,7 @@ class DriverInfoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: Container(
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
@@ -18,7 +18,7 @@ class DriverInfoPage extends StatelessWidget {
           children: [
             Text(
               "Driver's Information",
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 10),
             const Divider(color: Colors.black, height: 1),

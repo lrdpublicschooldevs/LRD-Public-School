@@ -9,8 +9,8 @@ class AcademyLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 20, left: 20),
-      padding: const EdgeInsets.all(15),
+      margin: const EdgeInsets.only(right: 15, left: 15),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromRGBO(250, 225, 225, 0.6),
@@ -33,7 +33,7 @@ class AcademyLabel extends StatelessWidget {
                     const SizedBox(width: 7),
                     Text(
                       labelName,
-                      style: Theme.of(context).textTheme.bodyLarge,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     const SizedBox(width: 5),
                   ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/Config/images.dart';
 
@@ -32,16 +33,16 @@ class NotificationBox extends StatelessWidget {
             color: labelColor,
             child: Text(
               labelName,
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
           const SizedBox(height: 10),
           Row(
             children: [
               SvgPicture.asset(
-                AssetsIamge.dNotificationSVG,
-                width: 60,
-                height: 60,
+                AssetsImage.dNotificationSVG,
+                width: 50,
+                height: 50,
               ),
               const SizedBox(width: 10),
               Expanded(
@@ -54,9 +55,12 @@ class NotificationBox extends StatelessWidget {
                           size: 20,
                         ),
                         const SizedBox(width: 5),
-                        Text(
-                          date,
-                          style: Theme.of(context).textTheme.labelLarge,
+                        Expanded(
+                          child: Text(
+                            overflow: TextOverflow.ellipsis,
+                            date,
+                            style: Theme.of(context).textTheme.labelLarge,
+                          ),
                         ),
                         const SizedBox(width: 5),
                         Text(
@@ -67,8 +71,9 @@ class NotificationBox extends StatelessWidget {
                     ),
                     const SizedBox(height: 5),
                     Text(
+                      textAlign: TextAlign.justify,
                       message,
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      style: Theme.of(context).textTheme.labelMedium,
                     )
                   ],
                 ),

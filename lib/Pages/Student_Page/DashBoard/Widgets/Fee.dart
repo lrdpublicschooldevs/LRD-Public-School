@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/Widgets/CircleProgressBar.dart';
 import 'package:myapp/Pages/Student_Page/Fee/FeePage.dart';
+import 'package:myapp/Widgets/responsiveLayout.dart';
 
 class FeeCard extends StatelessWidget {
   const FeeCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
+    final w = Responsive.width(context);
     return Container(
-      margin: const EdgeInsets.only(right: 20, left: 5),
+      margin: const EdgeInsets.only(right: 15, left: 5),
+      width: isMobile ? w * .85 : 450,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromRGBO(250, 225, 225, 0.8),
@@ -19,7 +23,6 @@ class FeeCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(left: 15, right: 15),
             height: 30,
-            width: MediaQuery.of(context).size.width * 0.81,
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
               borderRadius: const BorderRadius.only(
@@ -43,98 +46,110 @@ class FeeCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 10, bottom: 10, left: 5, right: 5),
+            padding: const EdgeInsets.all(8),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: 23,
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      alignment: Alignment.centerLeft,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.white,
+                Expanded(
+                  flex: 1,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 23,
+                        alignment: Alignment.centerLeft,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                        ),
+                        child: Text(
+                          overflow: TextOverflow.ellipsis,
+                          " Total Fee : 100",
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
                       ),
-                      child: Text(
-                        " Total Fee : 100",
-                        style: Theme.of(context).textTheme.titleSmall,
-                      ),
-                    ),
-                    const SizedBox(height: 7),
-                    Container(
-                      height: 23,
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.white,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            " Paid : 750",
-                            style: Theme.of(context).textTheme.titleSmall,
-                          ),
-                          Text(
-                            "36 ago ",
-                            style: Theme.of(context).textTheme.titleSmall,
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 7),
-                    Container(
-                      height: 23,
-                      width: MediaQuery.of(context).size.width * 0.47,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.white,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            "Pending : 250",
-                            style: Theme.of(context).textTheme.titleSmall,
-                          ),
-                          Text(
-                            "7 day rem",
-                            style: Theme.of(context).textTheme.titleSmall,
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 7),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            Get.to(const FeePage());
-                          },
-                          child: Container(
-                            height: 40,
-                            width: 140,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Theme.of(context).colorScheme.primary,
+                      const SizedBox(height: 7),
+                      Container(
+                        height: 23,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              overflow: TextOverflow.ellipsis,
+                              " Paid : 750",
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
-                            child: Center(
+                            Text(
+                              overflow: TextOverflow.ellipsis,
+                              "36 ago ",
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 7),
+                      Container(
+                        padding: const EdgeInsets.only(right: 5, left: 5),
+                        height: 23,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
                               child: Text(
-                                "More Detail",
-                                style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white),
+                                overflow: TextOverflow.ellipsis,
+                                "Pending : 250",
+                                style: Theme.of(context).textTheme.titleMedium,
+                              ),
+                            ),
+                            const SizedBox(width: 5),
+                            Expanded(
+                              child: Text(
+                                overflow: TextOverflow.ellipsis,
+                                "7 day rem",
+                                style: Theme.of(context).textTheme.titleMedium,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 7),
+                      Row(
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Get.to(const FeePage());
+                            },
+                            child: Container(
+                              height: 35,
+                              width: w * .35,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "More Detail",
+                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        const SizedBox(width: 10),
-                        // PrimaryBtn(btnName: " Apr ", ontap: () {})
-                      ],
-                    )
-                  ],
+                          const SizedBox(width: 10),
+                          // PrimaryBtn(btnName: " Apr ", ontap: () {})
+                        ],
+                      )
+                    ],
+                  ),
                 ),
                 const SizedBox(width: 10),
                 const MyProgressIndicator(percent: 0.75, lable: " 75% \n April"),

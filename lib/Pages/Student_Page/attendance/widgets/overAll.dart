@@ -19,7 +19,7 @@ class _OverAllState extends State<OverAll> {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 10, right: 20, left: 20),
+          margin: const EdgeInsets.only(top: 10, right: 15, left: 15),
           padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),

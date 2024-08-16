@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
@@ -7,8 +6,8 @@ import 'package:myapp/Widgets/customDropDown.dart';
 import 'package:myapp/Widgets/dateTimePick.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
 
-class THomeWorkPage extends StatelessWidget {
-  const THomeWorkPage({super.key});
+class ExamSheetPage extends StatelessWidget {
+  const ExamSheetPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class THomeWorkPage extends StatelessWidget {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          "Home Work",
+          "Exam Sheet",
           style: Theme.of(context).textTheme.displayMedium,
         ),
         leading: InkWell(
@@ -48,6 +47,33 @@ class THomeWorkPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 5),
+                    Text("Exam Type", style: Theme.of(context).textTheme.bodyLarge),
+                    const CustomDropdown(items: [
+                      {
+                        'value': 'Mid Term 1',
+                        'label': 'Mid Term 1'
+                      },
+                      {
+                        'value': 'Mid Term 2',
+                        'label': 'Mid Term 1'
+                      },
+                      {
+                        'value': 'Final Exam',
+                        'label': 'Final Exam'
+                      },
+                      {
+                        'value': 'Class Test',
+                        'label': 'Class Test'
+                      },
+                      {
+                        'value': 'Mock Test',
+                        'label': 'Mock Test'
+                      },
+                    ], hint: "-- Select Exam Type --"),
+                    const SizedBox(height: 15),
+                    Text("Exam Date", style: Theme.of(context).textTheme.bodyLarge),
+                    const DateTimePick(),
+                    const SizedBox(height: 15),
                     Text("Subject", style: Theme.of(context).textTheme.bodyLarge),
                     const CustomDropdown(items: [
                       {
@@ -68,44 +94,41 @@ class THomeWorkPage extends StatelessWidget {
                       },
                     ], hint: "-- Select Subject --"),
                     const SizedBox(height: 15),
-                    Text("Topic", style: Theme.of(context).textTheme.bodyLarge),
+                    Text("Period", style: Theme.of(context).textTheme.bodyLarge),
+                    const CustomDropdown(items: [
+                      {
+                        'value': '1st',
+                        'label': '1st'
+                      },
+                      {
+                        'value': '2nd',
+                        'label': '2nd'
+                      },
+                      {
+                        'value': '3rd',
+                        'label': '3rd'
+                      },
+                      {
+                        'value': '4th',
+                        'label': '4th'
+                      },
+                    ], hint: "-- Select Period --"),
+                    const SizedBox(height: 15),
+                    Text("Duration", style: Theme.of(context).textTheme.bodyLarge),
                     const TextField(
                       decoration: InputDecoration(
-                        hintText: "Enter your topic name",
-                        border: UnderlineInputBorder(),
-                      ),
-                    ),
-                    const SizedBox(height: 15),
-                    Text("Submission Date", style: Theme.of(context).textTheme.bodyLarge),
-                    const DateTimePick(),
-                    const SizedBox(height: 15),
-                    Text("Description", style: Theme.of(context).textTheme.bodyLarge),
-                    TextField(
-                      maxLines: 3,
-                      decoration: const InputDecoration(
-                        hintText: "Enter detailed description",
+                        hintText: "Enter time duration",
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey),
                         ),
                       ),
                       keyboardType: TextInputType.multiline,
-                      inputFormatters: [
-                        LengthLimitingTextInputFormatter(500)
-                      ],
-                    ),
-                    const SizedBox(height: 15),
-                    Text("Image", style: Theme.of(context).textTheme.bodyLarge),
-                    const TextField(
-                      decoration: InputDecoration(
-                        hintText: "Upload Image",
-                        border: UnderlineInputBorder(),
-                        suffixIcon: Icon(Icons.image_outlined),
-                      ),
+                      inputFormatters: [],
                     ),
                     const SizedBox(height: 30),
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                       PrimaryBtn(
-                        btnName: "Add Home Work",
+                        btnName: "Add Exam sheet",
                         ontap: () {},
                       ),
                     ]),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Widgets/responsiveLayout.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class MyProgressIndicator extends StatelessWidget {
@@ -8,8 +9,9 @@ class MyProgressIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
     return CircularPercentIndicator(
-      radius: 50.0,
+      radius: isMobile ? MediaQuery.of(context).size.width * .13 : 60,
       lineWidth: 10.0,
       percent: percent,
       center: Text(

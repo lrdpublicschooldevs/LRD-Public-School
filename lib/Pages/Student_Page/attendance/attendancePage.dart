@@ -10,7 +10,7 @@ class AttendancePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RxBool isLogin = true.obs;
+    RxBool isLogin = false.obs;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -31,10 +31,10 @@ class AttendancePage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            AssetsImage.bgDesignSVG,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
           SingleChildScrollView(
             child: Column(
@@ -94,7 +94,7 @@ class AttendancePage extends StatelessWidget {
                   ),
                 ),
                 Obx(
-                  () => isLogin.value ? OverAll() : SubjectWiseBox(),
+                  () => isLogin.value ? const OverAll() : const SubjectWiseBox(),
                 )
               ],
             ),

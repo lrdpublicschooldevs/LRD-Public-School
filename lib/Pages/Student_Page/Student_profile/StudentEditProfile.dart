@@ -28,7 +28,7 @@ class StudentEditProfile extends StatelessWidget {
         body: Stack(
           children: [
             SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
+              AssetsImage.bgDesignSVG,
               fit: BoxFit.cover,
               width: double.infinity,
               height: double.infinity,
@@ -36,7 +36,7 @@ class StudentEditProfile extends StatelessWidget {
             ListView(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+                  padding: const EdgeInsets.only(left: 15, right: 15, top: 20),
                   child: Container(
                     padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
@@ -54,7 +54,7 @@ class StudentEditProfile extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(100),
                                 child: Image.asset(
-                                  AssetsIamge.proflePicImg,
+                                  AssetsImage.proflePicImg,
                                   fit: BoxFit.contain,
                                 ),
                               ),
