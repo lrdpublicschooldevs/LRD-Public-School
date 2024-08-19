@@ -13,7 +13,10 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: PreferredSize(preferredSize: const Size.fromHeight(0.0), child: Container()),
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(0.0),
+          child: Container(),
+        ),
         body: Stack(
           children: [
             SvgPicture.asset(
