@@ -15,7 +15,6 @@ class WelcomePage extends StatelessWidget {
     // Get screen width
     double screenWidth = MediaQuery.of(context).size.width;
 
-    // Define font sizes based on screen width
     double headlineFontSize = screenWidth > 420 ? 24 : screenWidth * 0.06; // Fixed size of 24 for wide screens
     double bodyFontSize = screenWidth > 420 ? 16 : screenWidth * 0.04; // Fixed size of 16 for wide screens
 
@@ -24,7 +23,7 @@ class WelcomePage extends StatelessWidget {
         children: [
           // Background SVG
           SvgPicture.asset(
-            AssetsIamge.splashBgSVG,
+            AssetsImage.splashBgSVG,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -35,7 +34,7 @@ class WelcomePage extends StatelessWidget {
             left: 0,
             right: 0,
             child: Image.asset(
-              AssetsIamge.logoImg,
+              AssetsImage.logoImg,
               width: 150,
               height: 150,
               fit: BoxFit.contain,

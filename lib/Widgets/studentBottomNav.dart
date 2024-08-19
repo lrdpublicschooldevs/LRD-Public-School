@@ -61,7 +61,7 @@ class _StudentBottomNavState extends State<StudentBottomNav> {
         currentIndex: currentTabIndex,
         backgroundColor: Theme.of(context).colorScheme.primary,
         selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.black,
         onTap: (int index) {
           setState(() {
             currentTabIndex = index;
