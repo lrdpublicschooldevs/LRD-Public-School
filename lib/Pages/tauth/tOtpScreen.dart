@@ -80,7 +80,7 @@ class _TeacherOtpScreenState extends State<TeacherOtpScreen> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
+              AssetsImage.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
@@ -89,7 +89,7 @@ class _TeacherOtpScreenState extends State<TeacherOtpScreen> {
             left: 20,
             right: 20,
             child: Image.asset(
-              AssetsIamge.otpImg,
+              AssetsImage.otpImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,

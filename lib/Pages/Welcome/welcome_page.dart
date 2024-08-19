@@ -17,7 +17,7 @@ class WelcomePage extends StatelessWidget {
         children: [
           // Background SVG
           SvgPicture.asset(
-            AssetsIamge.splashBgSVG,
+            AssetsImage.splashBgSVG,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -28,7 +28,7 @@ class WelcomePage extends StatelessWidget {
             left: 0,
             right: 0,
             child: Image.asset(
-              AssetsIamge.logoImg,
+              AssetsImage.logoImg,
               width: 150,
               height: 150,
               fit: BoxFit.contain,

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Student_Page/DashBoard/dashboard.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
+import 'package:myapp/Widgets/studentBottomNav.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -79,7 +80,7 @@ class _OtpScreenState extends State<OtpScreen> {
         children: [
           Positioned.fill(
             child: SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
+              AssetsImage.bgDesignSVG,
               fit: BoxFit.cover,
             ),
           ),
@@ -88,7 +89,7 @@ class _OtpScreenState extends State<OtpScreen> {
             left: 20,
             right: 20,
             child: Image.asset(
-              AssetsIamge.otpImg,
+              AssetsImage.otpImg,
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -168,7 +169,7 @@ class _OtpScreenState extends State<OtpScreen> {
                             PrimaryBtn(
                               btnName: "Submit",
                               ontap: () {
-                                Get.to(const DashboardPage());
+                                Get.to(const StudentBottomNav());
                               },
                             ),
                           ],

@@ -28,7 +28,7 @@ class LibraryPage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
+            AssetsImage.bgDesignSVG,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -83,7 +83,6 @@ class LibraryPage extends StatelessWidget {
 }
 
 Widget CradLebel(BuildContext context, VoidCallback ontap, String labelName) {
-
   return Expanded(
     child: InkWell(
       onTap: ontap,

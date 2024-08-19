@@ -28,7 +28,7 @@ class TimeTablePage extends StatelessWidget {
       body: Stack(
         children: [
           SvgPicture.asset(
-            AssetsIamge.bgDesignSVG,
+            AssetsImage.bgDesignSVG,
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,

@@ -28,7 +28,7 @@ class StudentEditProfile extends StatelessWidget {
         body: Stack(
           children: [
             SvgPicture.asset(
-              AssetsIamge.bgDesignSVG,
+              AssetsImage.bgDesignSVG,
               fit: BoxFit.cover,
               width: double.infinity,
               height: double.infinity,
@@ -54,7 +54,7 @@ class StudentEditProfile extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(100),
                                 child: Image.asset(
-                                  AssetsIamge.proflePicImg,
+                                  AssetsImage.proflePicImg,
                                   fit: BoxFit.contain,
                                 ),
                               ),

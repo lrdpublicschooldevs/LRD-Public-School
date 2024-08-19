@@ -9,21 +9,21 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: Future.delayed(const Duration(seconds: 3)), 
+      future: Future.delayed(const Duration(seconds: 3)),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Scaffold(
             body: Stack(
               children: [
                 SvgPicture.asset(
-                  AssetsIamge.splashBgSVG,
+                  AssetsImage.splashBgSVG,
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: double.infinity,
                 ),
                 Center(
                   child: Image.asset(
-                    AssetsIamge.logoImg,
+                    AssetsImage.logoImg,
                     width: 150,
                     height: 150,
                     fit: BoxFit.contain,

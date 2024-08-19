@@ -61,30 +61,30 @@ class TDashboardBody extends StatelessWidget {
                     mainAxisSpacing: 10,
                   ),
                   children: [
-                    DashboardBox(context, () {}, AssetsIamge.tClassMngSVG, "class Management"),
-                    DashboardBox(context, () {}, AssetsIamge.tStdMngSVG, "Student Management"),
+                    DashboardBox(context, () {}, AssetsImage.tClassMngSVG, "class Management"),
+                    DashboardBox(context, () {}, AssetsImage.tStdMngSVG, "Student Management"),
                     DashboardBox(context, () {
                       Get.to(const AttendancePage());
-                    }, AssetsIamge.tAttdMarkingSVG, "Attendance Marking"),
-                    DashboardBox(context, () {}, AssetsIamge.tGradeBookSVG, "Gradebook"),
+                    }, AssetsImage.tAttdMarkingSVG, "Attendance Marking"),
+                    DashboardBox(context, () {}, AssetsImage.tGradeBookSVG, "Gradebook"),
                     DashboardBox(context, () {
                       Get.to(const THomeWorkPage());
-                    }, AssetsIamge.tHomeworkMngSVG, "Homework Management"),
-                    DashboardBox(context, () {}, AssetsIamge.tContactParentSVG, "Contact Parent"),
-                    DashboardBox(context, () {}, AssetsIamge.dSyllabusSVG, "Syllabus "),
-                    DashboardBox(context, () {}, AssetsIamge.tPerformanceRprtSVG, "Performance Report"),
-                    DashboardBox(context, () {}, AssetsIamge.dLibrarySVG, "Library"),
-                    DashboardBox(context, () {}, AssetsIamge.dExamDatesheetSVG, "Exam Datesheet"),
-                    DashboardBox(context, () {}, AssetsIamge.dAcademyCalenderSVG, "Academic Calendar"),
+                    }, AssetsImage.tHomeworkMngSVG, "Homework Management"),
+                    DashboardBox(context, () {}, AssetsImage.tContactParentSVG, "Contact Parent"),
+                    DashboardBox(context, () {}, AssetsImage.dSyllabusSVG, "Syllabus "),
+                    DashboardBox(context, () {}, AssetsImage.tPerformanceRprtSVG, "Performance Report"),
+                    DashboardBox(context, () {}, AssetsImage.dLibrarySVG, "Library"),
+                    DashboardBox(context, () {}, AssetsImage.dExamDatesheetSVG, "Exam Datesheet"),
+                    DashboardBox(context, () {}, AssetsImage.dAcademyCalenderSVG, "Academic Calendar"),
                     DashboardBox(context, () {
                       Get.to(const TeacherLeavePage());
-                    }, AssetsIamge.tLeaveAplicationSVG, "Teacher Leave"),
-                    DashboardBox(context, () {}, AssetsIamge.dTimeTableSVG, "Time Table"),
-                    DashboardBox(context, () {}, AssetsIamge.dAskDoubtSVG, "Doubt Solving"),
-                    DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
-                    DashboardBox(context, () {}, AssetsIamge.dOfficialDetailsSVG, " Official Details"),
-                    DashboardBox(context, () {}, AssetsIamge.tChangePasswordSVG, "Change password"),
-                    DashboardBox(context, () {}, AssetsIamge.dLogoutSVG, "Logout"),
+                    }, AssetsImage.tLeaveAplicationSVG, "Teacher Leave"),
+                    DashboardBox(context, () {}, AssetsImage.dTimeTableSVG, "Time Table"),
+                    DashboardBox(context, () {}, AssetsImage.dAskDoubtSVG, "Doubt Solving"),
+                    DashboardBox(context, () {}, AssetsImage.dGallerySVG, "Gallery"),
+                    DashboardBox(context, () {}, AssetsImage.dOfficialDetailsSVG, " Official Details"),
+                    DashboardBox(context, () {}, AssetsImage.tChangePasswordSVG, "Change password"),
+                    DashboardBox(context, () {}, AssetsImage.dLogoutSVG, "Logout"),
                   ],
                 );
               },

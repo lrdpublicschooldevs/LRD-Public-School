@@ -73,47 +73,47 @@ class DashboardBody extends StatelessWidget {
                   children: [
                     DashboardBox(context, () {
                       Get.to(const HomeWorkPage());
-                    }, AssetsIamge.dHomeworkSVG, "Homework"),
+                    }, AssetsImage.dHomeworkSVG, "Homework"),
                     DashboardBox(context, () {
                       Get.to(const TransportPage());
-                    }, AssetsIamge.dTransportSVG, "Transport"),
+                    }, AssetsImage.dTransportSVG, "Transport"),
                     DashboardBox(context, () {
                       Get.to(const LibraryPage());
-                    }, AssetsIamge.dLibrarySVG, "Library"),
+                    }, AssetsImage.dLibrarySVG, "Library"),
                     DashboardBox(context, () {
                       Get.to(const NotificationPage1());
-                    }, AssetsIamge.dNotificationSVG, "Notification"),
+                    }, AssetsImage.dNotificationSVG, "Notification"),
                     DashboardBox(context, () {
                       Get.to(const ExamPage());
-                    }, AssetsIamge.dExamDatesheetSVG, "Exam Sheet"),
+                    }, AssetsImage.dExamDatesheetSVG, "Exam Sheet"),
                     DashboardBox(context, () {
                       Get.to(const AcademyCalenderPage());
-                    }, AssetsIamge.dAcademyCalenderSVG, "Academy\nCalender"),
+                    }, AssetsImage.dAcademyCalenderSVG, "Academy\nCalender"),
                     DashboardBox(context, () {
                       Get.to(LeaveForm());
-                    }, AssetsIamge.dStudentLeaveSVG, "Student Leave"),
+                    }, AssetsImage.dStudentLeaveSVG, "Student Leave"),
                     DashboardBox(context, () {
                       Get.to(const TimeTablePage());
-                    }, AssetsIamge.dTimeTableSVG, "Time Table"),
+                    }, AssetsImage.dTimeTableSVG, "Time Table"),
                     DashboardBox(context, () {
                       Get.to(const AskDoubtPage());
-                    }, AssetsIamge.dAskDoubtSVG, "Ask Doubt"),
+                    }, AssetsImage.dAskDoubtSVG, "Ask Doubt"),
                     DashboardBox(context, () {
                       Get.to(const SyllabusPage());
-                    }, AssetsIamge.dSyllabusSVG, "Syllabus"),
-                    DashboardBox(context, () {}, AssetsIamge.dGallerySVG, "Gallery"),
+                    }, AssetsImage.dSyllabusSVG, "Syllabus"),
+                    DashboardBox(context, () {}, AssetsImage.dGallerySVG, "Gallery"),
                     DashboardBox(context, () {
                       Get.to(const OfficialDetailPage());
-                    }, AssetsIamge.dOfficialDetailsSVG, "Official Details"),
+                    }, AssetsImage.dOfficialDetailsSVG, "Official Details"),
                     DashboardBox(context, () {
                       Get.to(const TeacherPage());
-                    }, AssetsIamge.dClassTeacherSVG, "   Class\nTeachers"),
+                    }, AssetsImage.dClassTeacherSVG, "   Class\nTeachers"),
                     DashboardBox(context, () {
                       Get.to(const ReportCardPage());
-                    }, AssetsIamge.dReportCardSVG, "Report Card"),
+                    }, AssetsImage.dReportCardSVG, "Report Card"),
                     DashboardBox(context, () {
                       Get.to(const WelcomePage());
-                    }, AssetsIamge.dLogoutSVG, "Logout"),
+                    }, AssetsImage.dLogoutSVG, "Logout"),
                   ],
                 );
               },
