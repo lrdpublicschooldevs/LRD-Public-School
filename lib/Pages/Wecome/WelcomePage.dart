@@ -1,42 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
 import 'package:myapp/Pages/Auth/loginPage.dart';
-import 'package:myapp/Pages/Student_Page/DashBoard/dashboard.dart';
-import 'package:myapp/Pages/tauth/tLoginPage.dart';
 import 'package:myapp/Widgets/primaryBtn.dart';
+
+import '../tauth/tLoginPage.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Get screen width
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    // Define font sizes based on screen width
+    double headlineFontSize = screenWidth > 420 ? 24 : screenWidth * 0.06; // Fixed size of 24 for wide screens
+    double bodyFontSize = screenWidth > 420 ? 16 : screenWidth * 0.04; // Fixed size of 16 for wide screens
+
     return Scaffold(
       body: Stack(
         children: [
+          // Background SVG
           SvgPicture.asset(
-            AssetsImage.splashBgSVG,
-            fit: BoxFit.fill,
-            width: double.maxFinite,
-            height: double.maxFinite,
+            AssetsIamge.splashBgSVG,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
           ),
+          // Logo PNG
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.13,
+            top: 150,
             left: 0,
             right: 0,
-            bottom: MediaQuery.of(context).size.height * 0.5,
             child: Image.asset(
-              AssetsImage.logoImg,
+              AssetsIamge.logoImg,
               width: 150,
               height: 150,
+              fit: BoxFit.contain,
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.35,
             left: 0,
             right: 0,
-            bottom: MediaQuery.of(context).size.height * 0.2,
+            top: 300,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -44,8 +52,10 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Welcome to',
-                      style: Theme.of(context).textTheme.headlineSmall,
+                      'Welcome to', // Add text between the buttons
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        fontSize: headlineFontSize,
+                      ),
                     ),
                   ],
                 ),
@@ -53,13 +63,15 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'LRD Public School',
-                      style: Theme.of(context).textTheme.headlineSmall,
+                      'LRD Public School', // Add text between the buttons
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        fontSize: headlineFontSize,
+                      ),
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 25,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -72,7 +84,8 @@ class WelcomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 14),
+                const SizedBox(height: 16),
+                // Add spacing between the text and buttons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -92,3 +105,16 @@ class WelcomePage extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -18,80 +19,102 @@ class TeacherDetailBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: const Color.fromRGBO(250, 225, 225, 0.6),
-      ),
-      child: Column(
-        children: [
-          Text(
-            teacherName,
-            style: Theme.of(context).textTheme.headlineMedium,
+    final currentWidth = MediaQuery.of(context).size.width;
+    final bool isDesktop = currentWidth>1000;
+    final bool isTablet = currentWidth>600;
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: Container(
+          width: isDesktop?600:(isTablet?500: double.infinity),
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: const Color.fromRGBO(250, 225, 225, 0.6),
           ),
-          const SizedBox(height: 10),
-          const Divider(color: Colors.black, height: 1),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: [
               Text(
-                "Mobile No. : ",
-                style: Theme.of(context).textTheme.bodyLarge,
+                teacherName,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
-              Text(
-                mobileNo,
-                style: Theme.of(context).textTheme.labelLarge,
+              const SizedBox(height: 10),
+              const Divider(color: Colors.black, height: 1),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(
+                      "Mobile No. : ",
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      mobileNo,
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(
+                      "Email Id : ",
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      emailId,
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(
+                      "Subject : ",
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      subjectName,
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(
+                      "Cabin No. : ",
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      cabinNo,
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Text(
-                  overflow: TextOverflow.ellipsis,
-                  "Email Id : ",
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-              ),
-              Text(
-                emailId,
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Subject : ",
-                style: Theme.of(context).textTheme.bodyLarge,
-              ),
-              Text(
-                subjectName,
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Cabin No. : ",
-                style: Theme.of(context).textTheme.bodyLarge,
-              ),
-              Text(
-                cabinNo,
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
-            ],
-          ),
-        ],
+        ),
       ),
     );
   }

@@ -49,27 +49,55 @@ class OfficialStudentDetail extends StatelessWidget {
         "detail": "xyz villa, Bihar, India, 803322"
       },
     ];
-    return Container(
-      margin: const EdgeInsets.only(right: 15, left: 15),
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: const Color.fromRGBO(250, 225, 225, 0.6),
-      ),
-      child: Column(
-        children: [
-          Text("Student Detail's", style: Theme.of(context).textTheme.headlineMedium),
-          const SizedBox(height: 10),
-          const Divider(color: Colors.black, height: 1),
-          const SizedBox(height: 15),
-          ...studentDetails.map((detail) => Column(
+    final currentWidth = MediaQuery.of(context).size.width;
+    final bool isDesktop = currentWidth>1000;
+    final bool isTablet = currentWidth>600;
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: Container(
+          width: isDesktop ? 600 : (isTablet ? 400 : double.infinity),
+          margin: const EdgeInsets.only(right: 20, left: 20),
+          padding: const EdgeInsets.all(30),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: const Color.fromRGBO(250, 225, 225, 0.6),
+          ),
+          child: Column(
+
+            children: [
+              Text("Student Detail's", style: Theme.of(context).textTheme.headlineMedium),
+              const SizedBox(height: 10),
+              const Divider(color: Colors.black, height: 1),
+              const SizedBox(height: 15),
+              ...studentDetails.map((detail) => Column(
                 children: [
-                  StudentEditDetail(text: detail["text"]!, detail: detail["detail"]!),
-                  const SizedBox(height: 10),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          detail["text"]!,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          detail["detail"]!,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10), // Control spacing between entries
                 ],
               )),
-        ],
+            ],
+          ),
+        ),
       ),
     );
+
+
+
   }
 }
