@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:myapp/Config/images.dart';
-import 'package:myapp/Pages/Student_Page/Fee/widgets/FeePayDetail.dart';
-import 'package:myapp/Pages/Student_Page/Fee/widgets/FeePayDownload.dart';
-import 'package:myapp/Widgets/primaryBtn.dart';
+import 'package:myapp/Pages/Student_Page/Fee/widgets/FeeHeader.dart';
+import 'package:myapp/Pages/Student_Page/Fee/widgets/feeBody.dart';
 
 class FeePage extends StatelessWidget {
   const FeePage({super.key});
@@ -35,41 +34,50 @@ class FeePage extends StatelessWidget {
             height: double.infinity,
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 20, left: 20),
+            padding: const EdgeInsets.only(right: 15, left: 15, bottom: 20),
             child: ListView(
-              children: [
-                FeePayDetail(
-                  receiptNo: "#987132",
-                  month: "July",
-                  paymentDate: "30 July 2024",
-                  pendingAmount: "₹ 2000",
-                  primaryBtn: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      PrimaryBtn(
-                        btnName: "Pay Now",
-                        ontap: () {},
-                      ),
-                    ],
-                  ),
+              children: const [
+                FeeHeader(
+                  dueAmount: "₹ 43200",
+                  paidAmount: "₹ 21600",
+                  balanceAmount: "₹ 21600",
                 ),
-                const SizedBox(height: 20),
-                FeePayDownload(
-                  receiptNo: "#989421",
-                  month: "June",
-                  paymentDate: "24 June 2024",
-                  paymentAmount: "₹ 2000",
-                  paymentMode: "Cash",
-                  primaryBtn: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      PrimaryBtn(
-                        btnName: "Download Receipt",
-                        ontap: () {},
-                      ),
-                    ],
-                  ),
-                )
+                SizedBox(height: 15),
+                FeeBody(
+                  installment: "1st Installment",
+                  dueAmount: "₹ 7200",
+                  paidAmount: "₹ 7200",
+                  balanceAmount: "₹ 0",
+                  month: "January",
+                  date: "20/01/2024",
+                ),
+                SizedBox(height: 15),
+                FeeBody(
+                  installment: "2nd Installment",
+                  dueAmount: "₹ 7200",
+                  paidAmount: "₹ 7200",
+                  balanceAmount: "₹ 0",
+                  month: "February",
+                  date: "20/02/2024",
+                ),
+                SizedBox(height: 15),
+                FeeBody(
+                  installment: "3rd Installment",
+                  dueAmount: "₹ 7200",
+                  paidAmount: "₹ 7200",
+                  balanceAmount: "₹ 0",
+                  month: "March",
+                  date: "20/03/2024",
+                ),
+                SizedBox(height: 15),
+                FeeBody(
+                  installment: "4th Installment",
+                  dueAmount: "₹ 7200",
+                  paidAmount: "₹ 7200",
+                  balanceAmount: "₹ 0",
+                  month: "April",
+                  date: "20/04/2024",
+                ),
               ],
             ),
           )
