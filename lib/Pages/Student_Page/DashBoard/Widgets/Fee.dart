@@ -43,7 +43,7 @@ class FeeCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 10, bottom: 10, left: 5, right: 5),
+            padding: const EdgeInsets.only(top: 7, bottom: 7, left: 5, right: 5),
             child: Row(
               children: [
                 Column(
@@ -62,7 +62,7 @@ class FeeCard extends StatelessWidget {
                         style: Theme.of(context).textTheme.titleSmall,
                       ),
                     ),
-                    const SizedBox(height: 7),
+                    const SizedBox(height: 6),
                     Container(
                       height: 23,
                       width: MediaQuery.of(context).size.width * 0.45,
@@ -85,7 +85,7 @@ class FeeCard extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 7),
+                    const SizedBox(height: 6),
                     Container(
                       height: 23,
                       width: MediaQuery.of(context).size.width * 0.47,
@@ -108,7 +108,7 @@ class FeeCard extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 7),
+                    const SizedBox(height: 6),
                     Row(
                       children: [
                         InkWell(
@@ -116,7 +116,7 @@ class FeeCard extends StatelessWidget {
                             Get.to(const FeePage());
                           },
                           child: Container(
-                            height: 40,
+                            height: 35,
                             width: 140,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),

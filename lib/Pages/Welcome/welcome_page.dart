@@ -18,15 +18,16 @@ class WelcomePage extends StatelessWidget {
           // Background SVG
           SvgPicture.asset(
             AssetsImage.splashBgSVG,
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: double.infinity,
+            fit: BoxFit.fill,
+            width: double.maxFinite,
+            height: double.maxFinite,
           ),
           // Logo PNG
           Positioned(
-            top: 150,
+            top: MediaQuery.of(context).size.height * 0.13,
             left: 0,
             right: 0,
+            bottom: MediaQuery.of(context).size.height * 0.5,
             child: Image.asset(
               AssetsImage.logoImg,
               width: 150,
@@ -37,7 +38,8 @@ class WelcomePage extends StatelessWidget {
           Positioned(
             left: 0,
             right: 0,
-            top: 300,
+            top: MediaQuery.of(context).size.height * 0.35,
+            bottom: MediaQuery.of(context).size.height * 0.2,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

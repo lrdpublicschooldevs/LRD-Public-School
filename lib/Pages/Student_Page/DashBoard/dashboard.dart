@@ -12,36 +12,38 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: PreferredSize(preferredSize: const Size.fromHeight(0.0), child: Container()),
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(0.0),
+          child: Container(),
+        ),
         body: Stack(
           children: [
             SvgPicture.asset(
               AssetsImage.bgDesignSVG,
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
+              fit: BoxFit.fill,
+              width: double.maxFinite,
+              height: double.maxFinite,
             ),
-            ListView(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.only(right: 20, left: 20, top: 10),
-                  child: DashboardHeader(),
-                ),
-                SizedBox(height: 15),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      AttendanceCard(),
-                      FeeCard()
-                    ],
+            const Expanded(
+              child: Column(
+                children: [
+                  Expanded(flex: 2, child: DashboardHeader()),
+                  Expanded(
+                    flex: 3,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          AttendanceCard(),
+                          FeeCard()
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-                SizedBox(height: 15),
-                DashboardBody(),
-                SizedBox(height: 30)
-              ],
+                  SizedBox(height: 10),
+                  Expanded(flex: 6, child: DashboardBody()),
+                ],
+              ),
             ),
           ],
         ));

@@ -8,49 +8,52 @@ class DashboardHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Hi Student ",
-              style: Theme.of(context).textTheme.displaySmall,
-            ),
-            Text(
-              "Class : 3rd | Sec : A",
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
-            Card(
-              child: Text(
-                "  2024 - 25  ",
-                style: Theme.of(context).textTheme.bodyMedium,
+    return Padding(
+      padding: const EdgeInsets.only(right: 15, left: 15, top: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Hi Student ",
+                style: Theme.of(context).textTheme.displaySmall,
               ),
-            )
-          ],
-        ),
-        Column(
-          children: [
-            InkWell(
-              onTap: () {
-                Get.to(() => StudentProfilePage());
-              },
-              child: Container(
-                height: 90,
-                width: 90,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.asset(
-                    AssetsImage.proflePicImg,
-                    fit: BoxFit.contain,
+              Text(
+                "Class : 3rd | Sec : A",
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
+              Card(
+                child: Text(
+                  "  2024 - 25  ",
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              )
+            ],
+          ),
+          Column(
+            children: [
+              InkWell(
+                onTap: () {
+                  Get.to(() => StudentProfilePage());
+                },
+                child: Container(
+                  height: 90,
+                  width: 90,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Image.asset(
+                      AssetsImage.proflePicImg,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
-              ),
-            )
-          ],
-        )
-      ],
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
