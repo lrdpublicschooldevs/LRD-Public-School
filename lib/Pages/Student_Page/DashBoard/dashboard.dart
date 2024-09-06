@@ -12,7 +12,10 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
         backgroundColor: Colors.white,
+=======
+>>>>>>> ansh
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(0.0),
           child: Container(),
@@ -25,6 +28,7 @@ class DashboardPage extends StatelessWidget {
               width: double.maxFinite,
               height: double.maxFinite,
             ),
+<<<<<<< HEAD
             ListView(
               children: const [
                 Padding(
@@ -39,12 +43,28 @@ class DashboardPage extends StatelessWidget {
                       AttendanceCard(),
                       FeeCard()
                     ],
+=======
+            const Expanded(
+              child: Column(
+                children: [
+                  Expanded(flex: 2, child: DashboardHeader()),
+                  Expanded(
+                    flex: 3,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          AttendanceCard(),
+                          FeeCard()
+                        ],
+                      ),
+                    ),
+>>>>>>> ansh
                   ),
-                ),
-                SizedBox(height: 15),
-                DashboardBody(),
-                SizedBox(height: 30)
-              ],
+                  SizedBox(height: 10),
+                  Expanded(flex: 6, child: DashboardBody()),
+                ],
+              ),
             ),
           ],
         ));

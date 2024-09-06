@@ -46,7 +46,11 @@ class FeeCard extends StatelessWidget {
             ),
           ),
           Padding(
+<<<<<<< HEAD
             padding: const EdgeInsets.all(8),
+=======
+            padding: const EdgeInsets.only(top: 7, bottom: 7, left: 5, right: 5),
+>>>>>>> ansh
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -68,6 +72,7 @@ class FeeCard extends StatelessWidget {
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ),
+<<<<<<< HEAD
                       const SizedBox(height: 7),
                       Container(
                         height: 23,
@@ -83,6 +88,72 @@ class FeeCard extends StatelessWidget {
                               overflow: TextOverflow.ellipsis,
                               " Paid : 750",
                               style: Theme.of(context).textTheme.titleMedium,
+=======
+                      child: Text(
+                        " Total Fee : 100",
+                        style: Theme.of(context).textTheme.titleSmall,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Container(
+                      height: 23,
+                      width: MediaQuery.of(context).size.width * 0.45,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            " Paid : 750",
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                          Text(
+                            "36 ago ",
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Container(
+                      height: 23,
+                      width: MediaQuery.of(context).size.width * 0.47,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            "Pending : 250",
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                          Text(
+                            "7 day rem",
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Row(
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Get.to(const FeePage());
+                          },
+                          child: Container(
+                            height: 35,
+                            width: 140,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Theme.of(context).colorScheme.primary,
+>>>>>>> ansh
                             ),
                             Text(
                               overflow: TextOverflow.ellipsis,

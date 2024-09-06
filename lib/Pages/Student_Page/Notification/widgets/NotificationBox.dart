@@ -41,8 +41,13 @@ class NotificationBox extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 AssetsImage.dNotificationSVG,
+<<<<<<< HEAD
                 width: 50,
                 height: 50,
+=======
+                width: 60,
+                height: 60,
+>>>>>>> ansh
               ),
               const SizedBox(width: 10),
               Expanded(

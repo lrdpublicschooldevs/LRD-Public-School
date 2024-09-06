@@ -32,9 +32,15 @@ class _LeaveFormState extends State<LeaveForm> {
         children: [
           SvgPicture.asset(
             AssetsImage.bgDesignSVG,
+<<<<<<< HEAD
             fit: BoxFit.fill,
             width: double.maxFinite,
             height: double.maxFinite,
+=======
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+>>>>>>> ansh
           ),
           ListView(
             padding: const EdgeInsets.only(left: 15, right: 15),

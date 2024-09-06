@@ -72,4 +72,8 @@ class _StudentBottomNavState extends State<StudentBottomNav> {
       body: pages[currentTabIndex],
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ansh

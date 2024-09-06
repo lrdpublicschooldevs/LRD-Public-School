@@ -34,9 +34,15 @@ class _AskDoubtPageState extends State<AskDoubtPage> {
         children: [
           SvgPicture.asset(
             AssetsImage.bgDesignSVG,
+<<<<<<< HEAD
             fit: BoxFit.fill,
             width: double.maxFinite,
             height: double.maxFinite,
+=======
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+>>>>>>> ansh
           ),
           Padding(
             padding: const EdgeInsets.only(right: 15, left: 15),

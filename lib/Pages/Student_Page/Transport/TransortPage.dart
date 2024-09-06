@@ -31,9 +31,15 @@ class TransportPage extends StatelessWidget {
         children: [
           SvgPicture.asset(
             AssetsImage.bgDesignSVG,
+<<<<<<< HEAD
             fit: BoxFit.fill,
             width: double.maxFinite,
             height: double.maxFinite,
+=======
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+>>>>>>> ansh
           ),
           ListView(
             children: const [

@@ -75,9 +75,13 @@ class TDashboardBody extends StatelessWidget {
                     DashboardBox(context, () {}, AssetsImage.dSyllabusSVG, "Syllabus "),
                     DashboardBox(context, () {}, AssetsImage.tPerformanceRprtSVG, "Performance Report"),
                     DashboardBox(context, () {}, AssetsImage.dLibrarySVG, "Library"),
+<<<<<<< HEAD
                     DashboardBox(context, () {
                       Get.to(const ExamSheetPage());
                     }, AssetsImage.dExamDatesheetSVG, "Exam Datesheet"),
+=======
+                    DashboardBox(context, () {}, AssetsImage.dExamDatesheetSVG, "Exam Datesheet"),
+>>>>>>> ansh
                     DashboardBox(context, () {}, AssetsImage.dAcademyCalenderSVG, "Academic Calendar"),
                     DashboardBox(context, () {
                       Get.to(const TeacherLeavePage());

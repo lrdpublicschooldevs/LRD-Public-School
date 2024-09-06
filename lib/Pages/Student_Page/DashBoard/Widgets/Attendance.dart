@@ -13,7 +13,10 @@ class AttendanceCard extends StatelessWidget {
     final w = Responsive.width(context);
     return Container(
       margin: const EdgeInsets.only(right: 5, left: 15),
+<<<<<<< HEAD
       width: isMobile ? w * .85 : 450,
+=======
+>>>>>>> ansh
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromRGBO(250, 225, 225, 0.8),

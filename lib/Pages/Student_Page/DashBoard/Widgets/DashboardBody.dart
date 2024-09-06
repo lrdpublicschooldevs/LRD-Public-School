@@ -24,7 +24,11 @@ class DashboardBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(right: 15, left: 15),
+<<<<<<< HEAD
       height: MediaQuery.of(context).size.height * 0.55,
+=======
+      height: MediaQuery.of(context).size.height * 0.5,
+>>>>>>> ansh
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromRGBO(250, 225, 225, 0.8),

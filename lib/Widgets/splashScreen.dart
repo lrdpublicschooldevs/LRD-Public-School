@@ -17,9 +17,15 @@ class SplashScren extends StatelessWidget {
               children: [
                 SvgPicture.asset(
                   AssetsImage.splashBgSVG,
+<<<<<<< HEAD:lib/Widgets/splashScreen.dart
                   fit: BoxFit.fill,
                   width: double.maxFinite,
                   height: double.maxFinite,
+=======
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity,
+>>>>>>> ansh:lib/Widgets/splash_screen.dart
                 ),
                 Center(
                   child: Image.asset(

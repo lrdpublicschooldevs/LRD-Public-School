@@ -169,7 +169,11 @@ class _OtpScreenState extends State<OtpScreen> {
                             PrimaryBtn(
                               btnName: "Submit",
                               ontap: () {
+<<<<<<< HEAD
                                 Get.to(StudentBottomNav());
+=======
+                                Get.to(const StudentBottomNav());
+>>>>>>> ansh
                               },
                             ),
                           ],

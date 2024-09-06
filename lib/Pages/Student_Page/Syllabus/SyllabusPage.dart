@@ -28,6 +28,7 @@ class SyllabusPage extends StatelessWidget {
         children: [
           SvgPicture.asset(
             AssetsImage.bgDesignSVG,
+<<<<<<< HEAD
             fit: BoxFit.fill,
             width: double.maxFinite,
             height: double.maxFinite,
@@ -42,6 +43,11 @@ class SyllabusPage extends StatelessWidget {
                 return _buildMobileLayout();
               }
             },
+=======
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+>>>>>>> ansh
           ),
         ],
       ),
